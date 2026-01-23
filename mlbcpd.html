@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Kumaran - Data Scientist</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+      <link rel="icon" href="Logo.png" type="image/png">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  
+ 
+  
+   <div class="glass-container">
+    <section class="navblog-posts">
+    <header>
+  <h2><b><a href="index.html" class="headgui" style="margin-left:10px;">Sanjay Kumaran</a></b></h2>      
+  <nav>
+    <span class="menu-toggle" id="menuToggle">☰</span>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="navbuttongui">Home</a>
+      <a href="index#aboutme" class="navbuttongui">About</a>
+      <a href="index#education" class="navbuttongui">Education</a>
+      <a href="index#projects" class="navbuttongui">Projects️</a>
+      <a href="index#skills" class="navbuttongui">Skills</a>
+      <a href="index#resumenav" class="navbuttongui">Resume</a>
+      
+    </div>
+  </nav>
+</header>
+    </section>   
+    
+  <div style="padding-top:100px">
+
+    <center>   
+    <h1>Machine Learning BootCamp Projects</h1><br>
+    <h2>Source Code</h2>
+    <br><a href="https://github.com/sanjaykumarand/Machine-Learning-BootCamp-Project"><button class="buttongui">️GitHub 🕵️</button></a>
+    <br><br>
+    <hr>
+    <br><h2>Types of projects Done:</h2><br><hr></center>
+    <h3><br>•Disease Prediction System using K-Nearest Neighbors (KNN)<br>
+                •Classification Models using Random Forest Algorithm<br>
+                •Student Result Prediction using Linear Regression<br>
+                •Flower (Petal) Classification
+            </h3><br><hr><br><br><center>
+    <h2>Completion Certificate</h2><br>
+    <a href="mlbc.pdf"><img src="10dmlbp.jpg" style="width:300px; height:200px;"></a>
+    <br><br>
+    <a href="mlbc.pdf"><button class="buttongui">View this Certificate ↗️️</button></a>
+    
+  </center></div>
+
+  <br>
+      <center>
+    <h2 class="headingfont">Contact Me</h2><br>
+    <h4><a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="mail.png" class="cugui"></a>
+    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="linkedin.png" class="cugui"></a>
+    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="github.png" class="cugui"></a></h4>
+    </center>
+  
+  
+    <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+  if (nav.style.display === 'none') {
+    nav.style.display = 'flex';
+    nav.style.flexDirection = 'column'; // ✅ THIS LINE makes it vertical
+  } else {
+    nav.style.display = 'none';
+  }
+});
+    window.addEventListener('resize', updateLayout);
+    updateLayout();
+</script>
+   <script>
+ window.difyChatbotConfig = {
+  token: 'EEHX7AizWNHTwXXN',
+  inputs: {
+    // You can define the inputs from the Start node here
+    // key is the variable name
+    // e.g.
+    // name: "NAME"
+  },
+  systemVariables: {
+    // user_id: 'YOU CAN DEFINE USER ID HERE',
+    // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+  },
+  userVariables: {
+    avatar_url: 'aiuser.png',
+    name: 'SKAI',
+  },
+ }
+</script>
+<script
+ src="https://udify.app/embed.min.js"
+ id="EEHX7AizWNHTwXXN"
+ defer>
+</script>
+<style>
+  #dify-chatbot-bubble-button {
+    background:linear-gradient(135deg,#fdf5b9,#f3b0f2,#fdf5b9) !important;
+    box-shadow: 0 8px 32px rgba(255,255,0,0.5);
+  }
+  #dify-chatbot-bubble-button:hover {
+    box-shadow: 0 8px 32px rgba(255,255,0,0.75);
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+    position:fixed !important;
+    z-index: 999999;
+    
+  }
+</style>
+  </body>
+</html>
