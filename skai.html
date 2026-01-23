@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay Kumaran - Data Scientist</title>
+  <link rel="icon" href="Logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+</head>
+
+  <style>
+ 
+    
+    /* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:'Inter', sans-serif;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  background-image: url("aibg.png");
+  background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.glass-container {
+  width: 100%;
+}
+
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.headgui:hover {
+  color:lightgreen;
+}
+
+
+.pp{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid lightgreen;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.epp{
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+  
+.spp{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+
+ .typing-text {
+      color: white;
+      font-size: 20em;
+      font-family: 'Space Grotesk', sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(30, end) forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }    
+    
+
+
+/* Header */
+
+
+  
+
+header h1 {
+  font-size: 4rem;
+  color: #e0f7fa;
+}
+
+h1 {
+  font-size: 30px; }
+h3 {
+  font-size: 20px;}
+h2 {
+  font-size: 25px;}
+h4 {
+  font-size: 15px;
+  }
+h5 {
+  font-size: 10px; }
+
+/* Intro Section */
+.intro {
+  margin-bottom: 2rem;
+}
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 20px;
+  text-decoration:none !important 
+}
+/* Blog Posts */
+.blog-posts {
+  display: grid;
+  gap: 1.5rem;
+
+}
+.post {
+  background: rgba(255, 255, 255, 0.1-0.3);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+
+}
+.post:hover {
+  
+}
+.post h3 {
+  margin-bottom: 0.5rem;
+}
+.post p {
+  margin-bottom: 1rem;
+
+}
+
+.respost {
+  padding: 1rem;
+  width:100%;
+
+}
+.respost h3 {
+  margin-bottom: 0.5rem;
+}
+.respost p {
+  margin-bottom: 1rem;
+
+}
+
+.projectblog-posts {
+  display: grid;
+  gap: 1.5rem;
+
+}
+.projectpost {
+  background: rgb(10, 14, 35);
+  border-radius: 30px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  height:600px;
+  width:100%;
+
+}
+.projectpost:hover {
+  transform: scale(1.01);
+  
+}
+.projectpost h3 {
+  margin-bottom: 0.5rem;
+}
+.projectpost p {
+  margin-bottom: 1rem;
+
+}
+
+.rpost {
+  align-items:center;
+  border-radius: 15px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  height:60vh;
+  color:#000;
+
+}
+.rpost h3 {
+  margin-bottom: 0.5rem;
+}
+.rpost p {
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+.card-frontend{
+    flex: 1 1 250px;
+   background-color: rgb(220, 245, 255);
+   border-radius:12px;
+}
+
+.card-frontend:hover {
+ 
+  transform: scale(1.01);
+    box-shadow: 8px 8px 16px rgba(220,245,255,0.9);
+}
+
+.navblog-posts {
+  display: grid;
+  gap: 1.5rem;
+  
+
+}
+
+    nav {
+      margin-right:-55%;
+        transform: translateX(-55%);
+      align-items:center;
+      padding: 5px;
+      border-radius:30px;
+      transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      font-size: 20px;
+      background: linear-gradient(white);
+        -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+
+
+.navpost {
+  cursor: pointer;
+  display: none;
+  border-radius: 30px;
+  padding: 1rem;
+  display: flex;
+  gap: 20px;
+
+}
+.navpost h3 {
+  margin-bottom: 0.5rem;
+}
+.navpost p {
+  margin-bottom: 1rem;
+
+}
+
+.navpost a {
+      color: gold;
+      text-decoration: none;
+      
+    }
+
+nav a:hover {
+  border-bottom: 5px solid #1BDBDA;
+
+}
+
+.headgui {
+  background: linear-gradient(to right, #1BDBDA, #20C2E8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration:none !important
+  text-decoration:none !important
+  
+}
+
+.headgui:hover {
+    background: linear-gradient(#1BDBDA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skillgui {
+  text-align:left; }
+  
+  
+.buttonguileft {
+  background-color: transparent;
+  border: 2px solid;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: #FFF;
+  cursor: pointer;
+  float:left;
+  transition: background 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  text-decoration:none !important
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.buttonguileft:hover {
+  color:#FFF;
+  background: linear-gradient(135deg,#FF0000);
+}
+
+.forceleft {
+  float:left;}
+
+.imggui {
+  border-radius:10px;
+  width:100%;
+  height:250px;
+  }
+
+
+
+.footgui {
+  color:#FFFFFF;
+  text-decoration:none !important
+  }
+
+.buttongui {
+  display: inline-block;
+  margin-left:10px;
+  margin-bottom:8px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #3A7BFF ,  #00F0FF);
+  border: 0px solid ;
+  padding: 10px 25px;
+  border-radius: 15px;
+  color: #FFF;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 8px 32px rgba(255,255,255,0.35);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.buttongui:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0,240,255,0.75);
+}
+
+.navbuttongui {
+    position: fixed;
+    position: sticky;
+  top: 0;
+  width: 100%;
+  height:40px;
+  z-index: 1000;
+  display: inline-block;
+  margin-left:10px;
+  margin-bottom:8px;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbuttongui:hover {
+    background: linear-gradient(#1BDBDA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.buttonguitheme {
+  display: inline-block;
+  margin-left:10px;
+  margin-bottom:8px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.buttonguitheme:hover {
+  color: #FFF;
+  background: linear-gradient(135deg,#FFA500,#FFA500,#FFA500,#FFFFFF,#FFFFFF,#FFFFFF);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+
+
+
+.projectgui {
+  color:red;
+  text-decoration:none !important
+}
+
+.linkgui {
+  color:white;
+  margin-right:10px;
+  text-decoration:none !important 
+   }
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  float:right;
+  }
+    
+    .resumegui {
+  border-radius:30px;
+  width:340px;
+  height:300px;
+  }
+  
+
+  
+  .cugui {
+    width:35px;
+    height:35px;
+   
+  }
+  
+  .card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+    padding: 20px;
+
+}
+
+  .scard-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+    padding: 20px;
+
+}
+
+.card {
+  flex: 1 1 250px; /* Minimum width of 250px, wraps on smaller screens */
+  transition: transform 0.3s ease;
+  text-align: center;
+    padding: 20px;
+  
+}
+
+.scard {
+  color:#fff;
+  text-align: center;
+  
+}
+
+.scard-frontends {
+  color:#fff;
+  align-items:center;
+  flex:1 1 200px;
+  text-align:center;
+  border-radius:12px;
+  height:150px;
+  padding:10px;
+  background: rgba(125, 0, 255, 0.50);
+}
+
+
+.scard-frontends:hover {
+   background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+}
+
+.scard-frontends h3:hover {
+  color:red;
+}
+
+
+.scard-frontends:hover {
+  background-color: white;
+  color:#000;
+}
+
+.themeicon {
+  border-radius:50px;
+  width:50px;
+  height:50px;
+  }
+  
+.aboutgui {
+  border-radius:10px;
+  width:100%;
+  height:300px;
+  }
+  
+header {
+  border-radius:0px;
+    background-color: rgb(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);  
+  -webkit-backdrop-filter: blur(10px); 
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 5px;
+  position: fixed;       
+  top: 0;                
+  width: max-content;           
+  z-index: 999; 
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+  padding-right:35%;
+  padding-left:12.5%;
+
+    
+}
+
+#aboutme {
+  margin-top:200px;
+  margin-left:200px;
+  margin-right:200px;
+  
+}
+  
+.introgui {
+  border-radius:0px;
+  padding-top:120px;
+  padding-bottom:100px;
+}
+
+
+
+.headingfont {
+  color: rgba(210, 255, 180);
+}
+
+  .resumegui{
+    width:800px;
+    height:540px;
+  }
+  
+    .ifguiv2{
+  }
+
+
+@media only screen and (max-width: 1024px) {
+  body {
+    background-image: url('aibgm.png');
+  }
+  .introgui {
+    padding-bottom:100px;
+  }
+  nav {
+    flex-direction: column;
+    padding-left: 30px;
+  }
+  header {
+    width: 100%;
+  }
+  .resumegui{
+    width:95%;
+    height:200px;
+  }
+  body {
+    font-family:system-ui;
+  }
+  #aboutme {
+  margin-top:5px;
+  margin-left:27.5px;
+  margin-right:27.5px;
+  }
+  .rpost {
+    height: 750px;
+  }
+  .imggui{
+    height:200px;
+    width:100%;
+  }
+  .ifguiv2{
+    height:700px;
+  }
+}
+
+</style>
+<body>
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+  if (nav.style.display === 'none') {
+    nav.style.display = 'flex';
+    nav.style.flexDirection = 'column'; // ✅ THIS LINE makes it vertical
+  } else {
+    nav.style.display = 'none';
+  }
+});
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    window.addEventListener('load', updateLayout);
+  </script>
+
+
+
+
+  <div class="glass-container">
+    <section class="introvideo">
+    <section class="navblog-posts">
+
+<header>
+  <h2><b><a href="index.html" class="headgui">Sanjay Kumaran</a></b></h2>      
+  <nav>
+    <span class="menu-toggle" id="menuToggle" style="color:black;">☰</span>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="navbuttongui">Home</a>
+      <a href="index.html#aboutme" class="navbuttongui">About</a>
+      <a href="index.html#education" class="navbuttongui">Education</a>
+      <a href="index.html#projects" class="navbuttongui">Projects️</a>
+      <a href="index.html#skills" class="navbuttongui">Skills</a>
+      <a href="index.html#resumenav" class="navbuttongui">Resume</a>
+    </div>
+  </nav>
+
+    </section>             
+</header>
+
+    <article class="introgui"> 
+    <br>
+    
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+<script>
+  const clean = DOMPurify.sanitize(userInput);
+  document.getElementById("output").innerHTML = clean;
+</script>
+  
+<meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; frame-src https://cloud.flowiseai.com;">
+
+<center>
+<iframe
+ src="https://udify.app/chatbot/EEHX7AizWNHTwXXN"
+ style="width: 70%; height: 500px; min-height: 350px;"
+ frameborder="0"
+   style="border-radius:30px;"
+  sandbox="allow-scripts allow-same-origin allow-forms"
+  referrerpolicy="no-referrer"
+  loading="lazy"
+  class="ifguiv2"
+ allow="microphone">
+</iframe></center>
+
+    
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; frame-src https://cloud.flowiseai.com;">
+
+</article>
+</section>
+    <br>
+
+    <center>
+    <h2>Contact Me</h2><br>
+    <h4><a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="mail.png" class="cugui"></a>
+    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="linkedin.png" class="cugui"></a>
+    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="github.png" class="cugui"></a></h4>
+    </center>
+
+    
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (!nav || !toggle) return;
+
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+        nav.style.flexDirection = 'column';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'row';
+      }
+    }
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        if (nav.style.display === 'none') {
+          nav.style.display = 'flex';
+          nav.style.flexDirection = 'column';
+        } else {
+          nav.style.display = 'none';
+        }
+      });
+
+
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    updateLayout();
+    }
+  });
+
+  </script>
+         
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</body>
+</html>
