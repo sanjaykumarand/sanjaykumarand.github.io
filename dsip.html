@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay Kumaran - Data Scientist</title>
+  <link rel="icon" href="Logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+</head>
+
+
+<body>
+ <div class="video-container">
+    <video autoplay muted loop id="bg-video">
+      <source src="bv.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+
+
+ <div class="content">
+
+  
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    const ifr = document.getElementById('ifgui');
+
+    function updateLayout() {
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+        
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+        
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+  if (nav.style.display === 'none') {
+    nav.style.display = 'flex';
+    nav.style.flexDirection = 'column'; 
+  } else {
+    nav.style.display = 'none';
+  }
+});
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    window.addEventListener('load', updateLayout);
+  </script>
+
+
+
+
+  <div class="glass-container">
+    <section class="navblog-posts">
+
+<header>
+  <h2><b><a href="index.html" class="headgui">Sanjay Kumaran</a></b></h2>      
+  <nav>
+    <span class="menu-toggle" id="menuToggle">☰</span>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="navbuttongui">Home</a>
+      <a href="index.html#aboutme" class="navbuttongui">About</a>
+      <a href="index.html#education" class="navbuttongui">Education</a>
+      <a href="index.html#projects" class="navbuttongui">Projects️</a>
+      <a href="index.html#skills" class="navbuttongui">Skills</a>
+      <a href="index.html#resumenav" class="navbuttongui">Resume</a>
+    </div>
+  </nav>
+
+    </section>             
+</header>
+
+ 
+    <br>
+  
+
+    <br><br>
+    <h1>Testing</h1>
+    
+
+    
+
+    <center>
+    <h2 class="headingfont">Contact Me</h2><br>
+    <h4><a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="mail.png" class="cugui"></a>
+    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="linkedin.png" class="cugui"></a>
+    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="github.png" class="cugui"></a></h4>
+    </center>
+
+    
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (!nav || !toggle) return;
+
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+        nav.style.flexDirection = 'column';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'row';
+      }
+    }
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        if (nav.style.display === 'none') {
+          nav.style.display = 'flex';
+          nav.style.flexDirection = 'column';
+        } else {
+          nav.style.display = 'none';
+        }
+      });
+
+
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    updateLayout();
+    }
+  });
+
+  </script>
+         
+    
+    
+    
+    
+    
+    
+    <script>
+ window.difyChatbotConfig = {
+  token: 'EEHX7AizWNHTwXXN',
+  inputs: {
+    // You can define the inputs from the Start node here
+    // key is the variable name
+    // e.g.
+    // name: "NAME"
+  },
+  systemVariables: {
+    // user_id: 'YOU CAN DEFINE USER ID HERE',
+    // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+  },
+  userVariables: {
+    avatar_url: 'aiuser.png',
+    name: 'SKAI',
+  },
+ }
+</script>
+<script
+ src="https://udify.app/embed.min.js"
+ id="EEHX7AizWNHTwXXN"
+ defer>
+</script>
+<style>
+  #dify-chatbot-bubble-button {
+    background:linear-gradient(135deg,#fdf5b9,#f3b0f2,#fdf5b9) !important;
+    box-shadow: 0 8px 32px rgba(255,255,0,0.5);
+  }
+  #dify-chatbot-bubble-button:hover {
+    box-shadow: 0 8px 32px rgba(255,255,0,0.75);
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+    position:fixed !important;
+    z-index: 999999;
+    
+  }
+</style>   
+    
+    
+    
+    
+    
+    
+  </div>
+      
+ </div>
+    
+ </div>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</body>
+</html>
