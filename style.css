@@ -100,6 +100,15 @@ body {
 }
 
 
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 40%;
+  font-family: Arial, sans-serif;
+}
+
 
 
   
@@ -1030,6 +1039,7 @@ header {
     width:100%;
   }
 }
+
 
 
 
