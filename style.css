@@ -693,7 +693,7 @@ footer {
   background: rgba(0,0,0);
   border:3px solid #1bdbda;
   cursor: crosshair;
-  max-width:35px;
+  max-width:50px;
   width:100%;
 }
 
@@ -1041,6 +1041,7 @@ header {
     width:100%;
   }
 }
+
 
 
 
