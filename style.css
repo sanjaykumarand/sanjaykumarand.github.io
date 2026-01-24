@@ -685,7 +685,7 @@ footer {
 .scard-frontends {
   color:#fff;
   align-items:center;
-  flex:1 1 200px;
+  flex:1 1 120px;
   text-align:center;
   border-radius:100px;
   height:150px;
@@ -693,7 +693,7 @@ footer {
   background: rgba(0,0,0);
   border:3px solid #1bdbda;
   cursor: crosshair;
-  max-width:150px;
+  min-width:150px;
   width:100%;
 }
 
@@ -1041,6 +1041,7 @@ header {
     width:100%;
   }
 }
+
 
 
 
