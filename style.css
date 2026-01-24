@@ -1055,10 +1055,11 @@ header {
   @media (max-width: 768px){
        .scard-frontends{ 
          min-width:100px;
-        max-width:100px;
+        max-width:150px;
          padding:15px;
        }
   }
+
 
 
 
