@@ -17,13 +17,13 @@
 
 
 
- <div class="content" style="align-items: left;">
+ <div class="content" >
  
   
    <div class="glass-container">
     <section class="navblog-posts">
     <header>
-  <h2><b><a href="index.html" class="headgui" style="margin-left:10px;">Sanjay Kumaran</a></b></h2>      
+  <h2><b><a href="index.html" class="headgui">Sanjay Kumaran</a></b></h2>      
   <nav>
     <span class="menu-toggle" id="menuToggle">☰</span>
     <div class="nav-links" id="navLinks">
@@ -86,7 +86,7 @@
     toggle.addEventListener('click', () => {
   if (nav.style.display === 'none') {
     nav.style.display = 'flex';
-    nav.style.flexDirection = 'column'; // ✅ THIS LINE makes it vertical
+    nav.style.flexDirection = 'column'; 
   } else {
     nav.style.display = 'none';
   }
@@ -98,14 +98,8 @@
  window.difyChatbotConfig = {
   token: 'EEHX7AizWNHTwXXN',
   inputs: {
-    // You can define the inputs from the Start node here
-    // key is the variable name
-    // e.g.
-    // name: "NAME"
   },
   systemVariables: {
-    // user_id: 'YOU CAN DEFINE USER ID HERE',
-    // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
   },
   userVariables: {
     avatar_url: 'aiuser.png',
