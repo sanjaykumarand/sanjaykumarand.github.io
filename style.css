@@ -95,8 +95,8 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  object-fit: cover;   /* Ensures video scales properly */
-  z-index: -1;         /* Pushes video behind content */
+  object-fit: cover;   
+  z-index: -1;         
 }
 
 
@@ -105,6 +105,9 @@ body {
   z-index: 1;
   color: white;
   text-align: left;
+  justify-content:left;
+  justify-items:left;
+  align-items:left;
   top: 40%;
   font-family: 'Inter', sans-serif;
 }
@@ -1059,6 +1062,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
