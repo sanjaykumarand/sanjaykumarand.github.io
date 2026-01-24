@@ -104,9 +104,9 @@ body {
   position: relative;
   z-index: 1;
   color: white;
-  
+  text-align: left;
   top: 40%;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 
