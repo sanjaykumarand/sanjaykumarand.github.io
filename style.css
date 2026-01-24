@@ -694,6 +694,7 @@ footer {
   border:3px solid #1bdbda;
   cursor: crosshair;
   min-width:150px;
+  max-width:150px;
   width:100%;
 }
 
@@ -1041,6 +1042,7 @@ header {
     width:100%;
   }
 }
+
 
 
 
