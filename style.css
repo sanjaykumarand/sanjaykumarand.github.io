@@ -689,10 +689,12 @@ footer {
   text-align:center;
   border-radius:100px;
   height:150px;
-  padding:2px;
+  padding:10px;
   background: rgba(0,0,0);
   border:3px solid #1bdbda;
   cursor: crosshair;
+  max-width:50px;
+  width:100%;
 }
 
 
@@ -1039,6 +1041,7 @@ header {
     width:100%;
   }
 }
+
 
 
 
