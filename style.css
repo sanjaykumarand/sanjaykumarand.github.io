@@ -925,8 +925,8 @@ header {
   }
   .scard-frontends {
     flex: 1 1 120px;
-    min-width:50px;
-    max-width:50px;
+    min-width:100px;
+    max-width:100px;
     padding:15px;
     
   }
@@ -1046,6 +1046,7 @@ header {
     width:100%;
   }
 }
+
 
 
 
