@@ -768,7 +768,7 @@ header {
 }
   
 .introgui {
-  padding-top:130px;
+  padding-top:150px;
 }
 
 .introvideo {
@@ -895,6 +895,8 @@ header {
   font-size: 50px;         
   display: inline-block;
   animation: bounce 1s infinite; 
+  color:lightgreen;
+  text-shadow: 0 8px 16px lightgreen;
 }
 
 @keyframes bounce {
@@ -1075,6 +1077,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
