@@ -891,6 +891,22 @@ header {
    
  }
 
+.arrow {
+  font-size: 50px;         
+  display: inline-block;
+  animation: bounce 1s infinite; 
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);   
+  }
+  50% {
+    transform: translateY(20px); 
+  }
+}
+
+
 
 
 @media (max-width: 1024px) {
@@ -1059,6 +1075,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
