@@ -43,7 +43,9 @@ body {
   gap: 10px;
 }
 
-
+#iegui{
+  margin-top: -100px;
+}
 
 .pp{
   width: 200px;
@@ -1077,6 +1079,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
