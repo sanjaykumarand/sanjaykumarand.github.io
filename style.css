@@ -44,7 +44,7 @@ body {
 }
 
 #iegui{
-  margin-top: -100px;
+  margin-top: -40px;
 }
 
 .pp{
@@ -1067,6 +1067,9 @@ header {
   #pbf{
     width:100%;
   }
+  #iegui{
+  margin-top: -100px;
+}
 }
 
 
@@ -1079,6 +1082,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
