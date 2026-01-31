@@ -833,6 +833,9 @@ header {
   color:#fff;
   font-size:30px;
   font-weight:500;
+  border-radius:12px;
+  background-color: rgba(0,0,0,0.7);
+  transparent: blur;
 }
 
 .cardfrontend1 {
@@ -1091,6 +1094,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
