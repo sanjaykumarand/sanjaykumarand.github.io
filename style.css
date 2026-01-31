@@ -641,6 +641,8 @@ footer {
   gap: 10px;
   justify-content: center;
     padding: 20px;
+    border:2px solid #fff;
+    border-radius: 12px;
 
 }
 
@@ -1085,6 +1087,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
