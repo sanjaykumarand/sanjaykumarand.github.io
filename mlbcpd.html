@@ -11,9 +11,31 @@
   
 </head>
 
+<style>
+.card-grid{
+
+}
+
+
+.introgui1{
+  margin-top:50px;
+}
+.card-frontend:hover{
+  transform: scale(1.00);
+  max-height:150px;
+  
+}
+@media only screen and (max-width: 1024px) {
+
+.introgui1{
+  margin-top:0;
+}
+}
+</style>
+
 
 <body>
- <div class="video-container">
+   <div class="video-container">
     <video autoplay muted loop id="bg-video">
       <source src="bv.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
@@ -22,22 +44,17 @@
 
 
  <div class="content">
-
-  
 <script>
     const toggle = document.getElementById('menuToggle');
     const nav = document.getElementById('navLinks');
-    const ifr = document.getElementById('ifgui');
 
     function updateLayout() {
       if (window.innerWidth <= 1024) {
         toggle.style.display = 'inline';
         nav.style.display = 'none';
-        
       } else {
         toggle.style.display = 'none';
         nav.style.display = 'flex';
-        
       }
     }
 
@@ -55,16 +72,16 @@
 
     window.addEventListener('resize', updateLayout);
     window.addEventListener('load', updateLayout);
-  </script>
+    
 
+</script>
 
 
 
   <div class="glass-container">
     <section class="navblog-posts">
-
-<header>
-  <h2><b><a href="index.html" class="headgui" >Sanjay Kumaran</a></b></h2>      
+    <header>
+  <h2><b><a href="index.html" class="headgui">Sanjay Kumaran</a></b></h2>      
   <nav>
     <span class="menu-toggle" id="menuToggle">☰</span>
     <div class="nav-links" id="navLinks">
@@ -74,41 +91,95 @@
       <a href="index.html#projects" class="navbuttongui">Projects️</a>
       <a href="index.html#skills" class="navbuttongui">Skills</a>
       <a href="index.html#resumenav" class="navbuttongui">Resume</a>
+      
     </div>
   </nav>
-
-    </section>             
 </header>
-<div style="padding-top:100px;">
-  <article>
-    <section>
-      <division>
-<h1>Machine Learning BootCamp Projects</h1><br>
-    <center><h2>Source Code</h2></center>
-    <br><a href="https://github.com/sanjaykumarand/Machine-Learning-BootCamp-Project"><button class="buttongui">️GitHub 🕵️</button></a>
-    <br><br>
+    </section>   
     
-    <br><h2>Types of projects Done:</h2><br></center>
-    <h3><br>•Disease Prediction System using K-Nearest Neighbors (KNN)<br>
-                •Classification Models using Random Forest Algorithm<br>
-                •Student Result Prediction using Linear Regression<br>
-                •Flower (Petal) Classification
-            </h3><br>><br><br><center>
-    <h2>Completion Certificate</h2><br>
-    <a href="10dmlbp.jpg"><img src="10dmlbp.jpg" style="width:300px; height:200px;"></a>
-    <br><br>
-    <a href="10dmlbp.jpg"><button class="buttongui">View this Certificate ↗️️</button></a>
-              </division>
+
+
+<article class="introgui1"> 
+    <br>
+ <section class="blog-posts" id="education">
+      <article class="post">
+      <center><h2 style="color:white;">Machine Learning BootCamp Projects</h2>
+                    <h2 class="headingfont" >This BootCamp Project Associated with a Sarvagna Innovation Private Limited Company</h2><br>
+      </center>
+              <div class="daipcard-grid">
+               <div class="daipcard-frontend" style="height:350px;" >
+              <section class="blog-posts">
+                <article class="rpost" >
+          <center>      
+<span style="color:#fff;">
+    <br><h2>Hands on Projects during BootCamp:</h2><br></center>
+    <h3><br>•Disease Prediction System using K-Nearest Neighbors (KNN).<br>
+                •Classification Models using Random Forest Algorithm.<br>
+                •Student Result Prediction using Linear Regression.<br>
+                •Flower (Petal) Classification.
+            </h3></span>
+
+            </center>
+      </article>
+    </section></div>
+    </div>
+  <div class="daipcard-grid" style="margin-top:20px;">
+               <div class="daipcard-frontend" >
+              <section class="blog-posts">
+                <article class="rpost">
+             <center>   
+<h3 style="color:white;">Classification Models and KNN(Disease Prediction)</h3><br>
+<a href="https://github.com/sanjaykumarand/Machine-Learning-BootCamp-Project/blob/0dea9490d6547c5705633e1e939d9d2c097ffeb7/Day5_%26_6MLBC.ipynb"><button class="buttongui">️GitHub 🕵️</button></a>
+         
+     </center> </article>
     </section>
-</article>
+    </div><br></div>
+  <div class="daipcard-grid">
+               <div class="daipcard-frontend">
+              <section class="blog-posts">
+                <article class="rpost">
+             <center>   
+<h3 style="color:white;">Linear Regression and Flower(Petal) Classification</h3><br>
+<a href="https://github.com/sanjaykumarand/Machine-Learning-BootCamp-Project/blob/0dea9490d6547c5705633e1e939d9d2c097ffeb7/Day1_to_4_ML_BootCamp.ipynb"><button class="buttongui">️GitHub 🕵️</button></a>
+         
+     </center> </article>
+    </section>
+    </div><br></div>
+
+          <div class="daipcard-grid">
+               <div class="daipcard-frontend" style="height:500px;">
+              <section class="blog-posts">
+                <article class="rpost">
+             <center>   
+<h3 style="color:white;">Completion Certificate</h3><br>
+<a href="10dmlbp.jpg"><img src="10dmlbp.jpg" style="width:200px; height:200px;"></a><br><br>
+<center><a href="10dmlbp.jpg"><button class="buttongui">View Completion Certificate ↗️</button></a></center>
+         
+     </center> </article>
+    </section>
+    </div><br></div>
+                  
+      </center></article>
+    </section><br><br>
+      
     
-</div>
+
+
+</article>
+</section><br>
+    
+ 
+
+
+
+
     <center>
-    <h2 class="headingfont">Contact Me</h2><br>
-    <h4><a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="mail.png" class="cugui"></a>
+    <h2 style="color:white; padding-top:210px;">Contact Me</h2><br>
+    <a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="mail.png" class="cugui"></a>
     <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="linkedin.png" class="cugui"></a>
-    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="github.png" class="cugui"></a></h4>
+    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="github.png" class="cugui"></a>
     </center>
+    
 
     
 <script>
@@ -150,15 +221,15 @@
     }
   });
 
+
+    
   </script>
          
+         
+
     
     
-    
-    
-    
-    
-    <script>
+   <script>
  window.difyChatbotConfig = {
   token: 'EEHX7AizWNHTwXXN',
   inputs: {
@@ -197,27 +268,28 @@
     z-index: 999999;
     
   }
-</style>   
+</style>    
+    
+    
+    
+
+
+    
+    
+    
+    
+    
+    </div>
     
     
     
     
     
     
-  </div>
-      
+       
  </div>
     
  </div>  
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
