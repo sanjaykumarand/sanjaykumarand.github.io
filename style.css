@@ -275,11 +275,13 @@ header h1 {
 
 .daipcard-frontend{
     flex: 1 1 125px;
-   background-color: rgba(0,0,0);
+   background-color: rgba(0,0,0,0.5);
+  transparent: blur;
    border-radius:12px;
    max-width:80%;
    height:200px;
   color: #fff;
+  border: 2px solid #fff;
 }
 
 
@@ -1083,6 +1085,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
