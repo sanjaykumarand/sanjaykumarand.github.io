@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay Kumaran - Data Scientist</title>
+  <link rel="icon" href="Logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+        body {
+			font-family:'Inter', sans-serif; 
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+		color:#fff;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        
+        .slider-container {
+            width: 90%;
+            max-width: 100%;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,125,255,0.3);
+            position: relative;
+        }
+
+       
+        .slider-wrapper {
+            display: flex;
+            width: 300%; 
+            height: 100%;
+            animation: slide-animation 12s infinite ease-in-out;
+        }
+
+       
+        .slide {
+            width: 100%;
+            position: relative;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+       
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 40px 20px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        @keyframes slide-animation {
+            0%, 25% { transform: translateX(0); }
+            33%, 58% { transform: translateX(-33.333%); }
+            66%, 91% { transform: translateX(-66.666%); }
+            100% { transform: translateX(0); }
+        }
+
+       
+ 		header{
+			font-family:'Space Grotesk', sans-serif;
+		}
+
+		      
+		#menuToggle {
+			margin-left: -50px;
+		}
+
+		#navLinks{
+			margin-left: -70px;
+		}
+    </style>
+
+  
+</head>
+
+
+<body>
+ <div class="video-container">
+    <video autoplay muted loop id="bg-video">
+      <source src="bv.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+
+
+ <div class="content">
+
+
+  <div class="glass-container">
+    <section class="navblog-posts">
+    <header>
+  <h2><b><a href="index.html" class="headgui">Sanjay Kumaran</a></b></h2>      
+  <nav>
+    <span class="menu-toggle" id="menuToggle">☰</span>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="navbuttongui">Home</a>
+      <a href="#aboutme" class="navbuttongui">About</a>
+      <a href="#education" class="navbuttongui">Education</a>
+      <a href="#projects" class="navbuttongui">Projects️</a>
+      <a href="#skills" class="navbuttongui">Skills</a>
+      <a href="SanjayKumaran-CV.pdf" class="navbuttongui">Resume</a>
+      
+    </div>
+  </nav>
+</header>
+    </section>   
+ <center>
+
+    <div class="slider-container" style="margin-top: 100px;">
+        <div class="slider-wrapper">
+            
+            <div class="slide">
+                <picture>
+        			<source media="(max-width: 1024px)" srcset="hl1-1m.jpg">
+					<img src="hl1-1.jpg" alt="pymlworkshop">
+    			</picture>
+                <div class="caption" style="text-align: left; align-items: left;">Python for ML Workshop<br>📍 IITM Research Park<br><br>
+				<a href="pymlworkshop.html"><button class="buttongui">Workshop ↗️</button></a>
+					<a href="https://www.linkedin.com/posts/sanjaykumarand_iitm-researchpark-topengineers-activity-7421484756116221952-pfzz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui">Linkedin 🔗</button></a>
+					<a href="te.jpg"><button class="buttongui">Certificate ↗️</button></a></div>
+            </div>
+
+            <div class="slide">
+                <div class="slide">
+                <picture>
+        			<source media="(max-width: 1024px)" srcset="hl1m.jpg">
+					<img src="hl1.jpg" alt="pymlworkshop">
+    			</picture>
+                <div class="caption" style="text-align: left; align-items: left;">Data Science Intern Projects<br>📍 Virtual Tech Services(On-Site)<br><br>
+				<a href="dsip.html"><button class="buttongui">Explore ↗️</button></a> 
+				<a href="dspl.png"><button class="buttongui">Certificate ↗️</button></a>
+				<a href="https://github.com/sanjaykumarand/dsip"><button class="buttongui">Github 🕵️‍♂️</button></a></div>
+            </div>
+
+            <div class="slide">
+                <div class="slide">
+                <picture>
+        			<source media="(max-width: 1024px)" srcset="hl1-2m.jpg">
+					<img src="hl1-2.jpg" alt="pymlworkshop">
+    			</picture>
+                <div class="caption" style="text-align: left; align-items: left;">Data Analysis Intern Projects<br>📍Sarvagna Innovation Private Limited(Remote)<br><br>
+				<a href="daip.html"><button class="buttongui">Explore ↗️</button></a>
+				<a href="dapl.png"><button class="buttongui">Certificate ↗️</button></a>
+				<a href="https://github.com/sanjaykumarand/DataAnalysisInternProjects"><button class="buttongui">Github 🕵️‍♂️</button></a></div>
+            </div>
+
+        </div>
+    </div>
+
+    </center>   
+
+
+    
+    
+    
+    
+    
+
+
+
+
+
+    <center>
+    <h2 style="color:  white; margin-top:100px;">Contact Me</h2><br>
+    <a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="mail.png" class="cugui"></a>
+    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="linkedin.png" class="cugui"></a>
+    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="github.png" class="cugui"></a>
+    </center>
+
+    
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+  if (nav.style.display === 'none') {
+    nav.style.display = 'flex';
+    nav.style.flexDirection = 'column'; 
+  } else {
+    nav.style.display = 'none';
+  }
+});
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    window.addEventListener('load', updateLayout);
+    
+
+</script>
+         
+         
+
+    <script>
+ window.difyChatbotConfig = {
+  token: 'EEHX7AizWNHTwXXN',
+  inputs: {
+  },
+  systemVariables: {
+  },
+  userVariables: {
+    avatar_url: 'aiuser.png',
+    name: 'SKAI',
+  },
+ }
+</script>
+<script
+ src="https://udify.app/embed.min.js"
+ id="EEHX7AizWNHTwXXN"
+ defer>
+</script>
+<style>
+  #dify-chatbot-bubble-button {
+    background:linear-gradient(135deg,#fdf5b9,#f3b0f2,#fdf5b9) !important;
+    box-shadow: 0 8px 32px rgba(255,255,0,0.5);
+  }
+  #dify-chatbot-bubble-button:hover {
+    box-shadow: 0 8px 32px rgba(255,255,0,0.75);
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+    position:fixed !important;
+    z-index: 999999;
+    
+  }
+</style>
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+ </div>
+    
+ </div>  
+    
+    
+    
+    
+    
+    
+    
+  
+</body>
+
+</html>
