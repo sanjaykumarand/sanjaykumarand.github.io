@@ -883,7 +883,7 @@ header {
 
 #resumenav{
   border:3px solid white;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(0,0,0,0.75);
   transparent:blur;
   border-radius: 12px;
   width:500px;
@@ -1088,6 +1088,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
