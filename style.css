@@ -1076,6 +1076,9 @@ header {
   #iegui{
   margin-top: -100px;
 }
+  .expnav{
+    margin-top:100px;
+  }
 }
 
 
@@ -1088,6 +1091,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
