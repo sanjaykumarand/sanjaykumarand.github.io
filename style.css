@@ -825,8 +825,8 @@ header {
 }
 
 .ifgui {
-  width:1024px;
-  height:768px;
+  width:640px;
+  height:360px;
 }
 
 .abgui{
@@ -1094,6 +1094,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
