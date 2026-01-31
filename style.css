@@ -842,7 +842,7 @@ header {
 }
 
 .gg{
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255);
   font-weight:500;
   font-size:20px;
 }
@@ -1094,6 +1094,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
