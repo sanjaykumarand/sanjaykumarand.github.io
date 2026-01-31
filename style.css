@@ -278,8 +278,8 @@ header h1 {
    background-color: rgba(0,0,0,0.85);
   transparent: blur;
    border-radius:12px;
-  min-width:100%;
-   max-width:100%;
+  min-width:1000px;
+   max-width:1000px;
    height:200px;
   color: #fff;
   border: 2px solid #fff;
@@ -1088,6 +1088,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
