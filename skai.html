@@ -580,15 +580,15 @@ header {
   text-align: left;
   top: 40%;
   font-family: 'Inter', sans-serif;
-  margin-left: -500px;
+  margin-left: -1000px;
 }
 
 
 
 
 @media only screen and (max-width: 1024px) {
-  body {
-    
+  .content {
+    margin-left: 0px;
   }
   .introgui {
     padding-bottom:100px;
@@ -654,7 +654,7 @@ header {
     toggle.addEventListener('click', () => {
   if (nav.style.display === 'none') {
     nav.style.display = 'flex';
-    nav.style.flexDirection = 'column'; // ✅ THIS LINE makes it vertical
+    nav.style.flexDirection = 'column'; 
   } else {
     nav.style.display = 'none';
   }
@@ -706,7 +706,7 @@ header {
 <center>
 <iframe
  src="https://udify.app/chatbot/EEHX7AizWNHTwXXN"
- style="width: 70%; height: 500px; min-height: 350px;"
+ style="min-width:1000px; width: 70%; height: 500px; min-height: 350px;"
  frameborder="0"
    style="border-radius:30px;"
   sandbox="allow-scripts allow-same-origin allow-forms"
