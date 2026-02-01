@@ -569,18 +569,28 @@ header {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;   
-  z-index: -2;         
+  z-index: -1;         
 }
 
 
 .content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   color: white;
   text-align: left;
   top: 40%;
   font-family: 'Inter', sans-serif;
 }
+.content .left {
+  flex: 1;   
+  padding: 40px;
+}
+
+.content .right {
+  flex: 1;   
+  padding: 40px;
+}
+
 
 
 @media only screen and (max-width: 1024px) {
