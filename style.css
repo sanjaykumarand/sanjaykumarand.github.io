@@ -1086,6 +1086,9 @@ header {
   #expnav{
     margin:500px 0px 500px 0px;
   }
+  .content {
+    background-color: rgba(0,0,0,0.01);
+  }
 }
 
 
@@ -1098,6 +1101,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
