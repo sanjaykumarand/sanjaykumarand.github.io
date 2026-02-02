@@ -109,7 +109,7 @@ body {
   text-align: left;
   top: 40%;
   font-family: 'Inter', sans-serif;
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(0,0,0,0.5);
 }
 
 
@@ -1101,6 +1101,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
