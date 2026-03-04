@@ -296,7 +296,8 @@ header h1 {
  
   transform: scale(1.01);
   box-shadow: 0px 8px 16px rgba(0,0,255,0.5);
-  filter: blur(8px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 
@@ -312,7 +313,8 @@ header h1 {
  
   transform: scale(1.01);
   box-shadow: 0px 8px 16px rgba(0,0,255,0.5);
-  filter: blur(8px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 
@@ -1105,6 +1107,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
