@@ -210,9 +210,11 @@ header h1 {
 
 .card-frontend1{
     flex: 1 1 250px;
-   background-color: rgba(0,0,0,0.5);
+     background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
    border:2px solid #0000ff;
-   color:#fff;
+   color:#000;
    border-radius:12px;
   box-shadow: 0px 8px 16px rgba(0,0,255,0.35);
   transparent: blur;
@@ -223,12 +225,16 @@ header h1 {
   transform: scale(1.01);
     border-bottom:5px solid #0000ff;
     box-shadow: 0px 8px 16px rgba(0,0,255,0.5);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .card-frontend2{
     flex: 1 1 250px;
     box-shadow: 0px 8px 16px rgba(0,255,0,0.5);
-   background-color: rgba(0,0,0,0.5);
+     background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
    border:2px solid #00ff00;
    border-radius:12px;
   transparent: blur;
@@ -241,6 +247,8 @@ header h1 {
   transform: scale(1.01);
     box-shadow: 0px 8px 16px rgba(0,255,0,0.35);
     border-bottom:5px solid #00ff00;
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 
@@ -269,21 +277,26 @@ header h1 {
 
 .card-frontend{
     flex: 1 1 250px;
-   background-color: rgba(255, 255, 255, 0.5);
+     background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
    border-radius:12px;
    width:100%;
    height:640px;
+  color:#000;
 }
 
 .daipcard-frontend{
     flex: 1 1 125px;
-   background-color: rgba(0,0,0,0.85);
+     background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
   transparent: blur;
    border-radius:12px;
   min-width:1000px;
    max-width:1000px;
    height:200px;
-  color: #fff;
+  color: #000;
   border: 2px solid #fff;
 }
 
@@ -295,25 +308,28 @@ header h1 {
  
   transform: scale(1.01);
   box-shadow: 0px 8px 16px rgba(0,0,255,0.5);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 
 .bcard-frontend{
     flex: 1 1 125px;
-   background-color: rgba(255, 255, 255,0.3);
+     background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
    border-radius:12px;
    width:100%;
    height:250px;
+  color:#000;
 }
 
 .bcard-frontend:hover {
  
   transform: scale(1.01);
   box-shadow: 0px 8px 16px rgba(0,0,255,0.5);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 
@@ -325,9 +341,11 @@ header h1 {
    max-width: 400px;
     min-width: 400px; 
     width:100%;
-    color:white;
+    color:#000;
     border:2px solid #1bdbda;
-    background-color: black;
+      background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
     min-height:570px;
     max-height: 570px;
     height: 100%;
@@ -338,6 +356,8 @@ header h1 {
  
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px #20c2e8;
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .pcard-frontend:hover h2{
@@ -699,14 +719,16 @@ footer {
 }
 
 .scard-frontends {
-  color:#fff;
+  color:#000;
   align-items:center;
   flex:1 1 120px;
   text-align:center;
   border-radius:100px;
   height:150px;
   padding:20px;
-  background: rgba(0,0,0);
+    background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
   border:3px solid #1bdbda;
   cursor: crosshair;
   min-width:150px;
@@ -721,23 +743,29 @@ footer {
    box-shadow: 0px 8px 16px rgba(255,0,0,0.5);
   transform: translateY(-5px);
   color:#20c2e8;
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .escard-frontends {
-  color:#fff;
+  color:#000;
   align-items:center;
   flex:1 1 200px;
   text-align:center;
   border-radius:12px;
   height:150px;
   padding:10px;
-  background: rgba(0,0,0);
+    background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
    border:1px solid #1bdbda;
 }
 
 .escard-frontends:hover {
   transform: scale(1.02);
    border:2px solid #20c2e8;
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .themeicon {
@@ -805,8 +833,10 @@ header {
   border-radius:30px; 
   width:60px;
   margin-bottom:5px;
-  background-color:black;
-  color:#fff;
+    background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
+  color:#000;
   font-family:system-ui;
   border:2px solid white;
   padding: 5px 10px;
@@ -817,6 +847,8 @@ header {
   border:2px solid violet;
   color:violet;
   cursor: crosshair;
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .dp{
@@ -839,13 +871,21 @@ header {
 }
 
 .abgui{
-  color:#fff;
+  color:#000;
   font-size:30px;
   font-weight:500;
   border-radius:12px;
-  background-color: rgba(0,0,0,0.7);
+    background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
   transparent: blur;
   padding: 10px;
+}
+
+.abgui{
+    box-shadow: 0 8px 16px rgba(255,255,255,0.5);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .cardfrontend1 {
@@ -898,7 +938,9 @@ header {
 
 #resumenav{
   border:3px solid white;
-  background-color: rgba(0,0,0,0.75);
+    background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
   transparent:blur;
   border-radius: 12px;
   width:500px;
@@ -1109,6 +1151,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
