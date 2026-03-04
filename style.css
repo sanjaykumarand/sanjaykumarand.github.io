@@ -546,14 +546,13 @@ nav a:hover {
   margin-left:7.5px;
   margin-bottom:8px;
   text-decoration: none;
-  background-color: rgba(0,0,0,0.5);
-  border: 3px solid #99c5ef;
+  background: linear-gradient(135deg,#6E63F2,#7D5FF3,#9459F5);
   padding: 15px 30px;
   border-radius: 12px;
   color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0,125,255,0.35);
+  box-shadow: 0 8px 16px rgba(0,0,255,0.35);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -562,8 +561,7 @@ nav a:hover {
 }
 .buttongui:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,125,255,0.5);
-  border:3px solid #20c2e8;
+  box-shadow: 0 8px 16px rgba(0,0,255,0.5);
 }
 
 .navbuttongui {
@@ -1107,6 +1105,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
