@@ -545,13 +545,16 @@ nav a:hover {
   margin-left:7.5px;
   margin-bottom:8px;
   text-decoration: none;
-  background: linear-gradient(135deg,#6E63F2,#7D5FF3,#9459F5);
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
   padding: 15px 30px;
+  border: 1px solid #fff;
   border-radius: 12px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   transition: background 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0,0,255,0.35);
+  box-shadow: 0 8px 16px rgba(255,255,255,0.25);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -560,7 +563,9 @@ nav a:hover {
 }
 .buttongui:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,255,0.5);
+  box-shadow: 0 8px 16px rgba(255,255,255,0.5);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .navbuttongui {
@@ -1104,6 +1109,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
