@@ -571,7 +571,7 @@ nav a:hover {
   padding: 15px 30px;
   border: 1px solid #fff;
   border-radius: 15px;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
   box-shadow: 0 8px 16px rgba(255,255,255,0.25);
@@ -1151,6 +1151,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
