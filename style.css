@@ -987,7 +987,7 @@ header {
 }
 
 .tconnect {
-  height:150px;
+  height:100px;
   border-radius: 12px;
   width:85%;
   flex-wrap: wrap;
@@ -1198,6 +1198,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
