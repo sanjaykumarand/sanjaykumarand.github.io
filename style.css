@@ -989,7 +989,10 @@ header {
 .tconnect {
   height:150px;
   border-radius: 12px;
-  width:1000px;
+  width:85%;
+  flex-wrap: wrap;
+  flex: 1 1 250px;
+  display: flex;
   background-color: rgba(255,255,255,0.3);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
@@ -999,7 +1002,7 @@ header {
 .gitcb{
   height:100px;
   border-radius: 12px;
-  width:333px;
+  width:25%;
   color:#000;
   flex: 1 1 125px;
   background-color: rgba(255,255,255,0.3);
@@ -1194,6 +1197,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
