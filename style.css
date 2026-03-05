@@ -975,12 +975,32 @@ header {
 
 
 .fname{
-  padding-top:10px;
+  padding-top:15px;
   padding-left:10px;
 }
 
 .footer{
   height:50px;
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.tconnect {
+  height:150px;
+  border-radius: 12px;
+  width:1000px;
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+.gitcb{
+  height:100px;
+  border-radius: 12px;
+  width:333px;
+  color:#000;
   background-color: rgba(255,255,255,0.3);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
@@ -1154,6 +1174,13 @@ header {
   .fname{
   padding-top:0px;
 }
+  .tconnect{
+    width:100%;
+    height:600px;
+  }
+  .gitcb{
+    width:100%;
+  }
 }
 
 
@@ -1166,6 +1193,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
