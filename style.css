@@ -844,8 +844,8 @@ header {
 }
 
 .psb:hover {
-  border:2px solid violet;
-  color:violet;
+  border:2px solid red;
+  color:red;
   cursor: crosshair;
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
@@ -1151,6 +1151,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
