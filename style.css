@@ -978,6 +978,9 @@ header {
 
 .sml{
   position: center;
+  justify-content: center;
+  align-items:center;
+  justify-items: center;
 }
 
 .footer{
@@ -1164,6 +1167,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
