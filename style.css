@@ -974,8 +974,8 @@ header {
 
 
 
-.sml{
-  float: center;
+.fname{
+  margin-top:25px;
 }
 
 .footer{
@@ -1150,6 +1150,9 @@ header {
   .content {
     background-color: rgba(0,0,0,0.01);
   }
+  .fname{
+  margin-top:0px;
+}
 }
 
 
@@ -1162,6 +1165,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
