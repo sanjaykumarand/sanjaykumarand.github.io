@@ -1002,7 +1002,7 @@ header {
   border-radius: 12px;
   width:333px;
   color:#000;
-  flex: 1 1 125px;
+
   background-color: rgba(255,255,255,0.3);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
@@ -1195,6 +1195,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
