@@ -1010,6 +1010,11 @@ header {
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
 }
+
+.gitcb:hover{
+  border-bottom: 5px solid white;
+}
+  
 .sml{
   margin-top: -25px;
 }
@@ -1206,6 +1211,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
