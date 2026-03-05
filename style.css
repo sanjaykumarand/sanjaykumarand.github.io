@@ -549,7 +549,7 @@ nav a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size:15px;
-  color:#000;
+  color:#fff;
     padding: 10px;
 }
 .d1buttongui:hover {
@@ -1211,6 +1211,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
