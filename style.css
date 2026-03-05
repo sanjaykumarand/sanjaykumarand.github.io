@@ -987,7 +987,7 @@ header {
 }
 
 .tconnect {
-  height:133px;
+  height:132px;
   border-radius: 12px;
   width:85%;
   flex-wrap: wrap;
@@ -1012,7 +1012,7 @@ header {
 }
 
 .gitcb:hover{
-  box-shadow: 0 8px 16px #20c2e8;
+  box-shadow: 0 4px 8px #20c2e8;
 }
   
 .sml{
@@ -1211,6 +1211,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
