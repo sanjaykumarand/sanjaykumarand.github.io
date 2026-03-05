@@ -972,19 +972,14 @@ header {
   }
 }
 
-.fname{
-  position: left;
-}
+
 
 .sml{
-  position: center;
-  justify-content: center;
-  align-items:center;
-  justify-items: center;
+  float: center;
 }
 
 .footer{
-  height:50px;
+  height:70px;
   background-color: rgba(255,255,255,0.3);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
@@ -1167,6 +1162,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
