@@ -526,7 +526,7 @@ nav a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size:15px;
-  color:#000;
+  color:#fff;
 }
 .dbuttongui:hover {
   border:1px solid #20c2e8;
@@ -1211,6 +1211,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
