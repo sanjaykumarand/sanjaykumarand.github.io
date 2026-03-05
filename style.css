@@ -975,7 +975,7 @@ header {
 
 
 .fname{
-  margin-top:25px;
+  padding-top:25px;
 }
 
 .footer{
@@ -1151,7 +1151,7 @@ header {
     background-color: rgba(0,0,0,0.01);
   }
   .fname{
-  margin-top:0px;
+  padding-top:0px;
 }
 }
 
@@ -1165,6 +1165,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
