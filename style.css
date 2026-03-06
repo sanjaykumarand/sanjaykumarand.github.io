@@ -403,25 +403,26 @@ header h1 {
     box-shadow: 0px 8px 16px #20c2e8;
   background: linear-gradient(
     	135deg,
-    	rgba(255, 215, 0, 0.8 ),   
+    	rgba(255, 215, 0, 0.9 ),   
     	rgba(255, 165, 0, 0.6), 
         rgba(255, 165, 0, 0.6), 
-    	rgba(255, 215, 0, 0.8)    
+    	rgba(255, 215, 0, 0.9)    
       );
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
 }
 
 .goldpcard-frontend:hover h2{
-    color: #000;
+    color: #fff;
+  text-shadow: 0 3px 4px #fff;
 }
 
 .goldpcard-frontend h2 {
-  color: #000;
+  color: #fff;
 }
 
   .goldpcard-frontend h3 {
-    color:black;
+    color:fff;
   }
 
 
@@ -432,7 +433,7 @@ header h1 {
    max-width: 400px;
     min-width: 400px; 
     width:100%;
-    color:#000;
+    color:#fff;
     border:2px solid #1bdbda;
     background: linear-gradient(
     135deg,
@@ -464,15 +465,16 @@ header h1 {
 }
 
 .silverpcard-frontend:hover h2{
-    color: green;
+    color: fff;
+  text-shadow: 0 3px 4px #fff;
 }
 
 .silverpcard-frontend h2 {
-  color: #ff0000;
+  color: #fff;
 }
 
   .silverpcard-frontend h3 {
-    color:green;
+    color:#fff;
   }
 
 
@@ -1319,6 +1321,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
