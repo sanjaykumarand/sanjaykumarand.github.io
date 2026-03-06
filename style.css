@@ -382,7 +382,7 @@ header h1 {
     min-width: 400px; 
     width:100%;
     color:#fff;
-    border:2px solid #1bdbda;
+    border:1px solid gold;
       background: linear-gradient(
     	135deg,
     	rgba(255, 215, 0, 0.3),   
@@ -433,7 +433,7 @@ header h1 {
     min-width: 400px; 
     width:100%;
     color:#fff;
-    border:2px solid #1bdbda;
+    border:1px solid silver;
     background: linear-gradient(
     135deg,
     rgba(230,230,230,0.3),   
@@ -1320,6 +1320,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
