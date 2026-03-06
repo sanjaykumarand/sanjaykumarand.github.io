@@ -1204,6 +1204,18 @@ header {
     min-height: 500px;
     max-height: 500px;
   }
+  .goldpcard-frontend {
+    max-width:100%;
+    min-width: 100%;
+    min-height: 500px;
+    max-height: 500px;
+  }
+  .silverpcard-frontend {
+    max-width:100%;
+    min-width: 100%;
+    min-height: 500px;
+    max-height: 500px;
+  }
 
   #education {
     padding-top:75px;
@@ -1320,6 +1332,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
