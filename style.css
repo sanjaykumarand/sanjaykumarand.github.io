@@ -400,7 +400,7 @@ header h1 {
 .goldpcard-frontend:hover {
  
     transform: translateY(-5px);
-    box-shadow: 0px 8px 16px #20c2e8;
+    box-shadow: 0px 8px 16px gold;
   background: linear-gradient(
     	135deg,
     	rgba(255, 215, 0, 0.9 ),   
@@ -452,7 +452,7 @@ header h1 {
 .silverpcard-frontend:hover {
  
     transform: translateY(-5px);
-    box-shadow: 0px 8px 16px #20c2e8;
+    box-shadow: 0px 8px 16px silver;
   background: linear-gradient(
     135deg,
     rgba(230,230,230,0.95),   
@@ -1321,6 +1321,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
