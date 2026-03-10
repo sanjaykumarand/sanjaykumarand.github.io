@@ -1013,7 +1013,7 @@ header {
   
 }
 #projects {
-  margin-top: 250px;
+  margin-top: 350px;
   margin-bottom: -50px;
   transform: scale(0.9);
   border-radius:12px;
@@ -1332,6 +1332,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
