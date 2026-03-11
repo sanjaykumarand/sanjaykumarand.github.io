@@ -1128,6 +1128,12 @@ header {
   margin-top: -25px;
 }
 
+.icointro{
+  width: 200px;
+  height: 200px;
+}
+  
+
 @media (max-width: 1024px) {
   .introvideo {
     background-image: url('bgm.png');
@@ -1334,6 +1340,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
