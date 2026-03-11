@@ -300,6 +300,11 @@ header h1 {
   border: 2px solid #000;
 }
 
+.daipcard-frontend:hover {
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
 
 
 
@@ -1340,6 +1345,7 @@ header {
          padding:15px;
        }
   }
+
 
 
 
