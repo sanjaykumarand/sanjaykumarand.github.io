@@ -16,7 +16,7 @@ head{
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #FAFCFF, #E9F4FE);
+  background: linear-gradient(135deg, #FAFCFF, #E9F4FE, #add8e6);
   background-size: cover;
   background-repeat: no-repeat;
   color: #000;
@@ -679,7 +679,7 @@ nav a:hover {
   margin-left:7.5px;
   margin-bottom:8px;
   text-decoration: none;
-  background: linear-gradient(135deg, #1bdbda, #20c2e8);
+  background: linear-gradient(135deg, #1bdbda, #20c2e8, #1bdbda);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4px);
   padding: 15px 30px;
@@ -693,6 +693,7 @@ nav a:hover {
   text-overflow: ellipsis;
   font-size:15px;
   font-weight: bold;
+  border: 0px;
 }
 .buttongui:hover {
   transform: translateY(-5px);
