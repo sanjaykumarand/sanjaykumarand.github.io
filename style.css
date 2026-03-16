@@ -16,7 +16,7 @@ head{
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: white;
+  background: linear-gradient(90 deg, #FAFCFF, #E9F4FE);
   background-size: cover;
   background-repeat: no-repeat;
   color: #000;
@@ -1005,7 +1005,7 @@ header {
 }
 
 .gg{
-  color: rgba(255,255,255);
+  color: #000;
   font-weight:500;
   font-size:20px;
 }
