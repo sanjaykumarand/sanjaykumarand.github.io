@@ -16,7 +16,7 @@ head{
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: black;
+  background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
   color: #000;
@@ -679,7 +679,7 @@ nav a:hover {
   margin-left:7.5px;
   margin-bottom:8px;
   text-decoration: none;
-  background-color: rgba(255,255,255,0.3);
+  background: linear-gradient(135deg, #1bdbda, #20c2e8);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4px);
   padding: 15px 30px;
