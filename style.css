@@ -19,7 +19,7 @@ body {
   background: linear-gradient(135deg, #FAFCFF, #E9F4FE, #add8e6);
   background-size: cover;
   background-repeat: no-repeat;
-  color: #000;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +76,7 @@ body {
 
  .typing-text {
       padding-top:10px;
-      color: #000;
+      color: #fff;
       font-size:35px;
       font-family: 'Space Grotesk', sans-serif;
       white-space: nowrap;
@@ -679,7 +679,7 @@ nav a:hover {
   margin-left:7.5px;
   margin-bottom:8px;
   text-decoration: none;
-  background: linear-gradient(135deg, #1bdbda, #20c2e8, #1bdbda);
+  background: linear-gradient(135deg, #fff7ad, #ffa9f9, #fff7ad);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4px);
   padding: 15px 30px;
@@ -687,7 +687,7 @@ nav a:hover {
   color: #000;
   cursor: pointer;
   transition: background 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0,0,255,0.25);
+  box-shadow: 0 8px 16px rgba(255, 182, 193,0.25);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -696,8 +696,9 @@ nav a:hover {
   border: 0px;
 }
 .buttongui:hover {
+  background: linear-gradient(135deg, #ffa9f9, #fff7ad, #ffa9f9);
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,255,0.5);
+  box-shadow: 0 8px 16px rgba(255, 182, 193,0.5);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
 }
