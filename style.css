@@ -386,7 +386,7 @@ header h1 {
    max-width: 400px;
     min-width: 400px; 
     width:100%;
-    color:#fff;
+    color:#000;
     border:1px solid gold;
       background: linear-gradient(
     	135deg,
@@ -417,12 +417,12 @@ header h1 {
 }
 
 .goldpcard-frontend:hover h2{
-    color: #fff;
-  text-shadow: 0 0.5px 1px #fff;
+    color: #000;
+  text-shadow: 0 0.5px 1px #000;
 }
 
 .goldpcard-frontend h2 {
-  color: #fff;
+  color: #000;
 }
 
   .goldpcard-frontend h3 {
@@ -437,7 +437,7 @@ header h1 {
    max-width: 400px;
     min-width: 400px; 
     width:100%;
-    color:#fff;
+    color:#000;
     border:1px solid silver;
     background: linear-gradient(
     135deg,
@@ -469,16 +469,16 @@ header h1 {
 }
 
 .silverpcard-frontend:hover h2{
-    color: #fff;
-  text-shadow: 0 0.5px 1px #fff;
+    color: #000;
+  text-shadow: 0 0.5px 1px #000;
 }
 
 .silverpcard-frontend h2 {
-  color: #fff;
+  color: #000;
 }
 
   .silverpcard-frontend h3 {
-    color:#fff;
+    color:#000;
   }
 
 
@@ -683,7 +683,6 @@ nav a:hover {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4px);
   padding: 15px 30px;
-  border: 1px solid #fff;
   border-radius: 15px;
   color: #000;
   cursor: pointer;
