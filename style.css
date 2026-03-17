@@ -1335,7 +1335,7 @@ header {
     height: 75px;
   }
   .content{
-    z-index: 2;
+    z-index: -2;
   }
 }
 
