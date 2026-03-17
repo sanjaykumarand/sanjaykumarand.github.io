@@ -1334,6 +1334,9 @@ header {
   .footer{
     height: 75px;
   }
+  .content{
+    z-index: 2;
+  }
 }
 
 
