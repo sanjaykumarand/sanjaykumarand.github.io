@@ -566,7 +566,7 @@ nav a:hover {
 }
 
 .headgui {
-  background: linear-gradient(to right, #1BDBDA, #20C2E8);
+  background: linear-gradient(to right, gold);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration:none !important
