@@ -79,6 +79,7 @@ body {
     border-radius: 12px;
     max-width: fit-content;
     padding: 0px 5px 1px 5px;
+    text-align: left;
   }
 
 .epp{
