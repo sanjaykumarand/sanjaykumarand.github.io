@@ -1013,8 +1013,8 @@ header {
 }
 
 .techypic{
-  width:700px;
-  height:560px;
+  width:500px;
+  height:500px;
 }
 
 
@@ -1349,9 +1349,14 @@ header {
     padding-bottom: 230px;
   }
   .techypic{
-  width:200px;
-  height:200px;
+  width:250px;
+  height:250px;
 }
+  .Acard-frontend{
+    font-size:10px;
+    font-weight:600;
+    height:500px;
+  }
 }
 
 
