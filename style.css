@@ -48,8 +48,8 @@ body {
 }
 
 .pp{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
@@ -109,7 +109,6 @@ body {
   text-align: left;
   top: 40%;
   font-family: 'Inter', sans-serif;
-  background-color: rgba(0,0,0,0.3);
 }
 
 
@@ -212,8 +211,8 @@ header h1 {
 .card-frontend1{
     flex: 1 1 250px;
      background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
    border:0px;
    color:#000;
    border-radius:12px;
@@ -226,16 +225,15 @@ header h1 {
   transform: scale(1.01);
     border-bottom:2px solid #0000ff;
     box-shadow: 0px 4px 8px rgba(0,0,255,0.5);
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+
 }
 
 .card-frontend2{
     flex: 1 1 250px;
     box-shadow: 0px 8px 16px rgba(0,255,0,0.5);
      background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
    border:0px;
    border-radius:12px;
   transparent: blur;
@@ -248,8 +246,7 @@ header h1 {
   transform: scale(1.01);
     box-shadow: 0px 4px 8px rgba(0,255,0,0.35);
     border-bottom:2px solid #00ff00;
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+
 }
 
 
@@ -279,8 +276,8 @@ header h1 {
 .card-frontend{
     flex: 1 1 250px;
      background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
    border-radius:12px;
    width:100%;
    height:640px;
@@ -290,8 +287,8 @@ header h1 {
 .daipcard-frontend{
     flex: 1 1 125px;
      background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
   transparent: blur;
    border-radius:12px;
   min-width:1000px;
@@ -301,29 +298,20 @@ header h1 {
   border: 2px solid #000;
 }
 
-.daipcard-frontend:hover {
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
-
-
 
 
 .card-frontend:hover {
  
   transform: scale(1.01);
   box-shadow: 0px 8px 16px rgba(0,0,255,0.5);
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
 }
 
 
 .bcard-frontend{
     flex: 1 1 125px;
      background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
    border-radius:12px;
    width:100%;
    height:250px;
@@ -334,8 +322,7 @@ header h1 {
  
   transform: scale(1.01);
   box-shadow: 0px 8px 16px rgba(0,0,255,0.5);
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+
 }
 
 
@@ -350,8 +337,8 @@ header h1 {
     color:#000;
     border:2px solid #1bdbda;
       background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px)
     min-height:570px;
     max-height: 570px;
     height: 100%;
@@ -362,8 +349,7 @@ header h1 {
  
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px #20c2e8;
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+;
 }
 
 .pcard-frontend:hover h2{
@@ -395,8 +381,8 @@ header h1 {
     	rgba(255, 165, 0, 0.15),  
     	rgba(255, 215, 0, 0.3)    
       );
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
     min-height:570px;
     max-height: 570px;
     height: 100%;
@@ -413,8 +399,7 @@ header h1 {
     	rgba(255, 165, 0, 0.75),  
     	rgba(255, 215, 0, 0.9)    
       );
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+
 }
 
 .goldpcard-frontend:hover h2{
@@ -446,8 +431,8 @@ header h1 {
     rgba(200,200,200,0.15),  
     rgba(240,240,240,0.3)    
   );
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
     min-height:570px;
     max-height: 570px;
     height: 100%;
@@ -465,8 +450,7 @@ header h1 {
     rgba(200,200,200,0.5),  
     rgba(240,240,240,0.95)    
   );
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+
 }
 
 .silverpcard-frontend:hover h2{
@@ -843,8 +827,8 @@ footer {
   height:150px;
   padding:20px;
     background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
   border:3px solid #1bdbda;
   cursor: crosshair;
   min-width:150px;
@@ -859,8 +843,7 @@ footer {
    box-shadow: 0px 8px 16px rgba(255,0,0,0.5);
   transform: translateY(-5px);
   color:#ff0000;
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+
 }
 
 .escard-frontends {
@@ -872,16 +855,15 @@ footer {
   height:150px;
   padding:10px;
     background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
    border:1px solid #1bdbda;
 }
 
 .escard-frontends:hover {
   transform: scale(1.02);
    border:2px solid #20c2e8;
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+
 }
 
 .themeicon {
@@ -992,20 +974,16 @@ header {
   font-weight:500;
   border-radius:12px;
     background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 16px rgba(255,255,255,0.5);
   transparent: blur;
   padding: 10px;
 }
 
-.abgui{
-    box-shadow: 0 8px 16px rgba(255,255,255,0.5);
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
-}
 
-.cardfrontend1 {
-}
+
+
 
 .gg{
   color: #fff;
@@ -1014,9 +992,7 @@ header {
 }
 
 .gga{
-  background-color: rgba(255,255,255, 0.5);
-  border-radius: 20px;
-  font-weight:505;
+  font-weight:600;
   
 }
 #projects {
