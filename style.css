@@ -1050,8 +1050,8 @@ header {
 #resumenav{
   border:3px solid white;
     background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
   transparent:blur;
   border-radius: 12px;
   width:500px;
