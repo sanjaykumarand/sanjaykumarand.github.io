@@ -35,6 +35,7 @@ body {
   -webkit-backdrop-filter: blur(20px);
   color:#000;
   border-radius: 12px;
+  padding-bottom: 70px;
 }
 
   
@@ -1328,6 +1329,9 @@ header {
   }
   .footer{
     height: 75px;
+  }
+  .homie{
+    padding-bottom: 230px;
   }
 }
 
