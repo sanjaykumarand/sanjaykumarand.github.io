@@ -129,7 +129,7 @@ body {
   text-align: left;
   top: 40%;
   font-family: 'Inter', sans-serif;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.5);
 }
 
 
@@ -1322,9 +1322,7 @@ header {
   #expnav{
     margin:500px 0px 500px 0px;
   }
-  .content {
-    background-color: rgba(0,0,0,0.01);
-  }
+
   .fname{
   padding-top:0px;
 }
