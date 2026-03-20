@@ -1047,7 +1047,7 @@ header {
   
 }
 #projects {
-  margin-top: 200px;
+  margin-top: 50px;
   margin-bottom: -50px;
   transform: scale(0.9);
   border-radius:12px;
@@ -1289,7 +1289,7 @@ header {
   max-width:100%;
 }
 #projects {
-    margin-top: 200px;
+    margin-top: 50px;
   margin-bottom: -180px;
   transform: scale(1.00);
 }
