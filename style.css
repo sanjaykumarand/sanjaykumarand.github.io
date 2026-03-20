@@ -860,6 +860,7 @@ footer {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4px);
   min-height:1125px; 
+  border-radius: 12px;
 }  
 
 .scard-frontends {
