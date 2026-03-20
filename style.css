@@ -799,7 +799,7 @@ footer {
   flex-wrap: wrap;
   gap: 4px;
   justify-content: center;
-    padding: 5px;
+    padding: 20px;
 
 }
 
@@ -1373,6 +1373,9 @@ header {
   }
   .scard-frontend{
     min-height:1000px;
+  }
+  .card-grid{
+    padding: 5px;
   }
 }
 
