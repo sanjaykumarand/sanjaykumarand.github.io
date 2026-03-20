@@ -130,6 +130,8 @@ body {
   top: 40%;
   font-family: 'Inter', sans-serif;
   background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  min-width: 100%;
 }
 
 
