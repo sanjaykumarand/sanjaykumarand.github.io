@@ -797,9 +797,9 @@ footer {
     flex: 1 1 250px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 4px;
   justify-content: center;
-    padding: 20px;
+    padding: 5px;
 
 }
 
@@ -874,8 +874,8 @@ footer {
   height:150px;
   padding:20px;
     background-color: rgba(0,0,0,0.3);
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(10px);
   border:3px solid #1bdbda;
   cursor: crosshair;
   min-width:150px;
@@ -885,6 +885,9 @@ footer {
 
 
 .scard-frontends:hover {
+      background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
    border-bottom:3px solid #ff0000;
    border:3px solid #ff0000;
    box-shadow: 0px 8px 16px rgba(255,0,0,0.5);
@@ -984,16 +987,16 @@ header {
     background-color: rgba(255,255,255,0.3);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4px);
-  color:gold;
+  color:#fff;
   font-family:system-ui;
-  border:2px solid gold;
+  border:2px solid white;
   padding: 5px 10px;
   font-weight:bold;
 }
 
 .psb:hover {
-  border:2px solid red;
-  color:red;
+  border:2px solid gold;
+  color:gold;
   cursor: crosshair;
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
@@ -1023,7 +1026,7 @@ header {
   font-size:30px;
   font-weight:500;
   border-radius:12px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .techypic{
