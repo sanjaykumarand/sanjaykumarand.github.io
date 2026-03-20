@@ -859,8 +859,8 @@ footer {
 
 .scard-frontend{
   background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
   min-height:980px; 
   border-radius: 12px;
 }  
@@ -885,14 +885,12 @@ footer {
 
 
 .scard-frontends:hover {
-      background-color: rgba(0,0,0,0.6);
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+      background-color: rgba(0,0,0,1);
    border-bottom:3px solid #ff0000;
    border:3px solid #ff0000;
    box-shadow: 0px 8px 16px rgba(255,0,0,0.5);
   transform: translateY(-5px);
-  color:#ff0000;
+  color:gold;
 
 }
 
@@ -916,6 +914,7 @@ footer {
       background-color: rgba(0,0,0,1);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 16px #1bdbda;
 
 }
 
