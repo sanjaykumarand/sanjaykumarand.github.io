@@ -857,8 +857,9 @@ footer {
 
 .scard-frontend{
   background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
+  min-height:1125px; 
 }  
 
 .scard-frontends {
@@ -1360,6 +1361,9 @@ header {
   .abgui{
     font-size: 16.5px;
     font-weight: none;
+  }
+  .scard-frontend{
+    min-height:780px;
   }
 }
 
