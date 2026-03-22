@@ -1124,22 +1124,10 @@ header {
     height:250px;
   }
   .pcard-frontend {
-    max-width:100%;
-    min-width: 100%;
-    min-height: 500px;
-    max-height: 500px;
-  }
-  .goldpcard-frontend {
-    max-width:100%;
-    min-width: 100%;
-    min-height: 500px;
-    max-height: 500px;
-  }
-  .silverpcard-frontend {
-    max-width:100%;
-    min-width: 100%;
-    min-height: 500px;
-    max-height: 500px;
+    max-width:90%;
+    min-width: 90%;
+    min-height: 550px;
+    max-height: 550px;
   }
 
   #education {
