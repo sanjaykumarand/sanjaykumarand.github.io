@@ -512,9 +512,12 @@ nav a:hover {
   border-radius:10px;
   width:100%;
   height:250px;
+  transform: scale(1.01);
   }  
   
-
+primggui:hover{
+  transform: scale(1.02);
+}
 
   
 .mpimggui {
