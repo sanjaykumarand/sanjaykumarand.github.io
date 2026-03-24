@@ -339,7 +339,7 @@ header h1 {
 .card-frontend:hover {
  
   transform: scale(1.01);
-  box-shadow: 0px 8px 16px rgba(0,0,255,0.5);
+  box-shadow: 0px 4px 8px rgba(255,0,0,0.5);
 }
 
 
