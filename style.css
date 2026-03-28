@@ -1074,6 +1074,8 @@ header {
   }
   body {
     font-size: 1rem;
+    margin: 0;
+    overflow-x: hidden;
   }
   #aboutme {
   margin-top:5px;
@@ -1248,6 +1250,11 @@ header {
   .card-grid{
     padding: 5px;
   }
+  p, h1, h2, h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
 }
 
 
