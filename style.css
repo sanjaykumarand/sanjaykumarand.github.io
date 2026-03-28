@@ -100,14 +100,7 @@ body {
       color: #fff;
       font-size:35px;
       font-family: 'Space Grotesk', sans-serif;
-      display: block;         
-      white-space: normal;     
-      overflow-wrap: break-word;
-      word-break: break-word;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
+      white-space: nowrap;
       animation: typing 4s steps(30, end) forwards;
     }
 
@@ -925,7 +918,7 @@ header {
 .gg{
   color: #fff;
   font-weight:600;
-  font-size:25px;
+  font-size:20px;
 }
 
 .gga{
@@ -1267,6 +1260,12 @@ header {
   html {
   -webkit-text-size-adjust: 100%;
 }
+  .gg{
+    font-size:15px;
+     word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
 }
 
 
