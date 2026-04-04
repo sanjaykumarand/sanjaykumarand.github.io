@@ -1144,7 +1144,7 @@ header {
     height:200px;
   }
   .typing-text{
-    font-size:15px;
+    font-size:12px;
   }
   .navbuttongui {
     margin-left: -50%;
@@ -1279,15 +1279,6 @@ header {
         max-width:150px;
          padding:15px;
        }
-    .typing-text{
-      transform: scale(0.98);
-    }
-    .gg{
-      transform: scale(0.98);
-    }
-    .abgui{
-      transform: scale(0.98);
-    }
   }
 
 
