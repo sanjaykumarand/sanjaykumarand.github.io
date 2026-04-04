@@ -1049,7 +1049,7 @@ header {
   width: 200px;
   height: 200px;
 }
-  
+  .gg{}
 
 @media (max-width: 1024px) {
   .introvideo {
@@ -1279,6 +1279,15 @@ header {
         max-width:150px;
          padding:15px;
        }
+    .typing-text{
+      transform: scale(0.99);
+    }
+    .gg{
+      transform: scale(0.99);
+    }
+    .abgui{
+      transform: scale(0.99);
+    }
   }
 
 
