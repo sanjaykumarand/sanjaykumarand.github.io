@@ -617,9 +617,7 @@ nav a:hover {
   .slbuttongui {
   display: inline-block;
   text-decoration: none;
-  background-color: rgba(255,255,255, 0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(255,255,255, 0.1);
   padding: 10px 10px;
   border-radius: 50px;
   color: #000;
