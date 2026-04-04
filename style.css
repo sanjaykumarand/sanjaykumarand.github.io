@@ -614,6 +614,35 @@ nav a:hover {
   -webkit-backdrop-filter: blur(20px);
 }
 
+  .slbuttongui {
+  display: inline-block;
+  margin-left:7.5px;
+  margin-bottom:8px;
+  text-decoration: none;
+  background-color: rgba(255,255,255, 0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 8px 16px rgba(255, 255, 255,0.25);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size:15px;
+  font-weight: bold;
+  border: 0px;
+}
+.slbuttongui:hover {
+  background-color: rgba(255,255,255, 0.6);
+  transform: scale(1.01);
+  box-shadow: 0 8px 16px rgba(255, 255, 255,0.5);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
 .navbuttongui {
   top: 0;
   width: 100%;
