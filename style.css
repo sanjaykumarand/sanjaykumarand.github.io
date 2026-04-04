@@ -624,7 +624,7 @@ nav a:hover {
   -webkit-backdrop-filter: blur(4px);
   padding: 10px 20px;
   border-radius: 50px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   transition: background 0.3s ease;
   box-shadow: 0 8px 16px rgba(255, 255, 255,0.25);
