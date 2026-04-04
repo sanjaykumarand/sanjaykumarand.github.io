@@ -1079,7 +1079,9 @@ header {
   height: 200px;
 }
   .gg{}
-
+.gga{
+  font-size: 20px;
+}
 @media (max-width: 1024px) {
   .introvideo {
     background-image: url('bgm.png');
