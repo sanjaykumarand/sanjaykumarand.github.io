@@ -1280,13 +1280,13 @@ header {
          padding:15px;
        }
     .typing-text{
-      transform: scale(0.99);
+      transform: scale(0.98);
     }
     .gg{
-      transform: scale(0.99);
+      transform: scale(0.98);
     }
     .abgui{
-      transform: scale(0.99);
+      transform: scale(0.98);
     }
   }
 
