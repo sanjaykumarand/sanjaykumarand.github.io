@@ -1282,8 +1282,8 @@ header {
     .abgui{
       transform: scale(0.9);
     }
-    header{
-      padding-left: -20px;
+    .menu-toggle{
+      padding-left: -10px;
     }
   }
 
