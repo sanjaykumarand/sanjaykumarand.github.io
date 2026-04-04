@@ -628,7 +628,7 @@ nav a:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size:15px;
+  font-size:25px;
   font-weight: bold;
   border: 0px;
 }
