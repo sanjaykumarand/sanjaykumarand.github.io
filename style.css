@@ -371,7 +371,6 @@ header h1 {
     min-width: 400px; 
     width:100%;
     color:#fff;
-    border:2px solid #1bdbda;
       background-color: rgba(0,0,0,1);
     min-height:570px;
     max-height: 570px;
@@ -380,7 +379,7 @@ header h1 {
 }
 
 .pcard-frontend:hover {
- 
+     border:2px solid #1bdbda;
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px #20c2e8;
 }
