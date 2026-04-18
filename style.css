@@ -804,6 +804,14 @@ footer {
 
 }
 
+  .scard-frontends h6{
+    visibility: hidden;
+  }
+
+    .scard-frontends h6:hover{
+    visibility: visible;
+  }
+
 .escard-frontends {
   color:#fff;
   align-items:center;
