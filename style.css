@@ -322,7 +322,7 @@ header h1 {
 
 .daipcard-frontend{
     flex: 1 1 125px;
-     background-color: rgba(255,255,255,0.3);
+     background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
   transparent: blur;
@@ -330,8 +330,8 @@ header h1 {
   min-width:1000px;
    max-width:1000px;
    height:200px;
-  color: #000;
-  border: 2px solid #000;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.4);
 }
 
 
