@@ -589,7 +589,7 @@ nav a:hover {
   margin-left:7.5px;
   margin-bottom:8px;
   text-decoration: none;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 15px 30px;
@@ -602,12 +602,12 @@ nav a:hover {
   text-overflow: ellipsis;
   font-size:15px;
   font-weight: 600;
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.3);
 }
 .buttongui:hover {
- background-color: rgba(0,0,0,0.3);
+ background-color: rgba(255,255,255,0.2);
   transform: scale(1.01);
-  box-shadow: 0 8px 32px rgba(0, 0, 0,0.4);
+  box-shadow: 0 8px 32px rgba(255, 255, 255,0.4);
 }
 
   .slbuttongui {
