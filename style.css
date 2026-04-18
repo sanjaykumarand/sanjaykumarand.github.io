@@ -808,7 +808,7 @@ footer {
     visibility: hidden;
   }
 
-    .scard-frontends h6:hover{
+    .scard-frontends:hover h6{
     visibility: visible;
   }
 
