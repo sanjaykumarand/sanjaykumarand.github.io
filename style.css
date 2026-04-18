@@ -73,7 +73,7 @@ body {
 }
 
   .hui{
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
     backdrop-filter: blur(19px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: 12px;
@@ -1266,7 +1266,7 @@ header {
   }
   .abgui{
     font-size: 16.5px;
-    font-weight: none;
+    font-weight: 500;
   }
   .scard-frontend{
     min-height:1000px;
