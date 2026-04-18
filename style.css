@@ -602,7 +602,7 @@ nav a:hover {
   text-overflow: ellipsis;
   font-size:15px;
   font-weight: 600;
-  border: 1px solid rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.4);
 }
 .buttongui:hover {
  background-color: rgba(0,0,0,0.3);
