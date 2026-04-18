@@ -234,7 +234,7 @@ header h1 {
 
 .card-frontend1{
     flex: 1 1 250px;
-     background-color: rgba(255,255,255,0.3);
+     background-color: rgba(255,255,255,0.1);
    border:0px;
    color:#000;
    border-radius:12px;
@@ -250,7 +250,7 @@ header h1 {
 
 .card-frontend2{
     flex: 1 1 250px;
-     background-color: rgba(255,255,255,0.3);
+     background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
    border:0px;
@@ -305,7 +305,7 @@ header h1 {
 
   .Acard-frontend{
     flex: 1 1 250px;
-     background-color: rgba(255,255,255,0.3);
+     background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
    border-radius:12px;
@@ -626,7 +626,7 @@ nav a:hover {
   text-overflow: ellipsis;
   font-size:25px;
   font-weight: bold;
-  border: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
 }
 .slbuttongui:hover {
   background-color: rgba(255,255,255, 0.6);
@@ -767,7 +767,7 @@ footer {
 }
 
 .scard-frontend{
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
   min-height:980px; 
@@ -875,7 +875,7 @@ header {
 }
 .headingfont {
   margin-top:30px;
-  color: #000;
+  color: #fff;
 }
 
   .resumegui{
