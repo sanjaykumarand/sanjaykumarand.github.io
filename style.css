@@ -984,14 +984,14 @@ header {
 
 #resumenav{
   border:3px solid white;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
   transparent:blur;
   border-radius: 12px;
   width:500px;
   padding: 5px;
-  color:#000;
+  color:#fff;
   
 }
  #pbf {
@@ -1052,9 +1052,9 @@ header {
   width:25%;
   color:#fff;
   flex: 1 1 125px;
-  background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .gitcb:hover{
