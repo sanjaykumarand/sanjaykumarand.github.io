@@ -639,11 +639,14 @@ nav a:hover {
 
 
 .slbuttongui span{
-  visibility: hidden;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .slbuttongui:hover span{
-  visibility: visible;
+  display: inline-block;
+  opacity: 1;
 }
   
 
