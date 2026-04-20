@@ -621,7 +621,7 @@ nav a:hover {
   color: #000;
   cursor: pointer;
   transition: background 0.3s ease;
-  box-shadow: 0 8px 16px rgba(255, 255, 255,0.25);
+  box-shadow: 0 8px 16px rgba(255, 255, 255,0.2);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -630,9 +630,9 @@ nav a:hover {
   border: 1px solid rgba(255,255,255,0.3);
 }
 .slbuttongui:hover {
-  background-color: rgba(255,255,255, 0.6);
+  background-color: rgba(255,255,255, 0.5);
   transform: scale(1.02);
-  box-shadow: 0 8px 16px rgba(255, 255, 255,0.5);
+  box-shadow: 0 8px 16px rgba(255, 255, 255,0.4);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
 }
