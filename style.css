@@ -638,11 +638,11 @@ nav a:hover {
 }
 
 
-.slbuttongui h6{
+.slbuttongui span{
   visibility: hidden;
 }
 
-.slbuttongui:hover h6{
+.slbuttongui:hover span{
   visibility: visible;
 }
   
