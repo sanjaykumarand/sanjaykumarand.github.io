@@ -637,6 +637,16 @@ nav a:hover {
   -webkit-backdrop-filter: blur(20px);
 }
 
+
+.slbuttongui h4{
+  visibility: hidden;
+}
+
+.slbuttongui:hover h4{
+  visibility: visible;
+}
+  
+
 .navbuttongui {
   top: 0;
   width: 100%;
