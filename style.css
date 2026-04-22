@@ -601,19 +601,13 @@ nav a:hover {
   text-overflow: ellipsis;
   font-size:15px;
   font-weight: 600;
-  border: 2px solid;
+  border: 2px solid #fff;
   box-shadow: 0 8px 32px rgba(255, 255, 255,0.2);
-  border-image: linear-gradient(to right, #E15B64 2px,#CD4F91 2px,#B841C0 2px,#9F32FC 2px) 2;
-  border-image-slice: 2;
-  overflow:hidden;
-  border-image-radius: 15px;
-  border-radius: 15px;
 }
 .buttongui:hover {
  background-color: rgba(255,255,255,0.25);
   transform: scale(1.01);
   box-shadow: 0 8px 32px rgba(255, 255, 255,0.4);
-  border-image: linear-gradient(to right, #F40512 2px,#D1065B 2px,#B20698 2px,#8507F1 2px) 2;
   background-color: rgba(0,0,0,1);
 }
 
@@ -632,18 +626,12 @@ nav a:hover {
   text-overflow: ellipsis;
   font-size:25px;
   font-weight: bold;
-  border: 2px solid ;
-  border-image: linear-gradient(to right, #E15B64 2px,#CD4F91 2px,#B841C0 2px,#9F32FC 2px) 2;
-  border-image-slice: 2;
-  overflow:hidden;
-  border-image-radius: 50px;
-    border-radius: 50px;
+  border: 2px solid #fff;
 }
 .slbuttongui:hover {
   box-shadow: 0 8px 16px rgba(255, 255, 255,0.4);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
-  border-image: linear-gradient(to right, #F40512 2px,#D1065B 2px,#B20698 2px,#8507F1 2px) 2;
   background-color: rgba(0,0,0,1);
 }
 
