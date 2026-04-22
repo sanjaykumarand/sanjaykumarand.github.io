@@ -618,7 +618,7 @@ nav a:hover {
   background-color: rgba(255,255,255, 0.3);
   padding: 10px 10px;
   border-radius: 50px;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
   box-shadow: 0 8px 16px rgba(255, 255, 255,0.2);
@@ -627,12 +627,14 @@ nav a:hover {
   text-overflow: ellipsis;
   font-size:25px;
   font-weight: bold;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 2px solid transparent;
+  border-image: linear-gradient(135 deg, #E15B64,#CD4F91,#B841C0,#9F32FC) 1;
 }
 .slbuttongui:hover {
   box-shadow: 0 8px 16px rgba(255, 255, 255,0.4);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
+  border-image: linear-gradient(135 deg, #F40512,#D1065B,#B20698,#8507F1) 1;
 }
 
 
