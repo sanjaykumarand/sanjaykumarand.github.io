@@ -593,7 +593,6 @@ nav a:hover {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 15px 30px;
-  border-radius: 15px;
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -607,6 +606,8 @@ nav a:hover {
   border-image: linear-gradient(to right, #E15B64 2px,#CD4F91 2px,#B841C0 2px,#9F32FC 2px) 2;
   border-image-slice: 2;
   overflow:hidden;
+  border-image-radius: 15px;
+  border-radius: 15px;
 }
 .buttongui:hover {
  background-color: rgba(255,255,255,0.25);
@@ -622,7 +623,6 @@ nav a:hover {
   text-decoration: none;
   background-color: rgba(255,255,255, 0.3);
   padding: 10px 10px;
-  border-radius: 50px;
   color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -636,6 +636,8 @@ nav a:hover {
   border-image: linear-gradient(to right, #E15B64 2px,#CD4F91 2px,#B841C0 2px,#9F32FC 2px) 2;
   border-image-slice: 2;
   overflow:hidden;
+  border-image-radius: 50px;
+    border-radius: 50px;
 }
 .slbuttongui:hover {
   box-shadow: 0 8px 16px rgba(255, 255, 255,0.4);
