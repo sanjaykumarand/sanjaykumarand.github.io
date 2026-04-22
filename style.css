@@ -628,13 +628,13 @@ nav a:hover {
   font-size:25px;
   font-weight: bold;
   border: 2px solid transparent;
-  border-image: linear-gradient(135 deg, #E15B64,#CD4F91,#B841C0,#9F32FC) 1;
+  background: linear-gradient(to right, #E15B64,#CD4F91,#B841C0,#9F32FC) border-box;
 }
 .slbuttongui:hover {
   box-shadow: 0 8px 16px rgba(255, 255, 255,0.4);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
-  border-image: linear-gradient(135 deg, #F40512,#D1065B,#B20698,#8507F1) 1;
+  background: linear-gradient(to right, #F40512,#D1065B,#B20698,#8507F1) border-box;
   background-color: rgba(0,0,0,1);
 }
 
