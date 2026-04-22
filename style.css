@@ -635,6 +635,7 @@ nav a:hover {
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
   border-image: linear-gradient(135 deg, #F40512,#D1065B,#B20698,#8507F1) 1;
+  background-color: rgba(0,0,0,1);
 }
 
 
