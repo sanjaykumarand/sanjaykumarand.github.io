@@ -589,7 +589,7 @@ nav a:hover {
   margin-left:7.5px;
   margin-bottom:8px;
   text-decoration: none;
-  background:linear-gradient(135deg, #FDF4BA, #FDF4BA, #FDF4BA);
+  background:linear-gradient(135deg, #F3B1F1, #FDF4BA, #F3B1F1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 15px 30px;
@@ -606,7 +606,7 @@ nav a:hover {
   border-radius: 15px;
 }
 .buttongui:hover {
- background:linear-gradient(135deg, #FDF4BA, #FDF4BA, #FDF4BA);
+ background:linear-gradient(135deg, #FDF4BA, #F3B1F1, #FDF4BA);
   transform: scale(1.02);
   box-shadow: 0 8px 32px rgba(255, 255, 0,0.6);
   background-color: rgba(0,0,0,1);
