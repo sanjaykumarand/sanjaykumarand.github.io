@@ -452,7 +452,7 @@ footer {
 }
 
 .card {
-  flex: 1 1 250px; /* Minimum width of 250px, wraps on smaller screens */
+  flex: 1 1 250px; 
   transition: transform 0.3s ease;
     background: rgba(255, 255, 255, 0.15);
   border-radius: 12px;
@@ -535,6 +535,11 @@ footer {
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
 }
+.card-frontend{
+  width:40%;
+  min-width:40%;
+  max-width:40%;
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -560,6 +565,11 @@ footer {
   .footer{
     height: 75px;
   }
+  .card-frontend{
+  width:100%;
+  min-width:100%;
+  max-width:100%;
+}
 }
 
 </style>
@@ -619,7 +629,7 @@ footer {
       <article class="projectpost" style="width:418px;">
       <h2 >SK App Projects</h2><br>
       <div class="card-grid">
-  <div class="card frontend">
+  <div class="card-frontend">
     <section class="blog-posts">
       <article class="rpost" style="height:400px;">
       <img src="skcr128.png">
@@ -630,7 +640,7 @@ footer {
     </section>
   </div>
        
-        <div class="card frontend" id="skai">
+        <div class="card-frontend" id="skai">
     <section class="blog-posts">
       <article class="rpost" style="height:400px;">
       <img src="skailgo.png" style="width:50px; height:50px;">
