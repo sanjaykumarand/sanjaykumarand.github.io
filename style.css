@@ -16,7 +16,7 @@ head{
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #FAFCFF, #E9F4FE, #add8e6);
+  background-color: #000;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
