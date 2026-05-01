@@ -1019,10 +1019,11 @@ header {
 }
  #pbf {
    width: 750px;
-   align-items: left;
-   text-align: left;
-   justify-content: left;
-   
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   display: grid;
+   place-items: center;
  }
 
 .arrow {
