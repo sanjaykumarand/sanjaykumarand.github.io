@@ -29,8 +29,8 @@
         
         .slider-container {
             width: 90%;
-            max-width: 100%;
-            height: 600px;
+            max-width: 90%;
+            height: 500px;
             overflow: hidden;
             border-radius: 15px;
             box-shadow: 0 15px 30px rgba(0,125,255,0.3);
@@ -129,7 +129,7 @@
  <center>
 
     <div class="slider-container" style="margin-top: 100px;">
-        <div class="slider-wrapper">
+        <div class="slider-wrapper" id="sliderWrapper">
             
             <div class="slide">
                 <picture>
@@ -159,6 +159,12 @@
 
         </div>
     </div>
+
+<div style="margin-top:20px; text-align:center;">
+    <button id="pauseBtn" class="slbuttongui">⏸️</button>
+    <button id="resumeBtn" class="slbuttongui">▶️</button>
+</div>
+
 
     </center>   
 
@@ -284,7 +290,20 @@
  </div>  
     
     
-    
+    <script>
+    const slider = document.getElementById("sliderWrapper");
+    const pauseBtn = document.getElementById("pauseBtn");
+    const resumeBtn = document.getElementById("resumeBtn");
+
+    pauseBtn.addEventListener("click", () => {
+        slider.style.animationPlayState = "paused";
+    });
+
+    resumeBtn.addEventListener("click", () => {
+        slider.style.animationPlayState = "running";
+    });
+</script>
+
     
     
     
