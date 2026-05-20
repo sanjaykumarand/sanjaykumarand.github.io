@@ -334,9 +334,7 @@ header h1 {
    border-radius:12px;
   min-width:1000px;
    max-width:1000px;
-  min-height:200px;
   height:200px;
-   max-height:475px;
   color: #fff;
   border: 2px solid rgba(255,255,255,0.4);
 }
@@ -1227,9 +1225,7 @@ header {
     height:150px;
   }
   .daipcard-frontend {
-    min-height:350px;
     height: 350px;
-  max-height:500px;
     min-width:100%;
   max-width:100%;
 }
