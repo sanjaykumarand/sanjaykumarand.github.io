@@ -1,365 +1,799 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanjay Kumaran Services</title>
-  <link rel="icon" href="skailgo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <meta name="google-site-verification" content="bIuP1C2_zeoI9RXnqy46-R4dqH2NqM96JJ5CBqlQZlw" />
- 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanjay Kumaran Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #04050a;
+    --surface: rgba(255,255,255,0.032);
+    --surface2: rgba(255,255,255,0.058);
+    --border: rgba(255,255,255,0.07);
+    --border-lit: rgba(255,255,255,0.2);
+    --blue: #4f8eff;
+    --green: #3ecf8e;
+    --purple: #a78bfa;
+    --text: #eeeef2;
+    --text2: #9898aa;
+    --text3: #55556a;
+    --r: 20px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
 
+  /* ══════════════════════════════
+     ANIMATED GRADIENT BACKGROUND
+  ══════════════════════════════ */
+  .grad-canvas {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    overflow: hidden;
+  }
+  /* Large slowly-orbiting orbs */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0;
+    animation: orbFloat linear infinite;
+  }
+  .orb1 {
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(79,142,255,0.22) 0%, transparent 70%);
+    top: -200px; left: -150px;
+    animation-duration: 18s; animation-delay: 0s;
+    opacity: 1;
+  }
+  .orb2 {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(167,139,250,0.18) 0%, transparent 70%);
+    top: 30%; right: -180px;
+    animation-duration: 22s; animation-delay: -6s;
+    opacity: 1;
+  }
+  .orb3 {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(62,207,142,0.12) 0%, transparent 70%);
+    bottom: -100px; left: 30%;
+    animation-duration: 26s; animation-delay: -12s;
+    opacity: 1;
+  }
+  .orb4 {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(255,120,80,0.09) 0%, transparent 70%);
+    top: 60%; left: -100px;
+    animation-duration: 30s; animation-delay: -4s;
+    opacity: 1;
+  }
+  @keyframes orbFloat {
+    0%   { transform: translate(0px, 0px) scale(1); }
+    25%  { transform: translate(40px, -50px) scale(1.06); }
+    50%  { transform: translate(-30px, 60px) scale(0.96); }
+    75%  { transform: translate(55px, 30px) scale(1.04); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  /* Mesh gradient overlay */
+  .mesh {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 10% 0%,   rgba(79,142,255,0.07) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 40% at 90% 100%, rgba(167,139,250,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 60% at 50% 50%,  rgba(62,207,142,0.03) 0%, transparent 60%);
+    animation: meshShift 14s ease-in-out infinite alternate;
+  }
+  @keyframes meshShift {
+    0%   { opacity: 0.7; transform: scale(1); }
+    100% { opacity: 1;   transform: scale(1.08); }
+  }
+  /* Dot grid */
+  .dot-grid {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 38px 38px;
+    mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%);
+  }
+  /* Shimmer sweep */
+  .shimmer {
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.015) 50%, transparent 60%);
+    background-size: 200% 100%;
+    animation: shimmerSweep 8s ease-in-out infinite;
+  }
+  @keyframes shimmerSweep {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* ══ WELCOME POPUP ══ */
+  .welcome-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(4,5,10,0.78);
+    backdrop-filter: blur(10px);
+    display: flex; align-items: center; justify-content: center;
+    animation: fadeInOverlay 0.4s ease forwards;
+  }
+  .welcome-overlay.hide {
+    animation: fadeOutOverlay 0.35s ease forwards;
+    pointer-events: none;
+  }
+  @keyframes fadeInOverlay  { from { opacity:0; } to { opacity:1; } }
+  @keyframes fadeOutOverlay { from { opacity:1; } to { opacity:0; } }
+
+  .welcome-box {
+    background: #0d0f1a;
+    border: 1px solid rgba(79,142,255,0.3);
+    border-radius: 20px;
+    padding: 36px 40px 32px;
+    max-width: 420px; width: 90%;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(79,142,255,0.12), 0 24px 60px rgba(0,0,0,0.6);
+    animation: popIn 0.45s cubic-bezier(.34,1.56,.64,1) forwards;
+  }
+  @keyframes popIn {
+    from { opacity:0; transform: scale(0.82) translateY(20px); }
+    to   { opacity:1; transform: scale(1)    translateY(0);    }
+  }
+  .welcome-icon {
+    font-size: 2.4rem; margin-bottom: 14px;
+  }
+  .welcome-box h2 {
+    font-size: 1.25rem; font-weight: 600;
+    color: var(--text); letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .welcome-box p {
+    font-size: 0.9rem; color: var(--text2);
+    line-height: 1.65; margin-bottom: 24px;
+  }
+  .welcome-box p strong {
+    color: #7ab3ff;
+  }
+  .welcome-box .upi-note {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(79,142,255,0.1);
+    border: 1px solid rgba(79,142,255,0.25);
+    border-radius: 100px; padding: 6px 16px;
+    font-size: 0.76rem; color: #7ab3ff;
+    font-weight: 500; margin-bottom: 22px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .welcome-close {
+    display: block; width: 100%;
+    padding: 11px 0; border-radius: 10px;
+    background: var(--blue); border: none;
+    color: #fff; font-size: 0.9rem; font-weight: 600;
+    cursor: pointer; letter-spacing: -0.01em;
+    transition: opacity 0.18s;
+    font-family: inherit;
+  }
+  .welcome-close:hover { opacity: 0.85; }
+
+  /* ══ NAV ══ */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 60px;
+    background: rgba(4,5,10,0.72);
+    backdrop-filter: blur(28px) saturate(180%);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-size: 0.9rem; font-weight: 600; color: var(--text); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-logo em { color: var(--blue); font-style: normal; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 0.82rem; color: var(--text2); text-decoration: none; transition: color 0.18s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    font-size: 0.82rem; font-weight: 500; padding: 7px 16px; border-radius: 8px;
+    background: var(--surface2); border: 1px solid var(--border-lit);
+    color: var(--text); text-decoration: none; transition: background 0.2s;
+  }
+  .nav-cta:hover { background: rgba(255,255,255,0.09); }
+
+  /* ══ WRAPPER ══ */
+  .wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ══ HERO ══ */
+  .hero { padding: 150px 0 90px; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(79,142,255,0.1); border: 1px solid rgba(79,142,255,0.24);
+    border-radius: 100px; padding: 5px 14px; margin-bottom: 30px;
+    font-size: 0.73rem; font-weight: 500; color: #7ab3ff;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    opacity: 0; animation: rise 0.6s 0.05s ease forwards;
+  }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #3ecf8e; animation: blink 2.2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.28} }
+  .hero h1 {
+    font-size: clamp(2.6rem, 5.5vw, 4.5rem); font-weight: 600; line-height: 1.07;
+    letter-spacing: -0.04em; color: var(--text);
+    opacity: 0; animation: rise 0.6s 0.13s ease forwards;
+  }
+  .hero h1 .dim { color: var(--text2); font-weight: 300; }
+  .hero-sub {
+    max-width: 500px; margin-top: 20px; font-size: 0.96rem;
+    color: var(--text2); line-height: 1.72; font-weight: 300;
+    opacity: 0; animation: rise 0.6s 0.22s ease forwards;
+  }
+  .hero-pills {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px;
+    opacity: 0; animation: rise 0.6s 0.32s ease forwards;
+  }
+  .pill {
+    display: flex; align-items: center; gap: 6px;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 100px; padding: 6px 14px;
+    font-size: 0.77rem; color: var(--text2);
+  }
+  .hero-divider { height: 1px; background: var(--border); margin: 76px 0 0; opacity: 0; animation: rise 0.6s 0.4s ease forwards; }
+
+  @keyframes rise { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
+  /* ══ SCROLL REVEAL ══ */
+  .reveal {
+    opacity: 0; transform: translateY(32px);
+    transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .d1{transition-delay:.04s} .d2{transition-delay:.11s} .d3{transition-delay:.18s}
+  .d4{transition-delay:.25s} .d5{transition-delay:.32s} .d6{transition-delay:.39s}
+
+  /* ══ SECTION HEADER ══ */
+  .sec-head { padding: 80px 0 42px; }
+  .sec-label { font-size: 0.71rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
+  .sec-title { font-size: clamp(1.45rem, 3vw, 2.1rem); font-weight: 600; letter-spacing: -0.03em; }
+  .sec-sub { font-size: 0.88rem; color: var(--text2); margin-top: 7px; font-weight: 300; }
+
+  /* ══ CARDS ══ */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+    gap: 18px; padding-bottom: 100px;
+  }
+  .card {
+    position: relative; background: var(--surface);
+    border: 1px solid var(--border); border-radius: var(--r);
+    padding: 30px 28px 28px;
+    transform-style: preserve-3d; will-change: transform;
+    overflow: hidden; display: flex; flex-direction: column;
+  }
+  .card::after {
+    content: ''; position: absolute; inset: 0; border-radius: var(--r);
+    background: radial-gradient(circle at var(--mx,50%) var(--my,40%), rgba(79,142,255,0.09) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.35s; pointer-events: none;
+  }
+  .card:hover { border-color: var(--border-lit); box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04); }
+  .card:hover::after { opacity: 1; }
+  .card.featured { border-color: rgba(79,142,255,0.28); background: linear-gradient(140deg, rgba(79,142,255,0.055) 0%, rgba(167,139,250,0.04) 100%); }
+
+  .badge-top {
+    position: absolute; top: 0; right: 24px;
+    background: var(--blue); color: #fff;
+    font-size: 0.62rem; font-weight: 600; letter-spacing: 0.07em;
+    text-transform: uppercase; padding: 4px 10px;
+    border-radius: 0 0 8px 8px;
+  }
+  .card-icon {
+    width: 42px; height: 42px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.22rem; margin-bottom: 17px;
+    background: var(--surface2); border: 1px solid var(--border);
+  }
+  .card h3 { font-size: 1.03rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .card-desc { font-size: 0.81rem; color: var(--text2); line-height: 1.62; font-weight: 300; margin-bottom: 18px; }
+  .card-includes { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-bottom: 20px; flex: 1; }
+  .card-includes li { font-size: 0.79rem; color: #8c9ab2; display: flex; align-items: flex-start; gap: 9px; line-height: 1.45; }
+  .ck {
+    flex-shrink: 0; width: 14px; height: 14px; border-radius: 4px;
+    background: rgba(62,207,142,0.11); border: 1px solid rgba(62,207,142,0.25);
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .ck::before { content:'✓'; font-size: 0.58rem; color: var(--green); font-weight: 700; }
+
+  .delivery-tag { font-size: 0.69rem; color: var(--text3); margin-top: 10px; display: flex; align-items: center; gap: 5px; }
+  .delivery-tag::before { content:'⏱'; }
+
+  /* Card footer — price + buttons */
+  .card-footer {
+    padding-top: 18px; border-top: 1px solid var(--border);
+    margin-top: 14px; display: flex; flex-direction: column; gap: 12px;
+  }
+  .cf-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .price-wrap { display: flex; flex-direction: column; }
+  .price { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.03em; }
+  .price-note { font-size: 0.68rem; color: var(--text3); margin-top: 2px; }
+
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 9px 18px; border-radius: 9px;
+    font-family: inherit; font-size: 0.81rem; font-weight: 500;
+    text-decoration: none; cursor: pointer; border: none;
+    transition: all 0.18s; white-space: nowrap; flex-shrink: 0;
+  }
+  .btn-blue { background: var(--blue); color: #fff; box-shadow: 0 0 0 1px rgba(79,142,255,0.35); }
+  .btn-blue:hover { background: #6ba6ff; box-shadow: 0 6px 22px rgba(79,142,255,0.38); transform: translateY(-1px); }
+  .btn-ghost { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: var(--border-lit); color: var(--text); background: rgba(255,255,255,0.07); }
+  /* Start Processing — green accent, full width */
+  .btn-start {
+    width: 100%; background: rgba(62,207,142,0.1);
+    border: 1px solid rgba(62,207,142,0.28); color: #3ecf8e;
+    font-weight: 600; font-size: 0.83rem; padding: 11px;
+    border-radius: 10px; letter-spacing: 0.01em;
+    position: relative; overflow: hidden;
+  }
+  .btn-start::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(62,207,142,0.12), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.45s ease;
+  }
+  .btn-start:hover { background: rgba(62,207,142,0.18); border-color: rgba(62,207,142,0.5); transform: translateY(-1px); box-shadow: 0 6px 22px rgba(62,207,142,0.18); }
+  .btn-start:hover::before { transform: translateX(100%); }
+  .btn-pair { display: flex; gap: 8px; }
+
+  /* ══ POPUP MODAL ══ */
+  .modal-bg {
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(4,5,10,0.8); backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.25s;
+  }
+  .modal-bg.open { opacity: 1; pointer-events: all; }
+  .modal {
+    background: #0d0f1a;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px; padding: 36px 32px;
+    max-width: 440px; width: 100%;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+    transform: scale(0.93) translateY(12px);
+    transition: transform 0.28s cubic-bezier(.22,1,.36,1);
+    position: relative;
+  }
+  .modal-bg.open .modal { transform: scale(1) translateY(0); }
+  .modal-icon { font-size: 2rem; margin-bottom: 14px; display: block; text-align: center; }
+  .modal h3 {
+    font-size: 1.12rem; font-weight: 600; letter-spacing: -0.02em;
+    text-align: center; margin-bottom: 10px;
+  }
+  .modal-service-name {
+    text-align: center; font-size: 0.78rem; color: var(--blue);
+    font-weight: 500; margin-bottom: 18px;
+    background: rgba(79,142,255,0.08); border: 1px solid rgba(79,142,255,0.18);
+    border-radius: 8px; padding: 6px 14px; display: inline-block;
+    width: 100%;
+  }
+  .modal-notice {
+    background: rgba(255,180,50,0.07); border: 1px solid rgba(255,180,50,0.22);
+    border-radius: 12px; padding: 14px 16px; margin-bottom: 22px;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .modal-notice-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+  .modal-notice p { font-size: 0.82rem; color: #e8c96a; line-height: 1.55; }
+  .modal-notice strong { font-weight: 600; color: #f5d87a; }
+  .modal-steps { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 26px; }
+  .modal-steps li {
+    font-size: 0.8rem; color: var(--text2); display: flex; align-items: flex-start; gap: 10px; line-height: 1.45;
+  }
+  .step-num {
+    flex-shrink: 0; width: 20px; height: 20px; border-radius: 6px;
+    background: rgba(79,142,255,0.12); border: 1px solid rgba(79,142,255,0.22);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; font-weight: 700; color: var(--blue); margin-top: 0px;
+  }
+  .modal-actions { display: flex; gap: 10px; }
+  .modal-actions .btn { flex: 1; padding: 12px; font-size: 0.85rem; }
+  .btn-cancel { background: var(--surface2); border: 1px solid var(--border); color: var(--text2); }
+  .btn-cancel:hover { border-color: var(--border-lit); color: var(--text); }
+  .btn-proceed { background: var(--blue); color: #fff; }
+  .btn-proceed:hover { background: #6ba6ff; box-shadow: 0 6px 20px rgba(79,142,255,0.35); }
+
+  /* ══ WHY GRID ══ */
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; padding-bottom: 100px; }
+  .why-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px 20px; transition: border-color 0.25s, background 0.25s; }
+  .why-card:hover { border-color: var(--border-lit); background: var(--surface2); }
+  .why-icon { font-size: 1.3rem; margin-bottom: 12px; display: block; }
+  .why-card h4 { font-size: 0.87rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 6px; }
+  .why-card p { font-size: 0.77rem; color: var(--text2); line-height: 1.55; font-weight: 300; }
+
+  /* ══ CTA STRIP ══ */
+  .cta-strip {
+    margin-bottom: 120px;
+    background: linear-gradient(135deg, rgba(79,142,255,0.07), rgba(167,139,250,0.06));
+    border: 1px solid rgba(79,142,255,0.18);
+    border-radius: 24px; padding: 56px 48px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .cta-strip::before {
+    content:''; position: absolute; top:-80px; left:50%; transform:translateX(-50%);
+    width:400px; height:200px;
+    background: radial-gradient(ellipse, rgba(79,142,255,0.1), transparent 70%); pointer-events:none;
+  }
+  .cta-strip h2 { font-size: clamp(1.4rem, 2.8vw, 2rem); font-weight: 600; letter-spacing: -0.03em; margin-bottom: 10px; }
+  .cta-strip p { color: var(--text2); font-size: 0.9rem; margin-bottom: 32px; font-weight: 300; }
+  .cta-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+  .contact-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .contact-chip {
+    display: flex; align-items: center; gap: 6px;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 100px; padding: 8px 16px;
+    font-size: 0.77rem; color: var(--text2); text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .contact-chip:hover { border-color: var(--border-lit); color: var(--text); }
+
+  /* ══ FOOTER ══ */
+  footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  footer p { font-size: 0.74rem; color: var(--text3); }
+  .footer-links { display: flex; gap: 18px; }
+  .footer-links a { font-size: 0.74rem; color: var(--text3); text-decoration: none; transition: color 0.18s; }
+  .footer-links a:hover { color: var(--text2); }
+
+  /* ══ MOBILE ══ */
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 112px 0 60px; }
+    .cta-strip { padding: 36px 22px; }
+    footer { flex-direction: column; gap: 10px; padding: 20px 24px; text-align: center; }
+    .modal { padding: 28px 20px; }
+  }
+</style>
 </head>
-
-
 <body>
 
+<!-- ANIMATED BACKGROUND -->
+<div class="grad-canvas">
+  <div class="mesh"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+  <div class="orb orb4"></div>
+  <div class="dot-grid"></div>
+  <div class="shimmer"></div>
+</div>
 
+<!-- CONFIRM POPUP MODAL -->
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <span class="modal-icon">🚀</span>
+    <h3>Ready to Start?</h3>
+    <div class="modal-service-name" id="modal-service-name">Service Name</div>
+    <div class="modal-notice">
+      <span class="modal-notice-icon">⚠️</span>
+      <p><strong>Advance payment ₹199 required.</strong> Please attach the payment screenshot to your email. Work begins only after payment confirmation.</p>
+    </div>
+    <ul class="modal-steps">
+      <li><span class="step-num">1</span>Make the advance payment ₹199 via UPI to <strong>7200945207@fam</strong></li>
+      <li><span class="step-num">2</span>Take a screenshot of the payment confirmation</li>
+      <li><span class="step-num">3</span>Click "Open Email" below — attach screenshot & describe your requirements</li>
+      <li><span class="step-num">4</span>I'll confirm and start within 24 hours ✅</li>
+    </ul>
+    <div class="modal-actions">
+      <button class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+      <a class="btn btn-proceed" id="modal-email-link" href="#">Open Email →</a>
+    </div>
+  </div>
+</div>
 
-  
-<style>
-  .video-container{
-    background-color: black;
-  }
-</style>
+<!-- NAV -->
+<nav>
+  <a href="services" class="nav-logo">SanjayKumaran Services<em>.</em></a>
+  <ul class="nav-links">
+    <li><a href="services">Home</a></li>
+    <li><a href="#packs">Explore Plans</a></li>
+  </ul>
+  <a href="#gits" class="nav-cta">Get in touch</a>
+</nav>
 
-   <style>
-     body{
-       background-color: #000;
-     }
-    #popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 20px;
-      border: 2px solid #333;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      z-index: 1000;
-    }
-    #popup button {
-      margin-top: 10px;
-    }
-    #overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index: 999;
-    }
-  </style>
- <div class="video-container" >
+<div class="wrap">
 
- <div class="content" style="background-color: black;">
- <div id="overlay"></div>
-  <div id="popup">
-    <h2>Welcome!</h2>
-    <p>Thanks for visiting my website.</p>
-    <button onclick="closePopup()">Close</button>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow"><div class="status-dot"></div>FREELANCE SERVICE</div>
+    <h1>Launching My Service<br><span class="dim">On 7 June 2026 10 A.M.</span></h1>
+    <p class="hero-sub">I build websites, apps, dashboards and developer setups — clean, fast, and done right. Every service is backed by hands-on project experience.</p>
+    <div class="hero-pills">
+      <span class="pill">🏗️ 3+ Projects Delivered</span>
+      <span class="pill">⚡ Fast Turnaround</span>
+      <span class="pill">🔁 Revisions Included</span>
+      <span class="pill">📍 Chennai, India</span>
+    </div><br>
+<center><a href="#packs" class="btn btn-blue">Explore Plans ↗️</a></center>
+    <div class="hero-divider"></div>
+  </section>
+
+  <!-- SERVICES -->
+  <div class="sec-head reveal" id="packs">
+    <div class="sec-label">Services</div>
+    <div class="sec-title">What I build for you</div>
+    <div class="sec-sub">Pay via UPI · Advance required · Revisions included on every service</div>
   </div>
 
-  <script>
-    window.onload = function() {
-      document.getElementById("popup").style.display = "block";
-      document.getElementById("overlay").style.display = "block";
-    };
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-      document.getElementById("overlay").style.display = "none";
-    }
-  </script>
+  <div class="cards-grid">
 
-  <div class="glass-container">
-  
-    <section class="navblog-posts">
-    <header style="background-color: rgba(0,0,0,0);">
-  <h2><b><a href="services" class="headgui">Sanjay Kumaran</a></b></h2>      
-</header>
-    </section>   
-    
+    <!-- 1 Frontend Website -->
+    <div class="card featured reveal d1">
+      <div class="badge-top">Most Popular</div>
+      <div class="card-icon">🌐</div>
+      <h3>Frontend Website</h3>
+      <p class="card-desc">A sleek, mobile-friendly site on your own GitHub domain — looks premium, loads fast, yours for life.</p>
+      <ul class="card-includes">
+        <li><span class="ck"></span>Custom modern / frosted-glass design</li>
+        <li><span class="ck"></span>Mobile responsive layout</li>
+        <li><span class="ck"></span>GitHub Pages hosting (free forever)</li>
+        <li><span class="ck"></span>Google Search indexing setup</li>
+        <li><span class="ck"></span>Custom domain guidance</li>
+        <li><span class="ck"></span>1 revision round included</li>
+      </ul>
+      <div class="delivery-tag">Delivery in 3–5 days</div>
+      <div class="card-footer">
+        <div class="cf-top">
+          <div class="price-wrap">
+            <span class="price">₹499</span>
+            <span class="price-note">One-time · Lifetime ownership</span>
+          </div>
+          <a href="upi://pay?pa=7200945207@fam&pn=Sanjay Kumaran D&am=499.0" class="btn btn-blue">Pay ₹499</a>
+        </div>
+        <button class="btn btn-start" onclick="openModal('Frontend Website', 'Frontend+Website', 499)">▶ Start Processing</button>
+      </div>
+    </div>
 
+    <!-- 2 AI Chatbot -->
+    <div class="card reveal d2">
+      <div class="card-icon">🤖</div>
+      <h3>AI ChatBot Setup</h3>
+      <p class="card-desc">Your own branded AI assistant powered by Gemini API — embedded and ready on your site.</p>
+      <ul class="card-includes">
+        <li><span class="ck"></span>Custom chatbot personality & name</li>
+        <li><span class="ck"></span>Gemini API integration</li>
+        <li><span class="ck"></span>Embed-ready widget for any page</li>
+        <li><span class="ck"></span>API key setup walkthrough</li>
+        <li><span class="ck"></span>200 prompt starter pack</li>
+      </ul>
+      <div class="delivery-tag">Delivery in 2–3 days</div>
+      <div class="card-footer">
+        <div class="cf-top">
+          <div class="price-wrap">
+            <span class="price">₹299</span>
+            <span class="price-note">One-time · API usage cost extra</span>
+          </div>
+          <a href="upi://pay?pa=7200945207@fam&pn=Sanjay Kumaran D&am=299.0" class="btn btn-blue">Pay ₹299</a>
+        </div>
+        <button class="btn btn-start" onclick="openModal('AI ChatBot Setup', 'AI+ChatBot+Setup', 299)">▶ Start Processing</button>
+      </div>
+    </div>
 
+    <!-- 3 Java + MySQL -->
+    <div class="card reveal d3">
+      <div class="card-icon">☕</div>
+      <h3>Java + MySQL Management App</h3>
+      <p class="card-desc">Desktop app to manage grocery inventory, student attendance, or marks — all stored in a live MySQL database.</p>
+      <ul class="card-includes">
+        <li><span class="ck"></span>MySQL backend server setup</li>
+        <li><span class="ck"></span>JavaFX desktop UI (clean design)</li>
+        <li><span class="ck"></span>Add / edit / delete / view records</li>
+        <li><span class="ck"></span>Grocery OR Student system — your choice</li>
+        <li><span class="ck"></span>Installer with app icon included</li>
+        <li><span class="ck"></span>Source code handed over</li>
+      </ul>
+      <div class="delivery-tag">Delivery in 5–7 days</div>
+      <div class="card-footer">
+        <div class="cf-top">
+          <div class="price-wrap">
+            <span class="price">₹649</span>
+            <span class="price-note">Custom build · scope may vary</span>
+          </div>
+          <a href="mailto:sanjaykumaranservices@gmail.com?subject=Java+Management+App+Quote" class="btn btn-ghost">Quote</a>
+        </div>
+        <button class="btn btn-start" onclick="openModal('Java + MySQL Management App', 'Java+MySQL+Management+App', 649)">▶ Start Processing</button>
+      </div>
+    </div>
 
+    <!-- 4 Web to App -->
+    <div class="card reveal d4">
+      <div class="card-icon">📦</div>
+      <h3>Web → Desktop App</h3>
+      <p class="card-desc">Convert any website into an installable Windows app or Android APK using JavaFX.</p>
+      <ul class="card-includes">
+        <li><span class="ck"></span>JavaFX wrapper around your site</li>
+        <li><span class="ck"></span>Windows .exe or Android APK</li>
+        <li><span class="ck"></span>Custom app icon & splash screen</li>
+        <li><span class="ck"></span>Upgrade existing app · or build new</li>
+      </ul>
+      <div class="delivery-tag">Delivery in 3–7 days</div>
+      <div class="card-footer">
+        <div class="cf-top">
+          <div class="price-wrap">
+            <span class="price">₹499</span>
+            <span class="price-note">Upgrade · ₹699 for new build</span>
+          </div>
+          <div class="btn-pair">
+            <a href="upi://pay?pa=7200945207@fam&pn=Sanjay Kumaran D&am=499.0" class="btn btn-ghost" style="font-size:0.76rem;padding:8px 12px;">Upgrade</a>
+            <a href="upi://pay?pa=7200945207@fam&pn=Sanjay Kumaran D&am=699.0" class="btn btn-blue" style="font-size:0.76rem;padding:8px 12px;">New</a>
+          </div>
+        </div>
+        <button class="btn btn-start" onclick="openModal('Web → Desktop App', 'Web+to+Desktop+App', 499)">▶ Start Processing</button>
+      </div>
+    </div>
 
- <section class="blog-posts" id="projects">
-      <article class="post">
-      <center><br><br>
-     <div class="hui" >  <h2 style="color:  #fff;">Services <span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">Offering</span></h2></div><br><br>
+    <!-- 5 Data Dashboard -->
+    <div class="card reveal d5">
+      <div class="card-icon">📊</div>
+      <h3>Data Analysis & Dashboard</h3>
+      <p class="card-desc">Raw data in, clear Power BI dashboards out. Python + Excel data cleaning included.</p>
+      <ul class="card-includes">
+        <li><span class="ck"></span>Python / Excel data cleaning</li>
+        <li><span class="ck"></span>Interactive Power BI dashboard</li>
+        <li><span class="ck"></span>KPIs, charts & trend visuals</li>
+        <li><span class="ck"></span>PDF report export</li>
+        <li><span class="ck"></span>Up to 2 data sources per project</li>
+      </ul>
+      <div class="delivery-tag">Delivery in 2–4 days</div>
+      <div class="card-footer">
+        <div class="cf-top">
+          <div class="price-wrap">
+            <span class="price">₹499</span>
+            <span class="price-note">Per project · scope-based</span>
+          </div>
+          <a href="mailto:sanjaykumaranservices@gmail.com?subject=Data+Analysis+Quote" class="btn btn-ghost">Quote</a>
+        </div>
+        <button class="btn btn-start" onclick="openModal('Data Analysis & Dashboard', 'Data+Analysis+Dashboard', 499)">▶ Start Processing</button>
+      </div>
+    </div>
+
+    <!-- 6 GitHub Setup -->
+    <div class="card reveal d6">
+      <div class="card-icon">🐙</div>
+      <h3>Full GitHub Setup</h3>
+      <p class="card-desc">Everything GitHub — account, profile README, Pages deployment, repo management, all handled.</p>
+      <ul class="card-includes">
+        <li><span class="ck"></span>GitHub account creation & setup</li>
+        <li><span class="ck"></span>Profile README with badges & stats</li>
+        <li><span class="ck"></span>Repo structure, commits & branching</li>
+        <li><span class="ck"></span>GitHub Pages site deployment</li>
+        <li><span class="ck"></span>Documentation & README writing</li>
+        <li><span class="ck"></span>Ongoing repo management support</li>
+      </ul>
+      <div class="delivery-tag">Delivery in 1–3 days</div>
+      <div class="card-footer">
+        <div class="cf-top">
+          <div class="price-wrap">
+            <span class="price">₹299</span>
+            <span class="price-note">One-time full setup</span>
+          </div>
+          <a href="upi://pay?pa=7200945207@fam&pn=Sanjay Kumaran D&am=299.0" class="btn btn-blue">Pay ₹299</a>
+        </div>
+        <button class="btn btn-start" onclick="openModal('Full GitHub Setup', 'Full+GitHub+Setup', 299)">▶ Start Processing</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WHY ME -->
+  <div class="sec-head reveal">
+    <div class="sec-label">Why me</div>
+    <div class="sec-title">Not just theory</div>
+    <div class="sec-sub">Every service is backed by real project experience — not tutorials.</div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal d1"><span class="why-icon">🔬</span><h4>Built in production</h4><p>Student Management System, Power BI dashboards, AI chatbots — live projects, not side exercises.</p></div>
+    <div class="why-card reveal d2"><span class="why-icon">⚡</span><h4>Fast delivery</h4><p>Most projects land in 3–5 days. Need it faster? DM me and we'll work it out.</p></div>
+    <div class="why-card reveal d3"><span class="why-icon">🔁</span><h4>Revisions included</h4><p>Every service includes at least one revision round. I don't close until you're happy.</p></div>
+    <div class="why-card reveal d4"><span class="why-icon">📱</span><h4>Always reachable</h4><p>Instagram, email, or call — I reply within 24 hours, usually within the hour.</p></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip reveal" id="gits">
+    <h2>Not sure what you need?</h2>
+    <p>Reach out and I'll suggest the right service — free quote, no obligation.</p>
+    <div class="cta-buttons">
+      <a href="mailto:sanjaykumaranservices@gmail.com" class="btn btn-blue" style="font-size:0.9rem;padding:12px 24px;">📩 Email me</a>
+      <a href="https://www.instagram.com/sanjayitdeveloper" target="_blank" class="btn btn-ghost" style="font-size:0.9rem;padding:12px 24px;">📲 Instagram</a>
+<a href="https://www.linkedin.com/company/sanjaykumaranservices" target="_blank" class="btn btn-ghost" style="font-size:0.9rem;padding:12px 24px;">in LinkedIn</a>
+     
+    </div>
+    <div class="contact-row">
       
-              <div class="card-grid"   style="background-color: rgba(255,255,255,0.3); border-radius: 12px;   backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);">
-
-
-          <div class="pcard-frontend" id="s1">
-              <section class="blog-posts">
-                <article class="rpost">
-                <a href="daip.html"><img src="ser1.png" class="primggui"></a><br>
-            <a href="daip.html" class="projectgui"><h2>Frontend Website Pack</h2></a><br>
-                                 <h3>₹ 99\LifeTime</h3>
-            <button class="psb" style="width:85px;">Google🔍</button>
-                  <button class="psb" style="width:195px;">Custom Github Domain</button> <br><br>
-            <a href="upi://pay?pa=7200945207@fam&pn=Sanjay Kumaran D&am=99.0" class="projectgui"><button class="buttongui" >Buy Now</button></a>
-                  <h5 style="color:#fff;">*Use Mobile to Pay<br>*Contact Me For Starting Process & Creation</h5>
-      </article>
-    </section>
-    </div><br>
-    
-               <div class="pcard-frontend" id="s2" >
-              <section class="blog-posts">
-                <article class="rpost">
-                <a href="dsip.html"><img src="ser2.png" class="primggui"></a><br>
-            <a href="dsip.html" class="projectgui"><h2>Own AI ChatBot (API)</h2></a><br>
-
-                        <h3>₹ 19\200 Prompts Only</h3>
-            <button class="psb" style="width:75px;"><center>API</center></button><br><br>
-            <a href="upi://pay?pa=7200945207@fam&pn=Sanjay Kumaran D&am=19.0" class="projectgui"><button class="buttongui" >Buy Now</button></a>
-                   <h5 style="color:#fff;">*Use Mobile to Pay<br>*Contact Me For Starting Process & Creation</h5>
-      </article>
-    </section>
-    </div><br>   
-
-
-
-<div class="pcard-frontend" id="s3">
-              <section class="blog-posts">
-                <article class="rpost">
-                <a href="mlbcpd.html"><img src="ser3.png" class="primggui"></a><br>
-            <a href="mlbcpd.html" class="projectgui"><h2>Web To App</h2></a><br>
-
-            <h3>₹ 9\Upgrade<br>₹ 99\New</h3>
-                                    <button class="psb" style="width:165px;">Android / Windows</button>
-            <button class="psb" style="width:75px;"><center>JavaFX</center></button><br><br>
-            <a href="upi://pay?pa=7200945207@fam&pn=Sanjay Kumaran D&am=9.0" class="projectgui"><button class="buttongui" >Buy Upgrade</button></a>
-                  <a href="upi://pay?pa=7200945207@fam&pn=Sanjay Kumaran D&am=99.0" class="projectgui"><button class="buttongui" >Buy New</button></a>
-  <h5 style="color:#fff;">*Use Mobile to Pay<br>*Contact Me For Starting Process & Creation</h5>
-      </article>
-    </section></div><br>
-  
-
+      <a href="https://github.com/sanjaykumarand" class="contact-chip" target="_blank">⌥ GitHub</a>
     </div>
-      </center></article>
-    </section><br>
-   
-    
-      
+  </div>
 
-    
-    
-    <center>
-   <div class="hui" style="text-align: center;" >  <h2 id="lcgit" style="color:#fff;">Let's <span style="color: gold;">Connect</span></h2>
-    <h3 style="color:  gold;">Get in Touch</h3></div><br>
-  <div class="tconnect" style="color:#fff;">
-    <div class="gitcb" style="color:#fff;"  >
-      <h4 style="color:#fff;">📩 Email</h4>
-      <h4 style="color:#fff;">sanjaykumaranservices@gmail.com</h4><br> <a href="mailto:sanjaykumaranservices@gmail.com"<button class="buttongui"><h2>📧Email</h2></button></a>
-    </div>
-    <div class="gitcb" style="color:#fff;">
-      <h4 style="color:#fff;">💬 Instagram</h4>
-      <h4 style="color:#fff;">/sanjaykumarand</h4><br> <a href="https://www.instagram.com/sanjaykumaranservices?igsh=MTB4cWQzaDc0NDFjeQ=="<button class="buttongui"><h2>💬Instagram</h2></button></a>
-    </div>
-    <div class="gitcb" style="color:#fff;">
-      <h4 style="color:#fff;">📞 Call</h4>
-      <h4 style="color:#fff;">+91 7200945207</h4><br> <a href="tel:+917200945207"<button class="buttongui"><h2>📞Call</h2></button></a>
-    </div>
-  </div></center>
+</div>
 
+<!-- WELCOME POPUP -->
+<div class="welcome-overlay" id="welcomeOverlay">
+  <div class="welcome-box">
+    <div class="welcome-icon">📱</div>
+    <h2>Welcome to Sanjay Kumaran Services</h2>
+    <div class="upi-note">📢 Payment Notice</div>
+    <p>You can pay using <strong>UPI only on mobile</strong>.<br>
+    UPI links won't work on desktop browsers — please open this page on your phone to complete UPI payments.</p>
+    <button class="welcome-close" onclick="closeWelcome()">Got it, let's go →</button>
+  </div>
+</div>
 
+<footer>
+  <p>© 2026 SanjayKumaran Services. All Rights Reserved.</p>
+  <div class="footer-links">
+    <a href="services">Home</a>
+    <a href="https://www.linkedin.com/company/sanjaykumaranservices">Linkedin</a>
+    <a href="mailto:sanjaykumaranservices@gmail.com">Email</a>
+  </div>
+</footer>
 
-
-   <div class="footer" style="margin-top:150px;">
-       <div class="fname" style="color:#fff;">© 2024 Sanjay Kumaran D. All Rights Reserved</div>
-     <center><div class="sml">
-    <a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="mail.png" class="cugui"></a>
-    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="linkedin.png" class="cugui"></a>
-    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="github.png" class="cugui"></a>
-    <a href="https://leetcode.com/u/sanjaykumarand/" class="linkgui" style="text-decoration:none !important"><img src="lcp.png" class="cugui"></a>
-    <a href="https://unstop.com/u/sanjakum98898" class="linkgui" style="text-decoration:none !important"><img src="uns.png" class="cugui"></a>
-     </div></center></div>
-
-    
 <script>
-    const toggle = document.getElementById('menuToggle');
-    const nav = document.getElementById('navLinks');
-
-    function updateLayout() {
-      if (window.innerWidth <= 1024) {
-        toggle.style.display = 'inline';
-        nav.style.display = 'none';
-      } else {
-        toggle.style.display = 'none';
-        nav.style.display = 'flex';
-      }
-    }
-
-    toggle.addEventListener('click', () => {
-  if (nav.style.display === 'none') {
-    nav.style.display = 'flex';
-    nav.style.flexDirection = 'column'; 
-  } else {
-    nav.style.display = 'none';
-  }
+/* ── WELCOME POPUP ── */
+function closeWelcome() {
+  const overlay = document.getElementById('welcomeOverlay');
+  overlay.classList.add('hide');
+  overlay.addEventListener('animationend', () => overlay.remove(), { once: true });
+}
+// Auto-show on load (slight delay so page renders first)
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('welcomeOverlay').style.display = 'flex';
+  }, 400);
 });
 
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+/* ── 3D CARD TILT ── */
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const dx = (e.clientX - r.left - r.width/2)  / (r.width/2);
+    const dy = (e.clientY - r.top  - r.height/2) / (r.height/2);
+    card.style.transform = `perspective(750px) rotateX(${-dy*7}deg) rotateY(${dx*9}deg) scale3d(1.022,1.022,1.022)`;
+    card.style.setProperty('--mx', ((e.clientX-r.left)/r.width*100).toFixed(1)+'%');
+    card.style.setProperty('--my', ((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(750px) rotateX(0) rotateY(0) scale3d(1,1,1)';
+  });
+  card.style.transition = 'transform 0.2s ease, border-color 0.3s, box-shadow 0.3s';
+});
 
-
-    window.addEventListener('resize', updateLayout);
-    window.addEventListener('load', updateLayout);
-    
-
+/* ── MODAL ── */
+function openModal(serviceName, serviceSlug, price) {
+  document.getElementById('modal-service-name').textContent = serviceName;
+  const subject = encodeURIComponent('Start Processing: ' + serviceName);
+  const body = encodeURIComponent(
+    'Hi Sanjay,\n\nI would like to start processing for: ' + serviceName +
+    '\nPrice: ₹' + price +
+    '\n\n[Please attach your UPI payment screenshot here]\n\nMy requirements:\n'
+  );
+  document.getElementById('modal-email-link').href =
+    'mailto:sanjaykumaranservices@gmail.com?subject=' + subject + '&body=' + body;
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close on backdrop click
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal')) closeModal();
+});
+// Close on Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
-         
-         
-
-    <script>
- window.difyChatbotConfig = {
-  token: 'EEHX7AizWNHTwXXN',
-  inputs: {
-  },
-  systemVariables: {
-  },
-  userVariables: {
-    avatar_url: 'aiuser.png',
-    name: 'SKAI',
-  },
- }
-</script>
-<script
- src="https://udify.app/embed.min.js"
- id="EEHX7AizWNHTwXXN"
- defer>
-</script>
-<style>
-  #dify-chatbot-bubble-button {
-    background:linear-gradient(135deg,#fdf5b9,#f3b0f2,#fdf5b9) !important;
-    box-shadow: 0 8px 32px rgba(255,255,0,0.5);
-  }
-  #dify-chatbot-bubble-button:hover {
-    box-shadow: 0 8px 32px rgba(255,255,0,0.75);
-  }
-  #dify-chatbot-bubble-window {
-    width: 24rem !important;
-    height: 40rem !important;
-    position:fixed !important;
-    z-index: 999999;
-    
-  }
-</style>
-    
-    
-    
-    
-    
-
-
-    
-    
-    
-  
-    
-    </div>
-    
-    
-    
-    
-    
-    
-    
- </div>
- </div>
-  
-    
-    
-    
-    
-    
-    
-    
-  
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
