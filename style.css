@@ -82,6 +82,24 @@ body {
     text-align: center;
     color: #fff;
   }
+  
+   .huis{
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    max-width: fit-content;
+    padding: 0px 5px 1px 5px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .huis:hover{
+        backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(20px);
+    transform: scale(1.01);
+  }
+
 
 .epp{
   width: 75px;
