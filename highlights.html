@@ -40,9 +40,9 @@
        
         .slider-wrapper {
             display: flex;
-            width: 300%; 
+            width: 700%; 
             height: 100%;
-            animation: slide-animation 12s infinite ease-in-out;
+            animation: slide-animation 28s infinite ease-in-out;
         }
 
        
@@ -73,10 +73,21 @@
         }
 
         @keyframes slide-animation {
-            0%, 25% { transform: translateX(0); }
-            33%, 58% { transform: translateX(-33.333%); }
-            66%, 91% { transform: translateX(-66.666%); }
-            100% { transform: translateX(0); }
+            /* Slide 1 — hold */
+            0%,      11%   { transform: translateX(0%); }
+            /* Slide 2 — hold */
+            14.28%,  25.28% { transform: translateX(-14.2857%); }
+            /* Slide 3 — hold */
+            28.57%,  39.57% { transform: translateX(-28.5714%); }
+            /* Slide 4 — hold */
+            42.85%,  53.85% { transform: translateX(-42.8571%); }
+            /* Slide 5 — hold */
+            57.14%,  68.14% { transform: translateX(-57.1428%); }
+            /* Slide 6 — hold */
+            71.42%,  82.42% { transform: translateX(-71.4285%); }
+            /* Slide 7 — hold, then loop back */
+            85.71%,  96.71% { transform: translateX(-85.7142%); }
+            100%             { transform: translateX(0%); }
         }
 
        
@@ -155,6 +166,38 @@
                 <div class="caption" style="text-align: left; align-items: left; color:#fff;">Aero Knotz Industrial Visit<br>📍Padur, Kelambakkam, India<br><br>
 				<a href="AEROKNOTZIV.jpg"><button class="buttongui">Certificate ↗️</button></a>
 				<a href="https://www.linkedin.com/posts/sanjaykumarand_industrialvisit-learn-drone-ugcPost-7440046635977547778-EMCR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui">Linkedin ↗️</button></a></div>
+            </div>
+
+          
+            <div class="slide">
+                <img src="vtsi.png" alt="highlight4">
+                <div class="caption" style="text-align: left; align-items: left; color:#fff;">Event / Activity Title 4<br>📍 Location Here<br><br>
+                <a href="#"><button class="buttongui">Certificate ↗️</button></a>
+                <a href="#"><button class="buttongui">Linkedin ↗️</button></a></div>
+            </div>
+
+          
+            <div class="slide">
+                <img src="csps3.png" alt="highlight5">
+                <div class="caption" style="text-align: left; align-items: left; color:#fff;">Event / Activity Title 5<br>📍 Location Here<br><br>
+                <a href="#"><button class="buttongui">Certificate ↗️</button></a>
+                <a href="#"><button class="buttongui">Linkedin ↗️</button></a></div>
+            </div>
+
+         
+            <div class="slide">
+                <img src="omp.png" alt="highlight6">
+                <div class="caption" style="text-align: left; align-items: left; color:#fff;">Event / Activity Title 6<br>📍 Location Here<br><br>
+                <a href="#"><button class="buttongui">Certificate ↗️</button></a>
+                <a href="#"><button class="buttongui">Linkedin ↗️</button></a></div>
+            </div>
+
+        
+            <div class="slide">
+                <img src="bicsgi.png" alt="highlight7">
+                <div class="caption" style="text-align: left; align-items: left; color:#fff;">Event / Activity Title 7<br>📍 Location Here<br><br>
+                <a href="#"><button class="buttongui">Certificate ↗️</button></a>
+                <a href="#"><button class="buttongui">Linkedin ↗️</button></a></div>
             </div>
 
         </div>
