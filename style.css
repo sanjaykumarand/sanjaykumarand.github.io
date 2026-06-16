@@ -828,6 +828,7 @@ footer {
   min-height:1750px; 
   border-radius: 12px;
   min-width:1200px;
+  flex: 1 1 125px;
 }  
 
 .scard-frontends {
