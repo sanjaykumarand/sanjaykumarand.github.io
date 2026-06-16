@@ -825,7 +825,7 @@ footer {
   background-color: rgba(255,255,255,0.2);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
-  min-height:1308px; 
+  min-height:1900px; 
   border-radius: 12px;
 }  
 
