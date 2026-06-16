@@ -825,8 +825,9 @@ footer {
   background-color: rgba(255,255,255,0.2);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
-  min-height:1700px; 
+  min-height:1750px; 
   border-radius: 12px;
+  min-width:1200px;
 }  
 
 .scard-frontends {
@@ -1339,6 +1340,7 @@ header {
   }
   .scard-frontend{
     min-height:1336px;
+    min-width:100%;
   }
   .card-grid{
     padding: 5px;
