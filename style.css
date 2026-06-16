@@ -827,8 +827,6 @@ footer {
   -webkit-backdrop-filter: blur(20px);
   min-height:1750px; 
   border-radius: 12px;
-  min-width:1200px;
-  flex: 1 1 125px;
 }  
 
 .scard-frontends {
@@ -1341,7 +1339,7 @@ header {
     font-weight: 600;
   }
   .scard-frontend{
-    min-height:1736px;
+    min-height:1836px;
     min-width:100%;
   }
   .card-grid{
