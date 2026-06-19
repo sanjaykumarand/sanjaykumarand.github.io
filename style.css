@@ -869,7 +869,7 @@ footer {
 .escard-frontends {
   color:#fff;
   align-items:center;
-  flex:1 1 120px;
+  flex:1 1 250px;
   text-align:center;
   border-radius:12px;
   height:150px;
@@ -1340,7 +1340,7 @@ header {
   }
   .scard-frontend{
     min-height:1836px;
-    width:100%;
+  
   }
   .card-grid{
     padding: 5px;
