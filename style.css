@@ -1340,7 +1340,7 @@ header {
   }
   .scard-frontend{
     min-height:1836px;
-    min-width:100%;
+    width:100%;
   }
   .card-grid{
     padding: 5px;
