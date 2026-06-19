@@ -1058,8 +1058,7 @@ header {
   
 }
  #pbf {
-   min-width: 450px;
-   max-width: 450px;
+   width: 750px;
    align-items: center;
    text-align: center;
    justify-content: center;
