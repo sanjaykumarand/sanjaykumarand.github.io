@@ -868,9 +868,9 @@ footer {
 
 .escard-frontends {
   color:#fff;
-  align-items:center;
+  align-items:left;
   flex:1 1 250px;
-  text-align:center;
+  text-align:left;
   border-radius:12px;
   height:150px;
   padding:10px;
