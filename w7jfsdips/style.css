@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #1a0533;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at top left, #3b0764 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, #1e1050 0%, transparent 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;   
+  z-index: -1;         
+}
+
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: left;
+  top: 40%;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  min-width: 100%;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  letter-spacing: 0.03em;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff2d78, #ff6b00);
+  color: #ffffff;
+  box-shadow: 0 6px 24px rgba(255, 45, 120, 0.45);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.40);
+}
+
+#home-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 80vh;
+}
+
+#home-card {
+  background-color: rgb(149, 0, 255, 0.5);
+  border: 2px solid rgba(255, 230, 0, 0.25);
+  border-radius: 24px;
+  padding: 64px 56px;
+  text-align: center;
+  max-width: 540px;
+  width: 100%;
+  box-shadow:
+    0 0 60px rgba(255, 45, 120, 0.12),
+    0 24px 64px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+   backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#home-card:hover{
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+#home-card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+#home-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+  color: #ffe600;
+  text-shadow: 0 0 20px rgba(255, 230, 0, 0.5);
+}
+
+#home-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.6rem;
+  color: #ffe600;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  text-shadow: 0 0 30px rgba(255, 230, 0, 0.3);
+}
+
+#home-subtitle {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+#home-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+#home-actions .btn {
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+}
+
+#form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 520px;
+}
+
+#ticket-card {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 430px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 3px #ffe600,
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+#ticket-top {
+  background: linear-gradient(135deg, #ff2d78 0%, #7c3aed 100%);
+  padding: 32px 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#ticket-icon {
+  font-size: 2.6rem;
+  color: #ffffff;
+  letter-spacing: -4px;
+}
+
+#form-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+#ticket-divider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #f3e8ff;
+  height: 28px;
+}
+
+.circle-left,
+.circle-right {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1a0533;
+  flex-shrink: 0;
+  position: absolute;
+}
+
+.circle-left  { left: -14px; }
+.circle-right { right: -14px; }
+
+.dashed-line {
+  display: block;
+  flex: 1;
+  border-top: 3px dashed #c084fc;
+  margin: 0 24px;
+}
+
+#booking-form {
+  padding: 28px 36px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #ffffff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.form-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid #e8d5ff;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #1a0533;
+  background: #faf5ff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #ff2d78;
+  box-shadow: 0 0 0 3px rgba(255, 45, 120, 0.15);
+  background: #ffffff;
+}
+
+.form-input::placeholder {
+  color: #b8a0d0;
+  font-weight: 400;
+}
+
+#submit-btn {
+  margin-top: 8px;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff2d78, #ff6b00);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(255, 45, 120, 0.4);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+#submit-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+#submit-btn:active {
+  transform: translateY(0);
+}
+
+#back-link {
+  color: #6c00fa;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+#back-link:hover {
+  color: #ffe600;
+}
+
+#success-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 80vh;
+}
+
+#success-card {
+  background-color: rgb(149, 0, 255, 0.5);
+  border: 2px solid rgba(255, 230, 0, 0.3);
+  border-radius: 24px;
+  padding: 60px 56px;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  box-shadow:
+    0 0 0 1px rgba(255, 45, 120, 0.1),
+    0 24px 64px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#success-card:hover{
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+#success-icon {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 20px;
+  color: #ffe600;
+  text-shadow: 0 0 20px rgba(255, 230, 0, 0.4);
+  animation: pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+#success-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  color: #ffe600;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  text-shadow: 0 0 24px rgba(255, 230, 0, 0.3);
+}
+
+#success-msg {
+  color: #c4a8e8;
+  font-size: 0.95rem;
+  margin-bottom: 36px;
+}
+
+#home-btn {
+  font-size: 1rem;
+  padding: 14px 40px;
+}
+
+@media (max-width: 540px) {
+  body { padding: 16px; }
+
+  #home-card, #success-card {
+    padding: 40px 28px;
+  }
+
+  #home-title { font-size: 2rem; }
+
+  #ticket-top { padding: 24px 24px 20px; }
+  #booking-form { padding: 24px 24px 30px; }
+  #form-title { font-size: 1.6rem; }
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 12px 20px;
+  background: rgba(26, 5, 51, 0.92);
+  border-top: 1px solid rgba(255, 230, 0, 0.15);
+  font-size: 0.82rem;
+  color: #c4a8e8;
+  letter-spacing: 0.02em;
+}
+
+#footer-link {
+  color: #ffe600;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+
+#footer-link:hover {
+  color: #ff2d78;
+}

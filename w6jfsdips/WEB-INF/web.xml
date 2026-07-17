@@ -1,0 +1,33 @@
+<web-app>
+
+  <!-- AddQuestionServlet -->
+  <servlet>
+    <servlet-name>AddQuestionServlet</servlet-name>
+    <servlet-class>AddQuestionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddQuestionServlet</servlet-name>
+    <url-pattern>/AddQuestionServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- ViewQuestionsServlet (was missing — caused 404 on Take Quiz) -->
+  <servlet>
+    <servlet-name>ViewQuestionsServlet</servlet-name>
+    <servlet-class>ViewQuestionsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewQuestionsServlet</servlet-name>
+    <url-pattern>/ViewQuestionsServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- SubmitQuizServlet -->
+  <servlet>
+    <servlet-name>SubmitQuizServlet</servlet-name>
+    <servlet-class>SubmitQuizServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubmitQuizServlet</servlet-name>
+    <url-pattern>/SubmitQuizServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>
