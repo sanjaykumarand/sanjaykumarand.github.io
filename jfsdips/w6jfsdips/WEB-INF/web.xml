@@ -1,6 +1,23 @@
 <web-app>
 
-  <!-- AddQuestionServlet -->
+<filter>
+    <filter-name>CorsFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    <init-param>
+        <param-name>cors.allowed.origins</param-name>
+        <param-value>https://sanjaykumarand.github.io</param-value>
+    </init-param>
+    <init-param>
+        <param-name>cors.allowed.methods</param-name>
+        <param-value>GET,POST,HEAD,OPTIONS,PUT,DELETE</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>CorsFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+  
   <servlet>
     <servlet-name>AddQuestionServlet</servlet-name>
     <servlet-class>AddQuestionServlet</servlet-class>
@@ -10,8 +27,7 @@
     <url-pattern>/AddQuestionServlet</url-pattern>
   </servlet-mapping>
 
-  <!-- ViewQuestionsServlet (was missing — caused 404 on Take Quiz) -->
-  <servlet>
+   <servlet>
     <servlet-name>ViewQuestionsServlet</servlet-name>
     <servlet-class>ViewQuestionsServlet</servlet-class>
   </servlet>
@@ -20,8 +36,7 @@
     <url-pattern>/ViewQuestionsServlet</url-pattern>
   </servlet-mapping>
 
-  <!-- SubmitQuizServlet -->
-  <servlet>
+    <servlet>
     <servlet-name>SubmitQuizServlet</servlet-name>
     <servlet-class>SubmitQuizServlet</servlet-class>
   </servlet>
