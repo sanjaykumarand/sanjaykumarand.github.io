@@ -22,6 +22,9 @@ Add Faculty
 <a class="nav-link" href="ViewFacultyServlet">
 View Faculty
 </a>
+<a class="nav-link" href="https://sanjaykumarand.github.io/#projects">
+Back To Portfolio
+</a>
 </div>
 </div>
 </body>

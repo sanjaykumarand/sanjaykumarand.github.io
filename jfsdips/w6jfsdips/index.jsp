@@ -20,8 +20,8 @@
     <p class="page-subtitle">Select an option to continue</p>
     <nav class="nav-links">
       <a href="addQuestion.jsp" class="nav-link">Add Questions</a>
-      <!-- Goes through servlet first so DB data is loaded before takeQuiz.jsp renders -->
       <a href="ViewQuestionsServlet" class="nav-link primary">Take Quiz</a>
+      <a href="https://sanjaykumarand.github.io/#projects" class="nav-link primary">Back To Portfolio</a>
       <br>
       <h4 style="text-align:center; color:#000;">Powered by Sanjay Kumaran Portal</h4>
     </nav>

@@ -27,6 +27,9 @@
       <a href="ViewBookingsServlet" class="btn btn-secondary">
         View Bookings
       </a>
+      <a href="https://sanjaykumarand.github.io/#projects" class="btn btn-secondary">
+        Back To Portfolio
+      </a>
     </div>
   </div>
 </div>

@@ -11,6 +11,7 @@
     <nav id="nav-links">
       <a class="nav-link" href="orderFood.jsp">Order Food</a>
       <a class="nav-link" href="ViewOrdersServlet">View Orders</a>
+      <a class="nav-link" href="https://sanjaykumarand.github.io/#projects">Back To Portfolio</a>
     </nav>
   </div>
 </div>
