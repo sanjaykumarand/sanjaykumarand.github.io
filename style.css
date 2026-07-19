@@ -454,6 +454,7 @@ height:475px;
     max-height: 440px;
     height: 100%;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .pcard-frontend:hover {
@@ -588,10 +589,11 @@ nav a:hover {
   }
   
 .primggui {
-  border-radius:12px;
-  width:100%;
+  border-radius:0px;
+  width: calc(100% + 2rem);
   height:150px;
-  
+  margin: -1rem -1rem 1rem -1rem;
+  display: block;
   }  
   
 
@@ -669,11 +671,9 @@ nav a:hover {
   margin-left:7.5px;
   margin-bottom:8px;
   text-decoration: none;
-  background:linear-gradient(135deg, #F3B1F1, #FDF4BA, #F3B1F1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, #6d28d9, #db2777);
+  color: #ffffff;
   padding: 15px 30px;
-  color: #000;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -681,16 +681,12 @@ nav a:hover {
   text-overflow: ellipsis;
   font-size:15px;
   font-weight: 600;
-  border: 1px solid pink;
-  box-shadow: 0 8px 32px rgba(255, 255, 0,0.2);
-  border-radius: 15px;
+  border-radius: 30px;
 }
 .buttongui:hover {
- background:linear-gradient(135deg, #FDF4BA, #F3B1F1, #FDF4BA);
-  transform: scale(1.02);
-  box-shadow: 0 8px 32px rgba(255, 255, 0,0.6);
-  background-color: rgba(0,0,0,1);
-  border: 1px solid yellow;
+ background: linear-gradient(135deg, #7c3aed, #ec4899) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(219, 39, 119, 0.35) !important;
 }
 
   .slbuttongui {
