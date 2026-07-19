@@ -1538,3 +1538,11 @@ header {
 
 
 
+
+/* On mobile, let touches pass through the canvas so the page scrolls
+   normally. Color is instead triggered by scroll position via JS. */
+@media (max-width: 768px) {
+  canvas#fluid {
+    pointer-events: none;
+  }
+}
