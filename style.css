@@ -445,13 +445,13 @@ height:475px;
 .pcard-frontend{
     flex: 1 1 250px;
    border-radius:12px;
-   max-width: 220px;
-    min-width: 220px; 
+   max-width: 320px;
+    min-width: 320px; 
     width:100%;
     color:#fff;
       background-color: rgba(0,0,0,1);
-    min-height:440px;
-    max-height: 440px;
+    min-height:460px;
+    max-height: 460px;
     height: 100%;
     margin-bottom: 20px;
     overflow: hidden;
@@ -591,7 +591,7 @@ nav a:hover {
 .primggui {
   border-radius:0px;
   width: calc(100% + 2rem);
-  height:150px;
+  height:180px;
   margin: -1rem -1rem 1rem -1rem;
   display: block;
   }  
@@ -682,9 +682,11 @@ nav a:hover {
   font-size:15px;
   font-weight: 600;
   border-radius: 30px;
+  border: transparent !important;
 }
 .buttongui:hover {
  background: linear-gradient(135deg, #7c3aed, #ec4899) !important;
+ border: transparent !important;
   transform: translateY(-5px);
   box-shadow: 0 10px 24px rgba(219, 39, 119, 0.35) !important;
 }
