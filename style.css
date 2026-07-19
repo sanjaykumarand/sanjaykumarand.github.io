@@ -170,7 +170,27 @@ canvas#fluid {
 .content input,
 .content textarea,
 .content select,
-.content .menu-toggle {
+.content img,
+.content .menu-toggle,
+.content .pp,
+.content .post,
+.content .projectpost,
+.content .card-frontend1,
+.content .card-frontend2,
+.content .card-frontend,
+.content .bcard-frontend,
+.content .pcard-frontend,
+.content .headgui,
+.content .dbuttongui,
+.content .d1buttongui,
+.content .buttongui,
+.content .slbuttongui,
+.content .navbuttongui,
+.content .scard-frontends,
+.content .escard-frontends,
+.content .psb,
+.content .dp,
+.content .gitcb {
   pointer-events: auto;
 
  
@@ -848,7 +868,7 @@ footer {
   background-color: rgba(255,255,255,0.2);
   backdrop-filter: blur(19px);
   -webkit-backdrop-filter: blur(20px);
-  min-height:1900px; 
+  min-height:700px; 
   border-radius: 12px;
 }  
 
@@ -1082,6 +1102,16 @@ header {
 }
  #pbf {
    width: 750px;
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   display: grid;
+   place-items: center;
+ }
+
+  #pbfh { 
+    height: 300px;
+  width: 750px;
    align-items: center;
    text-align: center;
    justify-content: center;
@@ -1323,6 +1353,11 @@ header {
   #pbf{
     width:100%;
   }
+
+  #pbfh{
+    width:100%;
+  }
+
   #iegui{
   margin-top: -100px;
 }
