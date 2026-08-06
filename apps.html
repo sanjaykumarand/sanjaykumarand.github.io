@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay Kumaran App Store</title>
+  <link rel="icon" href="SKengine/skailgo.png" type="image/png">
+  <meta name="google-site-verification" content="bIuP1C2_zeoI9RXnqy46-R4dqH2NqM96JJ5CBqlQZlw" />
+
+  
+</head>
+
+  <style>
+ 
+    
+    /* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI';
+  background: black;
+  color: #FFF;
+  border:20px solid linear-gradient(rgba(255,0,0,0.5));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  padding:0.5rem;
+  
+}
+
+.glass-container {
+  width: 100%;
+}
+
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.headgui:hover {
+  color:lightgreen;
+}
+
+
+.pp{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid blue;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.epp{
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+  
+.spp{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+
+ .typing-text {
+      color: white;
+      font-size: 20em;
+      font-family: 'Segoe UI';
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(30, end) forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }    
+    
+
+
+/* Header */
+
+header {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 20px;
+}
+  
+
+header h1 {
+  font-size: 4rem;
+  color: #e0f7fa;
+}
+
+h1 {
+  font-size: 30px; }
+h3 {
+  font-size: 20px;}
+h2 {
+  font-size: 25px;}
+h4 {
+  font-size: 15px;
+  }
+h5 {
+  font-size: 10px; }
+
+/* Intro Section */
+.intro {
+  margin-bottom: 2rem;
+}
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 20px;
+  text-decoration:none !important 
+}
+/* Blog Posts */
+.blog-posts {
+  display: grid;
+  gap: 1.5rem;
+  flex: 1 1 250px;
+
+}
+.post {
+  background: rgba(255, 255, 255, 0.1-0.3);
+  border-radius: 30px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  border: 5px solid #fff;
+
+}
+.post:hover {
+  transform: scale(1.00);
+}
+.post h3 {
+  margin-bottom: 0.5rem;
+}
+.post p {
+  margin-bottom: 1rem;
+
+}
+
+.respost {
+  background: rgba(255, 255, 255, 0.1-0.3);
+  border-radius: 30px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+   border: 5px solid #fff;
+
+}
+.respost h3 {
+  margin-bottom: 0.5rem;
+}
+.respost p {
+  margin-bottom: 1rem;
+
+}
+
+.projectblog-posts {
+  display: grid;
+  gap: 1.5rem;
+  flex: 1 1 250px;
+
+}
+.projectpost {
+
+  border-radius: 30px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  height:600px;
+  border:0px solid #fff;
+  width:100%;
+
+}
+.projectpost h3 {
+  margin-bottom: 0.5rem;
+}
+.projectpost p {
+  margin-bottom: 1rem;
+
+}
+
+.rpost {
+  align-items:center;
+  border-radius: 15px;
+  padding: 0rem;
+  transition: transform 0.3s ease;
+  height:60vh;
+  flex: 1 1 250px;
+
+}
+.rpost h3 {
+  margin-bottom: 0.5rem;
+}
+.rpost p {
+  margin-bottom: 0.5rem;
+}
+
+.rpost h4:hover {
+  color:violet;
+}
+
+.navblog-posts {
+  display: grid;
+  gap: 1.5rem;
+  
+
+}
+
+    nav {
+        background: rgba(0, 0, 255,0.25);
+      color: white;
+      align-items:center;
+      padding: 10px;
+      border-radius:30px;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+
+.navpost {
+  cursor: pointer;
+  display: none;
+  border-radius: 30px;
+  padding: 1rem;
+  display: flex;
+  gap: 20px;
+
+}
+nav:hover {
+  transform: scale(1.02);
+}
+.navpost h3 {
+  margin-bottom: 0.5rem;
+}
+.navpost p {
+  margin-bottom: 1rem;
+
+}
+
+.navpost a {
+      color: white;
+      text-decoration: none;
+      padding:10px 0;
+    }
+
+
+.headgui {
+  color:#FFF;
+  text-decoration:none !important
+  
+}
+
+.headgui:hover {
+    background: linear-gradient(blue,lightblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skillgui {
+  text-align:left; }
+  
+  
+.buttonguileft {
+  background-color: transparent;
+  border: 2px solid;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: #FFF;
+  cursor: pointer;
+  float:left;
+  transition: background 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  text-decoration:none !important
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.buttonguileft:hover {
+  color:#FFF;
+  background: linear-gradient(135deg,#FF0000);
+}
+
+.forceleft {
+  float:left;}
+
+.imggui {
+  border-radius:10px;
+  width:300px;
+  height:200px;
+  }
+
+
+
+.footgui {
+  color:#FFFFFF;
+  text-decoration:none !important
+  }
+
+.buttongui {
+  display: inline-block;
+  margin-left:10px;
+  margin-bottom:8px;
+  text-decoration: bold;
+  background: linear-gradient(135deg, #3A7BFF ,  #00F0FF);
+  border: 0px solid ;
+  padding: 10px 25px;
+  border-radius: 15px;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 8px 32px rgba(255,255,255,0.35);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+.buttongui:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0,240,255,0.75);
+}
+
+.navbuttongui {
+    position: fixed;
+    position: sticky;
+  top: 0;
+  width: 100%;
+  height:40px;
+  z-index: 1000;
+  display: inline-block;
+  margin-left:10px;
+  margin-bottom:8px;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.navbuttongui:hover {
+    background: linear-gradient(red,yellow,yellow,pink,pink,orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  font-size:18px;
+}
+
+
+.buttonguitheme {
+  display: inline-block;
+  margin-left:10px;
+  margin-bottom:8px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.buttonguitheme:hover {
+  color: #FFF;
+  background: linear-gradient(135deg,#FFA500,#FFA500,#FFA500,#FFFFFF,#FFFFFF,#FFFFFF);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+
+
+
+.projectgui {
+  color:red;
+  text-decoration:none !important
+}
+
+.linkgui {
+  color:white;
+  margin-right:10px;
+  text-decoration:none !important 
+   }
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  float:right;
+  }
+    
+    .resumegui {
+  border-radius:30px;
+  width:340px;
+  height:300px;
+  }
+  
+
+  
+  .cugui {
+    width:35px;
+    height:35px;
+   
+  }
+  
+  .card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+    padding: 20px;
+
+}
+
+  .scard-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+    padding: 20px;
+
+}
+
+.card {
+  flex: 1 1 250px; 
+  transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  text-align: center;
+    padding: 20px;
+  
+}
+
+.scard {
+  flex: 1 1 250px; /* Minimum width of 250px, wraps on smaller screens */
+  transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1-0.3);
+  border-radius: 30px;
+  text-align: center;
+  height:820px;
+    padding: 20px;
+     border: 5px solid #fff;
+  
+}
+
+.scard-frontends {
+  align-items:center;
+  flex:1 1 800px;
+  text-align:center;
+  padding:20px;
+  border-radius:12px;
+  height:150px;
+  background: rgba(255, 255, 255,0.15);
+  width:10px;
+}
+
+
+.scard-frontends:hover {
+   background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+}
+
+.scard-frontends h3:hover {
+  color:lightgreen;
+}
+
+
+.scard-frontends p:hover {
+  color:violet;
+}
+
+.themeicon {
+  border-radius:50px;
+  width:50px;
+  height:50px;
+  }
+  
+.aboutgui {
+  border-radius:10px;
+  width:100%;
+  height:300px;
+  }
+  
+.introgui {
+  padding-top:20px;
+  padding-bottom:115px;
+}
+
+.introvideo {
+  background-image: url("bg.png");
+  border-radius:12px;
+}
+
+.sml{
+  margin-top: -25px;
+}
+.fname{
+  padding-top:15px;
+  padding-left:10px;
+}
+
+.footer{
+  height:50px;
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-top: 400px;
+}
+.card-frontend{
+  width:40%;
+  min-width:40%;
+  max-width:40%;
+  margin-left:10px;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255,0,0,0.5);
+  flex: 1 1 250px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .introvideo {
+    background-image: url('bgm.png');
+  }
+  .introgui {
+    padding-bottom:40px;
+  }
+  .fname{
+  padding-top:0px;
+}
+  .tconnect{
+    min-width:100%;
+    height:350px;
+  }
+  .gitcb{
+    min-width:100%;
+  }
+  .sml{
+    margin-top: 10px;
+  }
+  .footer{
+    height: 75px;
+    margin-top:1200px;
+  }
+  .card-frontend{
+  width:100%;
+  min-width:100%;
+  max-width:100%;
+  margin-left:0px;
+}
+}
+
+</style>
+<body>
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+  if (nav.style.display === 'none') {
+    nav.style.display = 'flex';
+    nav.style.flexDirection = 'column'; // ✅ THIS LINE makes it vertical
+  } else {
+    nav.style.display = 'none';
+  }
+});
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    window.addEventListener('load', updateLayout);
+  </script>
+
+
+
+
+  <div class="glass-container">
+  <br>
+    <section class="navblog-posts">
+
+<header>
+  <h2><b><a href="apps" class="headgui">SK App Store</a></b></h2>      
+
+    </section>             
+</header>
+
+ 
+    <br>
+
+<a href="/" class="projectgui"><button class="buttongui">Portfolio Homepage ✨</button></a>
+<a href="/#projects" class="projectgui"><button class="buttongui">Browse all Projects 📑</button></a>
+
+<center>
+
+          <section class="projectblog-posts" >
+      <article class="projectpost" style="width:100%;">
+      <h2 >Sanjay Kumaran App Projects</h2><br>
+      <div class="card-grid">
+
+
+          <div class="card-frontend" id="skai">
+    <section class="blog-posts">
+      <article class="rpost" style="height:400px;">
+      <img src="SKengine/skailgo.png" style="width:50px; height:50px;">
+      <h3>Sanjay Kumaran AI</h3>
+      <h3>Supports only Windows 11/10/8.1/7 64-bit<br>& Android 9 - 16</h3><br>
+         <h4>Temporarily Disabled Download Link for Windows Users</h4>
+         <a href="https://icedrive.net/s/B5w9vgAZ952YkF5vv5F5tyaNfk6y" class="projectgui"><button class="buttongui">⬇️ Download for Android</button></a>
+        <a href="skai/skaiav" class="projectgui"><button class="buttongui">🌐Chat on Web Now</button></a>
+      </article>
+    </section>
+  </div>
+        
+  <div class="card-frontend" id="skc">
+    <section class="blog-posts">
+      <article class="rpost" style="height:400px;">
+      <img src="SKengine/skcr128.png">
+      <h3>SK Classroom</h3>
+      <h3>Supports only Windows 11/10/8.1/7 64-bit</h3><br>
+      <h3>Try Again Later, If you are Interested to check my app</h3>
+      </article>
+    </section>
+  </div>
+
+  <div class="card-frontend" id="skaib2">
+    <section class="blog-posts">
+      <article class="rpost" style="height:400px;">
+      <img src="SKengine/skailgo.png" width="100px" height="100px">
+      <h3>SK AI Beta 2</h3>
+      <h3>Supports only Android 12 - 17</h3><br>
+      <a href="" class="projectgui"><button class="buttongui">Coming Soon ❕</button></a>
+      </article>
+    </section>
+  </div>
+
+
+  <div class="card-frontend" id="skchat">
+    <section class="blog-posts">
+      <article class="rpost" style="height:400px;">
+      <img src="SKengine/skchatlgo.png" width="100px" height="100px">
+      <h3>SK Chat</h3>
+      <h3>Supports only Android 12 - 17</h3><br>
+      <a href="mailto:sanjaykumaran6907@gmail.com?subject=Request%20for%20Decryption%20Key%20-%20SK%20Chat%20App&body=I%20requesting%20to%20give%20the%20Decryption%20Key%20to%20Check%20your%20SK%20Chat%20App" class="projectgui"><button class="buttongui">🔐 Request Key</button></a>
+      <a href="https://mega.nz/file/rhpWGDaK" class="projectgui"><button class="buttongui">🔑 I have Key to Download this App for Android(.apk)</button></a>
+      </article>
+    </section>
+  </div>
+       
+      
+        
+</div>
+      </article>
+    </section>
+
+
+
+    
+</center>
+<br>
+
+
+
+
+   <div class="footer">
+       <div class="fname">© 2024 Sanjay Kumaran D. All Rights Reserved</div>
+     <center><div class="sml">
+    <a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="SKengine/mail.png" class="cugui"></a>
+    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/linkedin.png" class="cugui"></a>
+    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/github.png" class="cugui"></a>
+    <a href="https://leetcode.com/u/sanjaykumarand/" class="linkgui" style="text-decoration:none !important"><img src="SKengine/lcp.png" class="cugui"></a>
+    <a href="https://unstop.com/u/sanjakum98898" class="linkgui" style="text-decoration:none !important"><img src="SKengine/uns.png" class="cugui"></a>
+     </div></center></div>
+
+
+    
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (!nav || !toggle) return;
+
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+        nav.style.flexDirection = 'column';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'row';
+      }
+    }
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        if (nav.style.display === 'none') {
+          nav.style.display = 'flex';
+          nav.style.flexDirection = 'column';
+        } else {
+          nav.style.display = 'none';
+        }
+      });
+
+
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    updateLayout();
+    }
+  });
+
+  </script>
+         
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</body>
+</html>

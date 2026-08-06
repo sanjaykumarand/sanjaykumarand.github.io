@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay Kumaran Portfolio</title>
+  <link rel="icon" href="SKengine/proaccess.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+</head>
+
+<style>
+.content{
+  background-color: rgba(0,0,0,0);
+}
+  .footer{
+  border-radius: 12px;
+}
+  
+header{
+margin-left: 0px;
+}
+
+
+.introgui1{
+  margin-top:50px;
+}
+.card-frontend:hover{
+  transform: scale(1.00);
+  max-height:150px;
+  
+}
+@media only screen and (max-width: 1024px) {
+
+.introgui1{
+  margin-top:0;
+}
+header{
+margin-left: 0px;
+}
+  .footer{
+  border-radius: 0px;
+}
+  
+}
+</style>
+
+
+<body>
+   <script src="https://cdn.jsdelivr.net/npm/webgl-fluid@0.4"></script>
+<script src="script.js"></script>
+
+
+
+ <div id="hero">
+  <canvas id="fluid"></canvas>
+
+
+
+
+
+ <div class="content">
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+  if (nav.style.display === 'none') {
+    nav.style.display = 'flex';
+    nav.style.flexDirection = 'column'; 
+  } else {
+    nav.style.display = 'none';
+  }
+});
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    window.addEventListener('load', updateLayout);
+    
+
+</script>
+
+
+
+  <div class="glass-container">
+    <section class="navblog-posts">
+    <header>
+  <h2><b><a href="/" class="headgui">Sanjay Kumaran</a></b></h2>      
+  <nav>
+    <span class="menu-toggle" id="menuToggle">☰</span>
+    <div class="nav-links" id="navLinks">
+       <a href="/" class="navbuttongui">Home</a>
+      <a href="/#aboutme" class="navbuttongui">About</a>
+      <a href="/#projects" class="navbuttongui">Projects️</a>
+      <a href="certificates" class="navbuttongui">Skills</a>
+      <a href="highlights" class="navbuttongui">Highlights</a>
+      <a href="apps" class="navbuttongui">MyApps</a>
+      <a href="SKengine/SanjayKumaran-CV.pdf" class="navbuttongui">Resume</a>
+      
+    </div>
+  </nav>
+</header>
+    </section>   
+    
+<div id="demoPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:99999; font-family:'Inter', sans-serif;">
+  <div style="background-color:rgba(255,255,255,0.1); backdrop-filter:blur(19px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:35px; max-width:400px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#fff;">
+    <h1 style="font-family:'Space Grotesk', sans-serif; margin-bottom:10px;">🌐 <span id="demoPopupTitle" style="background:linear-gradient(to right, gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent;"></span></h1>
+    <p style="color:#fff; font-weight:500;">*Website Backend Server : <span class="blink" style="color: #00ff00; font-weight:bold; ">ACTIVE</span></p>
+    <a id="demoPopupLink" href="#" target="_blank"><button class="buttongui" style="margin-top:20px;">🛒 E-Commerce Management System</button></a>
+    <a href="https://w8-jfsdips.onrender.com/w7/"><button class="buttongui">🎫 Movie Ticket Booking System</button></a>
+    <a href="https://w8-jfsdips.onrender.com/w6/"><button class="buttongui">📜 Online Quiz Examination System</button></a>
+    <a href="https://w8-jfsdips.onrender.com/w5/"><button class="buttongui">🎓 College Management System</button></a>
+    <a href="https://w8-jfsdips.onrender.com/w4/"><button class="buttongui">😋 Online Food Ordering System</button></a>
+    <a href="https://w8-jfsdips.onrender.com/w3/"><button class="buttongui">📚 Library Management System</button></a>
+    <a href="https://w8-jfsdips.onrender.com/w2/"><button class="buttongui">💼 Employee Management System</button></a>
+    <br><button class="buttongui" style="margin-top:10px; background:rgba(255,255,255,0.2);" onclick="document.getElementById('demoPopup').style.display='none';">Close</button>
+  </div>
+</div>
+
+<script>
+function showDemoPopup(title, url) {
+  document.getElementById('demoPopupTitle').innerText = title;
+  document.getElementById('demoPopupLink').href = url;
+  document.getElementById('demoPopup').style.display = 'flex';
+}
+</script>
+
+<article class="introgui1"> 
+    <br>
+ <section class="blog-posts" id="education">
+      <article class="post">
+      <center> <div class="hui" ><h2 style="color:#fff;">Java Full Stack Developer Intern Projects<br>My Source Codes</h2></div><br>
+        <button class="buttongui" onclick="showDemoPopup('Java Full Stack Developer Intern Projects','https://w8-jfsdips.onrender.com/')">Play Demo 🌐</button>
+      </center>
+              <div class="daipcard-grid" >
+               <div class="vdaipcard-frontend" >
+              <section class="blog-posts" >
+                <article class="rpost">
+          <center>      
+<h3 style="color:#fff;">Week 1 Project [Student Management System using Java and MySql DataBase Server]</h3>
+            <a href="https://github.com/sanjaykumarand/Student-Management-System-using-Java" class="projectgui"><button class="buttongui" style="margin-top:10px;">GitHub 🕵️</button></a>
+            <a href="https://www.linkedin.com/posts/sanjaykumarand_javadevelopment-mysql-internshipjourney-ugcPost-7461779855836155905-_bf6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui"><h4>Screenshots ️🖼️</h4></button></a>
+            <br>
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7461791382207115264?compact=1" class="oframe" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            </center>
+      </article>
+    </section></div>
+    </div>
+
+
+ <div class="daipcard-grid" >
+               <div class="vdaipcard-frontend" >
+              <section class="blog-posts" >
+                <article class="rpost">
+          <center>      
+<h3 style="color:#fff;">Week 2 Project [Employee Management System using Java, Apache Tomcat and MySql DataBase Server]</h3>
+            <a href="https://github.com/sanjaykumarand/Employee_Management_System_using_Java_Servlet" class="projectgui"><button class="buttongui" style="margin-top:10px;">GitHub 🕵️</button></a>
+            <a href="https://www.linkedin.com/posts/sanjaykumarand_javadevelopment-apachetomcat-mysqldatabase-ugcPost-7464592319657250816-H5dM/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui"><h4>Screenshots ️🖼️</h4></button></a>
+            <a href="http://w8-jfsdips.onrender.com/w2/"><button class="buttongui">🌐 Demo</button></a>
+      <br>      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7464590590832259072?compact=1" class="oframe" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            </center>
+      </article>
+    </section></div>
+    </div>
+
+
+
+
+         <div class="daipcard-grid" >
+               <div class="vdaipcard-frontend" >
+              <section class="blog-posts" >
+                <article class="rpost">
+          <center>      
+<h3 style="color:#fff;">Week 3 Project [Library Management System using JSP, Java, Apache Tomcat and MySql DataBase Server]</h3>
+            <a href="https://github.com/sanjaykumarand/Week3_Library_Management_System" class="projectgui"><button class="buttongui" style="margin-top:10px;">GitHub 🕵️</button></a>
+            <a href="https://www.linkedin.com/posts/sanjaykumarand_javadevelopment-jsp-apachetomcat-ugcPost-7467191969132359680-04zn/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui"><h4>Screenshots ️🖼️</h4></button></a>
+         <a href="http://w8-jfsdips.onrender.com/w3/"><button class="buttongui">🌐 Demo</button></a>
+            <br>    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7467189797544046592?compact=1" class="oframe" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            </center>
+      </article>
+    </section></div>
+    </div>
+
+
+  <div class="daipcard-grid" >
+               <div class="vdaipcard-frontend" >
+              <section class="blog-posts" >
+                <article class="rpost">
+          <center>      
+<h3 style="color:#fff;">Week 4 Project [Online Food Ordering System using JSP, Java, Apache Tomcat and MySql DataBase Server]</h3>
+            <a href="https://github.com/sanjaykumarand/Week4_Online_Food_Ordering_System" class="projectgui"><button class="buttongui" style="margin-top:10px;">GitHub 🕵️</button></a>
+            <a href="https://www.linkedin.com/posts/sanjaykumarand_javadevelopment-jsp-apachetomcat-ugcPost-7469742698636267520-5-hA/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui"><h4>Screenshots ️🖼️</h4></button></a>
+         <a href="http://w8-jfsdips.onrender.com/w4/"><button class="buttongui">🌐 Demo</button></a>
+            <br>    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7469784078813220868?compact=1" class="oframe" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            </center>
+      </article>
+    </section></div>
+    </div>
+
+
+        <div class="daipcard-grid" >
+               <div class="vdaipcard-frontend" >
+              <section class="blog-posts" >
+                <article class="rpost">
+          <center>      
+<h3 style="color:#fff;">Week 5 Project [Smart College Management System using JSP, Java, Apache Tomcat and MySql DataBase Server]</h3>
+            <a href="https://github.com/sanjaykumarand/Smart_College_Management_System" class="projectgui"><button class="buttongui" style="margin-top:10px;">GitHub 🕵️</button></a>
+            <a href="https://www.linkedin.com/posts/sanjaykumarand_javafullstack-collegemanagementsystem-jsp-ugcPost-7472154664029945857-E38Z/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui"><h4>Screenshots ️🖼️</h4></button></a>
+       <a href="http://w8-jfsdips.onrender.com/w5/"><button class="buttongui">🌐 Demo</button></a>
+            <br>      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7472179234786934784?compact=1" class="oframe" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            </center>
+      </article>
+    </section></div>
+    </div>
+
+         <div class="daipcard-grid" >
+               <div class="vdaipcard-frontend" >
+              <section class="blog-posts" >
+                <article class="rpost">
+          <center>      
+<h3 style="color:#fff;">Week 6 Project [Online QuizSystem using JSP, Java, Apache Tomcat and MySql DataBase Server]</h3>
+            <a href="https://github.com/sanjaykumarand/Week6_Online_Quiz_System" class="projectgui"><button class="buttongui" style="margin-top:10px;">GitHub 🕵️</button></a>
+            <a href="https://www.linkedin.com/posts/sanjaykumarand_javafullstack-jsp-apachetomcat-ugcPost-7474807026674618368-dLFJ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui"><h4>Screenshots ️🖼️</h4></button></a>
+        <a href="http://w8-jfsdips.onrender.com/w6/"><button class="buttongui">🌐 Demo</button></a>
+            <br>     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7474801684867891200?compact=1" class="oframe" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            </center>
+      </article>
+    </section></div>
+    </div>
+
+         <div class="daipcard-grid" >
+               <div class="vdaipcard-frontend" >
+              <section class="blog-posts" >
+                <article class="rpost">
+          <center>      
+<h3 style="color:#fff;">Week 7 Project [Online Movie Ticket Booking using JSP, Java, Apache Tomcat and MySql DataBase Server]</h3>
+            <a href="https://github.com/sanjaykumarand/Week7_Movie_Ticket_Booking_System" class="projectgui"><button class="buttongui" style="margin-top:10px;">GitHub 🕵️</button></a>
+            <a href="https://www.linkedin.com/posts/sanjaykumarand_internshipproject-movieticketbooking-onlinebookingsystem-ugcPost-7477292210405707776-0fT-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui"><h4>Screenshots ️🖼️</h4></button></a>
+         <a href="http://w8-jfsdips.onrender.com/w7/"><button class="buttongui">🌐 Demo</button></a>
+            <br>    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7477284567587139584?compact=1" class="oframe" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            </center>
+      </article>
+    </section></div>
+    </div>
+        
+  <div class="daipcard-grid" style="margin-top:20px;">
+               <div class="vdaipcard-frontend">
+              <section class="blog-posts">
+                <article class="rpost">
+             <center>   
+<h3 style="color:#fff;">Week 8 Project [E-Commerce Management System using JSP, Java, Apache Tomcat and MySql DataBase Server]</h3>
+            <a href="https://github.com/sanjaykumarand/Week8_ECommerce_Management_System" class="projectgui"><button class="buttongui" style="margin-top:10px;">GitHub 🕵️</button></a>
+            <a href="https://www.linkedin.com/posts/sanjaykumarand_internshipproject-movieticketbooking-onlinebookingsystem-ugcPost-7479871905630584832-90mX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui"><h4>Screenshots ️🖼️</h4></button></a>
+              <a href="http://w8-jfsdips.onrender.com/"><button class="buttongui">🌐 Demo</button></a>
+            <br> <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7479871905630584832?compact=1" class="oframe" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+         
+     </center> </article>
+    </section>
+    </div><br></div>
+
+
+
+<div class="daipcard-grid" >
+               <div class="vdaipcard-frontend" >
+              <section class="blog-posts" >
+                <article class="rpost">
+          <center>      
+<h3 style="color:#fff;">View Completion Certificate</h3><br>
+          <a href="SKengine/jfsdiccfsipl.pdf"><img src="SKengine/defcer.png" class="cimggui"></a><br><br>
+            <a href="SKengine/jfsdiccfsipl.pdf"><button class="buttongui">View Certificate ↗️</button>
+          
+            </center>
+      </article>
+    </section></div>
+    </div>
+        
+
+      </center></article>
+    </section><br><br>
+      
+    
+
+
+</article>
+</section><br>
+    
+ 
+
+
+
+
+<center>
+  <a href="/#lcgit"><button class="buttongui">Let's Connect ◥</button></a>  
+</center>
+
+
+
+
+   <div class="footer" style="margin-top:100px;">
+       <div class="fname">© 2024 Sanjay Kumaran D. All Rights Reserved</div>
+     <center><div class="sml">
+    <a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="SKengine/mail.png" class="cugui"></a>
+    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/linkedin.png" class="cugui"></a>
+    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/github.png" class="cugui"></a>
+    <a href="https://leetcode.com/u/sanjaykumarand/" class="linkgui" style="text-decoration:none !important"><img src="SKengine/lcp.png" class="cugui"></a>
+    <a href="https://unstop.com/u/sanjakum98898" class="linkgui" style="text-decoration:none !important"><img src="SKengine/uns.png" class="cugui"></a>
+     </div></center></div>
+    
+
+    
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (!nav || !toggle) return;
+
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+        nav.style.flexDirection = 'column';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'row';
+      }
+    }
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        if (nav.style.display === 'none') {
+          nav.style.display = 'flex';
+          nav.style.flexDirection = 'column';
+        } else {
+          nav.style.display = 'none';
+        }
+      });
+
+
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    updateLayout();
+    }
+  });
+
+
+    
+  </script>
+         
+         
+
+    
+    
+   <script>
+ window.difyChatbotConfig = {
+  token: 'EEHX7AizWNHTwXXN',
+  inputs: {
+    // You can define the inputs from the Start node here
+    // key is the variable name
+    // e.g.
+    // name: "NAME"
+  },
+  systemVariables: {
+    // user_id: 'YOU CAN DEFINE USER ID HERE',
+    // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+  },
+  userVariables: {
+    avatar_url: 'aiuser.png',
+    name: 'SKAI',
+  },
+ }
+</script>
+<script
+ src="https://udify.app/embed.min.js"
+ id="EEHX7AizWNHTwXXN"
+ defer>
+</script>
+<style>
+  #dify-chatbot-bubble-button {
+    background:linear-gradient(135deg,#fdf5b9,#f3b0f2,#fdf5b9) !important;
+    box-shadow: 0 8px 32px rgba(255,255,0,0.5);
+  }
+  #dify-chatbot-bubble-button:hover {
+    box-shadow: 0 8px 32px rgba(255,255,0,0.75);
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+    position:fixed !important;
+    z-index: 999999;
+    
+  }
+</style>    
+    
+    
+    
+
+
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+       
+ </div>
+    
+ </div>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</body>
+</html>

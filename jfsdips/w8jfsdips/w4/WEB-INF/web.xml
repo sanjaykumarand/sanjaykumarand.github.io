@@ -1,0 +1,52 @@
+<web-app>
+
+<filter>
+    <filter-name>CorsFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    <init-param>
+        <param-name>cors.allowed.origins</param-name>
+        <param-value>https://sanjaykumarand.github.io,https://w8-jfsdips.onrender.com/w4/</param-value>
+    </init-param>
+    <init-param>
+        <param-name>cors.allowed.methods</param-name>
+        <param-value>GET,POST,HEAD,OPTIONS,PUT,DELETE</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>CorsFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<servlet>
+<servlet-name>
+OrderFoodServlet
+</servlet-name>
+<servlet-class>
+OrderFoodServlet
+</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>
+OrderFoodServlet
+</servlet-name>
+<url-pattern>
+/OrderFoodServlet
+</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>
+ViewOrdersServlet
+</servlet-name>
+<servlet-class>
+ViewOrdersServlet
+</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>
+ViewOrdersServlet
+</servlet-name>
+<url-pattern>
+/ViewOrdersServlet
+</url-pattern>
+</servlet-mapping>
+</web-app>

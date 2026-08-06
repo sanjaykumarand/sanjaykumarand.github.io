@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay Kumaran Portfolio</title>
+  <link rel="icon" href="SKengine/ws.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+        body {
+			font-family:'Inter', sans-serif; 
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+		color:#fff;
+        }
+
+        h2 {
+            color: #fff;
+            margin-right: 50px;
+        }
+
+        
+        .slider-container {
+            width: 90%;
+            max-width: 90%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,125,255,0.1);
+            position: relative;
+        }
+
+       
+        .slider-wrapper {
+            display: flex;
+            width: 300%; 
+            height: 100%;
+            transition: transform 0.7s ease-in-out;
+        }
+
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border: none;
+            font-size: 1.8rem;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.3s ease;
+        }
+
+        .slide-btn:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        .prev-btn { left: 15px; }
+        .next-btn { right: 15px; }
+
+        .indicators {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .indicator {
+            width: 20px;
+            height: 4px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            border: none;
+        }
+
+        .indicator.active {
+            width: 35px;
+            background: gold;
+        }
+
+       
+        .slide {
+            width: 100%;
+            position: relative;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+       
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 40px 20px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+
+       
+ 		header{
+			font-family:'Space Grotesk', sans-serif;
+		}
+
+		      
+		#menuToggle {
+			margin-left: -50px;
+		}
+
+		#navLinks{
+			margin-left: -70px;
+		}
+    </style>
+
+  
+</head>
+
+
+<body>
+ <script src="https://cdn.jsdelivr.net/npm/webgl-fluid@0.4"></script>
+<script src="script.js"></script>
+
+
+
+ <div id="hero">
+  <canvas id="fluid"></canvas>
+
+
+
+
+
+ <div class="content">
+
+
+  <div class="glass-container">
+    <section class="navblog-posts">
+    <header>
+  <h2><b><a href="/" class="headgui">Sanjay Kumaran</a></b></h2>      
+  <nav>
+    <span class="menu-toggle" id="menuToggle">☰</span>
+    <div class="nav-links" id="navLinks">
+       <a href="/" class="navbuttongui">Home</a>
+      <a href="/#aboutme" class="navbuttongui">About</a>
+      <a href="/#projects" class="navbuttongui">Projects️</a>
+      <a href="certificates" class="navbuttongui">Skills</a>
+      <a href="highlights" class="navbuttongui">Highlights</a>
+      <a href="apps" class="navbuttongui">MyApps</a>
+      <a href="SKengine/SanjayKumaran-CV.pdf" class="navbuttongui">Resume</a>
+      
+    </div>
+  </nav>
+</header>
+    </section>   
+ <center>
+
+    <div class="slider-container" style="margin-top: 70px;">
+        <button class="slide-btn prev-btn" id="prevBtn">‹</button>
+        <button class="slide-btn next-btn" id="nextBtn">›</button>
+        <div class="slider-wrapper" id="sliderWrapper">
+            
+            <div class="slide">
+                <picture>
+        			<source media="(max-width: 1024px)" srcset="SKengine/hl1m.jpg">
+					<img src="SKengine/hl1.jpg" alt="pymlworkshop">
+    			</picture>
+                <div class="caption" style="text-align: left; align-items: left;">Python for ML Workshop<br>📍 IITM Research Park<br><br>
+					<a href="https://www.linkedin.com/posts/sanjaykumarand_iitm-researchpark-topengineers-activity-7421484756116221952-pfzz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui">Linkedin 🔗</button></a>
+					<a href="SKengine/te.jpg"><button class="buttongui">Certificate ↗️</button></a>
+					<a href="https://mywallet.profential.com/credentials/public-view/badge/assertion/e738b957-22fc-f011-832f-6045bd726e2d"><button class="buttongui">Badge ↗️</button></a></div>
+            </div>
+
+            <div class="slide">
+                <img src="SKengine/hl1-1.jpg" alt="dsipvts">
+                <div class="caption" style="text-align: left; align-items: left;">Python for ML Workshop<br>📍 IITM Research Park<br><br>
+					<a href="https://www.linkedin.com/posts/sanjaykumarand_iitm-researchpark-topengineers-activity-7421484756116221952-pfzz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui">Linkedin 🔗</button></a>
+					<a href="SKengine/te.jpg"><button class="buttongui">Certificate ↗️</button></a>
+					<a href="https://mywallet.profential.com/credentials/public-view/badge/assertion/e738b957-22fc-f011-832f-6045bd726e2d"><button class="buttongui">Badge ↗️</button></a></div>
+            </div>
+
+            <div class="slide">
+					<img src="SKengine/hl1-3.jpg" alt="pymlworkshop">
+                <div class="caption" style="text-align: left; align-items: left;">Python for ML Workshop<br>📍 IITM Research Park<br><br>
+					<a href="https://www.linkedin.com/posts/sanjaykumarand_iitm-researchpark-topengineers-activity-7421484756116221952-pfzz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViDvQB9Cy9_7IDU9t2p3qQuaHP2qzDLmg"><button class="buttongui">Linkedin 🔗</button></a>
+					<a href="SKengine/te.jpg"><button class="buttongui">Certificate ↗️</button></a>
+					<a href="https://mywallet.profential.com/credentials/public-view/badge/assertion/e738b957-22fc-f011-832f-6045bd726e2d"><button class="buttongui">Badge ↗️</button></a></div>
+            </div>
+
+        </div>
+    </div>
+	<div class="indicators" id="indicators">
+		<button class="indicator active" data-index="0"></button>
+		<button class="indicator" data-index="1"></button>
+		<button class="indicator" data-index="2"></button>
+	</div>
+
+	 <div style="margin-top:20px; text-align:center;">
+    <button id="pauseBtn" class="slbuttongui">⏸️</button>
+    <button id="resumeBtn" class="slbuttongui">▶️</button>
+</div>
+			<div class="arrow" style="color:lightgreen; text-shadow: 0 8px 16px lightgreen;"><h5><a href="#pyss" style="color:lightgreen; text-decoration: none !important">↓</a></h5></div>
+<br><br>
+	 
+	 <div id="pyss">
+		 <br>
+		  <a href="SKengine/te.jpg"><button class="buttongui">Certificate ↗️</button></a>
+		 <a href="https://mywallet.profential.com/credentials/public-view/badge/assertion/e738b957-22fc-f011-832f-6045bd726e2d"><button class="buttongui">Badge ↗️</button></a><br>
+		 <div class="hui" style="text-align: center; width:90%;"> <h2 style="color:#fff;">This Workshop is Conducted by TopEngineersIndia at IITMadras Research Park</h2><br>
+		 <h2 style="color:#fff;">Python for ML Workshop Experience Gallery<br><br><span style="color:red;">*Below images are taken from the Topengineers Workshop Gallery and not from any Personal Collection/Credits.</span></h2></div><br>
+		 <a href="SKengine/hl1-1.jpg"><img src="SKengine/hl1-1.jpg" style="height:250px; max-width:400px; width:100%; margin-left:5px; margin-bottom:5px;"></a>
+		 <a href="SKengine/hl1-2.jpg"><img src="SKengine/hl1-2.jpg" style="height:250px; max-width:400px; width:100%; margin-left:5px; margin-bottom:5px;"></a>
+		 <a href="SKengine/hl1-3.jpg"><img src="SKengine/hl1-3.jpg" style="height:250px; max-width:400px; width:100%; margin-left:5px; margin-bottom:5px;"></a>
+		 <a href="SKengine/hl1-4.jpg"><img src="SKengine/hl1-4.jpg" style="height:250px; max-width:400px; width:100%; margin-left:5px; margin-bottom:5px;"></a>
+		<a href="SKengine/hl1-5.jpg"><img src="SKengine/hl1-5.jpg" style="height:250px; max-width:400px; width:100%; margin-left:5px; margin-bottom:5px;"></a>
+		 <a href="SKengine/hl1-6.jpg"><img src="SKengine/hl1-6.jpg" style="height:250px; max-width:400px; width:100%; margin-left:5px; margin-bottom:5px;"></a>
+
+
+
+
+	 </div>
+<br>
+	 		<a href="/"><button class="buttongui">Explore My Portfolio ↗️</button></a>
+    </center>   
+
+
+    
+    
+    
+    
+    
+
+
+
+<center>
+  <a href="/#lcgit"><button class="buttongui">Let's Connect ◥</button></a>  
+</center>
+
+
+
+
+   <div class="footer" style="margin-top:100px;">
+       <div class="fname">© 2024 Sanjay Kumaran D. All Rights Reserved</div>
+     <center><div class="sml">
+    <a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="SKengine/mail.png" class="cugui"></a>
+    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/linkedin.png" class="cugui"></a>
+    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/github.png" class="cugui"></a>
+    <a href="https://leetcode.com/u/sanjaykumarand/" class="linkgui" style="text-decoration:none !important"><img src="SKengine/lcp.png" class="cugui"></a>
+    <a href="https://unstop.com/u/sanjakum98898" class="linkgui" style="text-decoration:none !important"><img src="SKengine/uns.png" class="cugui"></a>
+     </div></center></div>
+
+    
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+  if (nav.style.display === 'none') {
+    nav.style.display = 'flex';
+    nav.style.flexDirection = 'column'; 
+  } else {
+    nav.style.display = 'none';
+  }
+});
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    window.addEventListener('load', updateLayout);
+    
+
+</script>
+         
+         
+
+    <script>
+ window.difyChatbotConfig = {
+  token: 'EEHX7AizWNHTwXXN',
+  inputs: {
+  },
+  systemVariables: {
+  },
+  userVariables: {
+    avatar_url: 'aiuser.png',
+    name: 'SKAI',
+  },
+ }
+</script>
+<script
+ src="https://udify.app/embed.min.js"
+ id="EEHX7AizWNHTwXXN"
+ defer>
+</script>
+<style>
+  #dify-chatbot-bubble-button {
+    background:linear-gradient(135deg,#fdf5b9,#f3b0f2,#fdf5b9) !important;
+    box-shadow: 0 8px 32px rgba(255,255,0,0.5);
+  }
+  #dify-chatbot-bubble-button:hover {
+    box-shadow: 0 8px 32px rgba(255,255,0,0.75);
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+    position:fixed !important;
+    z-index: 999999;
+    
+  }
+</style>
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+ </div>
+    
+ </div>  
+    
+    
+    
+    
+      
+    <script>
+    const slider = document.getElementById("sliderWrapper");
+    const pauseBtn = document.getElementById("pauseBtn");
+    const resumeBtn = document.getElementById("resumeBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const dots = document.querySelectorAll(".indicator");
+    const totalSlides = dots.length;
+    let current = 0;
+    let autoplay;
+
+    function goToSlide(index) {
+        current = (index + totalSlides) % totalSlides;
+        slider.style.transform = `translateX(-${current * (100 / totalSlides)}%)`;
+        dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
+    }
+
+    function startAutoplay() {
+        autoplay = setInterval(() => goToSlide(current + 1), 4000);
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplay);
+    }
+
+    nextBtn.addEventListener("click", () => {
+        goToSlide(current + 1);
+        stopAutoplay();
+        startAutoplay();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        goToSlide(current - 1);
+        stopAutoplay();
+        startAutoplay();
+    });
+
+    dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+            goToSlide(parseInt(dot.dataset.index));
+            stopAutoplay();
+            startAutoplay();
+        });
+    });
+
+    pauseBtn.addEventListener("click", () => {
+        stopAutoplay();
+    });
+
+    resumeBtn.addEventListener("click", () => {
+        stopAutoplay();
+        startAutoplay();
+    });
+
+    goToSlide(0);
+    startAutoplay();
+</script>
+
+    
+    
+  
+</body>
+
+</html>

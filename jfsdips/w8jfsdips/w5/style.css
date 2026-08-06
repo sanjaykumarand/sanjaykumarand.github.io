@@ -1,0 +1,183 @@
+/* ============================================
+   Smart College Management System - style.css
+   Theme: Fresh Green | Full-width Clean Layout
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f8f4;
+  color: #1a2e1a;
+  min-height: 100vh;
+}
+
+/* ---- Page Wrapper ---- */
+.page-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 32px;
+}
+
+/* ---- Page Header ---- */
+.page-header {
+  margin-bottom: 40px;
+  border-bottom: 2px solid #2e7d32;
+  padding-bottom: 20px;
+}
+
+.page-header h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1b5e20;
+  letter-spacing: 0.5px;
+}
+
+.page-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* ---- Navigation Links (index.jsp) ---- */
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.nav-link {
+  display: block;
+  padding: 18px 24px;
+  background-color: #ffffff;
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1.5px solid #c8e6c9;
+  border-left: 4px solid #2e7d32;
+  border-radius: 6px;
+  transition: background-color 0.18s ease, border-left-color 0.18s ease, color 0.18s ease;
+}
+
+.nav-link:hover {
+  background-color: #e8f5e9;
+  border-left-color: #1b5e20;
+  color: #1b5e20;
+}
+
+/* ---- Form Layout ---- */
+.form-section {
+  background-color: #ffffff;
+  border: 1.5px solid #c8e6c9;
+  border-top: 4px solid #2e7d32;
+  border-radius: 8px;
+  padding: 36px 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 0.92rem;
+  font-family: 'Inter', sans-serif;
+  border: 1.5px solid #a5d6a7;
+  border-radius: 5px;
+  background-color: #f9fdf9;
+  color: #1a2e1a;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.12);
+  background-color: #ffffff;
+}
+
+.form-input::placeholder {
+  color: #7a9e7a;
+}
+
+/* ---- Submit Button ---- */
+.btn-submit {
+  padding: 12px 32px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.18s ease, transform 0.1s ease;
+  margin-top: 6px;
+}
+
+.btn-submit:hover {
+  background-color: #1b5e20;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+/* ---- Success Page ---- */
+.success-box {
+  background-color: #ffffff;
+  border: 1.5px solid #c8e6c9;
+  border-left: 5px solid #2e7d32;
+  border-radius: 8px;
+  padding: 36px 40px;
+}
+
+.success-box h2 {
+  color: #1b5e20;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ---- Back Link ---- */
+.back-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: #2e7d32;
+  font-weight: 500;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.back-link:hover {
+  color: #1b5e20;
+  border-bottom-color: #1b5e20;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .page-wrapper {
+    padding: 28px 16px;
+  }
+  .form-section,
+  .success-box {
+    padding: 24px 20px;
+  }
+  .page-header h1 {
+    font-size: 1.3rem;
+  }
+}

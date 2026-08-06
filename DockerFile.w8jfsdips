@@ -1,0 +1,11 @@
+FROM tomcat:9-jdk11
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY ./jfsdips/w8jfsdips/w2 /usr/local/tomcat/webapps/w2
+COPY ./jfsdips/w8jfsdips/w3 /usr/local/tomcat/webapps/w3
+COPY ./jfsdips/w8jfsdips/w4 /usr/local/tomcat/webapps/w4
+COPY ./jfsdips/w8jfsdips/w5 /usr/local/tomcat/webapps/w5
+COPY ./jfsdips/w8jfsdips/w6 /usr/local/tomcat/webapps/w6
+COPY ./jfsdips/w8jfsdips/w7 /usr/local/tomcat/webapps/w7
+COPY ./jfsdips/w8jfsdips /usr/local/tomcat/webapps/ROOT
+EXPOSE 8080
+CMD ["catalina.sh", "run"]

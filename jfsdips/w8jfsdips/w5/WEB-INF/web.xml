@@ -1,0 +1,52 @@
+<web-app>
+
+<filter>
+    <filter-name>CorsFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    <init-param>
+        <param-name>cors.allowed.origins</param-name>
+        <param-value>https://sanjaykumarand.github.io,https://w8-jfsdips.onrender.com/w5/</param-value>
+    </init-param>
+    <init-param>
+        <param-name>cors.allowed.methods</param-name>
+        <param-value>GET,POST,HEAD,OPTIONS,PUT,DELETE</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>CorsFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<servlet>
+<servlet-name>AddStudentServlet</servlet-name>
+<servlet-class>AddStudentServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>AddStudentServlet</servlet-name>
+<url-pattern>/AddStudentServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>ViewStudentsServlet</servlet-name>
+<servlet-class>ViewStudentsServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ViewStudentsServlet</servlet-name>
+<url-pattern>/ViewStudentsServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>AddFacultyServlet</servlet-name>
+<servlet-class>AddFacultyServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>AddFacultyServlet</servlet-name>
+<url-pattern>/AddFacultyServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>ViewFacultyServlet</servlet-name>
+<servlet-class>ViewFacultyServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ViewFacultyServlet</servlet-name>
+<url-pattern>/ViewFacultyServlet</url-pattern>
+</servlet-mapping>
+</web-app>

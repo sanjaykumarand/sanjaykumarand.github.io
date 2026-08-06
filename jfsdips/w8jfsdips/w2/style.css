@@ -1,0 +1,402 @@
+/* ============================================================
+   EMPLOYEE MANAGEMENT SYSTEM — style.css
+   Aesthetic: Corporate Refined | Deep Navy + Gold Accents
+   Fonts: Playfair Display (headings) + DM Sans (body)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── CSS Variables ─────────────────────────────────────────── */
+:root {
+  --navy-deep:    #0a1628;
+  --navy-mid:     #112240;
+  --navy-light:   #1a3460;
+  --gold:         #c9a84c;
+  --gold-light:   #e8c96a;
+  --gold-pale:    #f5e9c4;
+  --white:        #ffffff;
+  --off-white:    #f4f6fb;
+  --text-primary: #0a1628;
+  --text-muted:   #5a6a85;
+  --border:       #d8e0ef;
+  --shadow-sm:    0 2px 12px rgba(10, 22, 40, 0.08);
+  --shadow-md:    0 8px 32px rgba(10, 22, 40, 0.14);
+  --shadow-lg:    0 20px 60px rgba(10, 22, 40, 0.18);
+  --radius:       10px;
+  --radius-lg:    18px;
+  --transition:   0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reset & Base ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  background: var(--off-white);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(17, 34, 64, 0.06) 0%, transparent 70%),
+    linear-gradient(180deg, #eef1f8 0%, #f4f6fb 100%);
+  animation: fadeIn 0.5s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Top Header Bar ────────────────────────────────────────── */
+body::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--navy-deep), var(--gold), var(--navy-deep));
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* ── Card Container ────────────────────────────────────────── */
+.container,
+body > * {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 40px;
+}
+
+/* ── Card Wrapper ──────────────────────────────────────────── */
+/* Wraps h1/h2 + links/form in a card-like panel */
+body {
+  position: relative;
+}
+
+body > h1,
+body > h2 {
+  width: 100%;
+  max-width: 560px;
+}
+
+/* ── Headings ──────────────────────────────────────────────── */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--navy-deep);
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 18px;
+  animation: slideDown 0.5s ease 0.1s both;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 2px;
+}
+
+h2 {
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  color: var(--navy-deep);
+  text-align: center;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  position: relative;
+  animation: slideDown 0.5s ease 0.1s both;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 2px;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── System Label (subtitle/badge above h1) ─────────────────── */
+body > h1::before {
+  content: 'SANJAY KUMARAN PORTAL';
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ── Main Card Panel (index & addEmployee) ──────────────────── */
+form,
+body > a:first-of-type {
+  width: 100%;
+  max-width: 560px;
+}
+
+/* Wrap all primary content in a card */
+body > * + * {
+  animation: cardIn 0.5s ease both;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Nav Links (index.html) ─────────────────────────────────── */
+a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 16px;
+  padding: 18px 28px;
+  background: var(--white);
+  color: var(--navy-deep);
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition),
+    color var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--gold), var(--gold-light));
+  border-radius: 4px 0 0 4px;
+  transform: scaleY(0);
+  transition: transform var(--transition);
+}
+
+a::after {
+  content: '→';
+  font-size: 1.1rem;
+  color: var(--gold);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+a:hover {
+  background: var(--navy-deep);
+  color: var(--white);
+  border-color: var(--navy-deep);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+a:hover::before {
+  transform: scaleY(1);
+}
+
+a:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+a:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Form (addEmployee.html) ────────────────────────────────── */
+form {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 44px 44px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: cardIn 0.5s ease 0.15s both;
+}
+
+/* ── Input Fields ───────────────────────────────────────────── */
+input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  transition:
+    border-color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
+  margin-bottom: 20px;
+}
+
+input[type="text"]::placeholder {
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+input[type="text"]:focus {
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.14);
+}
+
+input[type="text"]:hover:not(:focus) {
+  border-color: #b0bcd4;
+}
+
+/* ── Field Labels (via placeholder-shown trick) ─────────────── */
+input[type="text"]:not(:placeholder-shown) {
+  background: var(--white);
+  border-color: var(--navy-light);
+}
+
+/* ── Submit Button ──────────────────────────────────────────── */
+button[type="submit"] {
+  margin-top: 8px;
+  padding: 16px 32px;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy-deep);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(201, 168, 76, 0.35);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    filter var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+button[type="submit"]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201, 168, 76, 0.45);
+  filter: brightness(1.05);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(201, 168, 76, 0.3);
+}
+
+/* ── Back Link (inside addEmployee page) ───────────────────── */
+/* Style <br> tags are layout artifacts — we normalize spacing */
+br {
+  display: none;
+}
+
+/* Re-apply spacing via margin on inputs instead (already set above) */
+
+/* ── Footer Stamp ───────────────────────────────────────────── */
+body::after {
+  content: 'MADE BY SANJAY KUMARAN';
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 36px;
+  opacity: 0.55;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  body {
+    padding: 48px 16px 36px;
+  }
+
+  form {
+    padding: 28px 24px 32px;
+  }
+
+  a {
+    max-width: 100%;
+    padding: 16px 20px;
+  }
+}
+
+/* ── Link Cards on index — full-width card layout ───────────── */
+/* Make both links stack as a panel */
+body > a {
+  max-width: 400px;
+}
+
+/* Stagger link animations */
+body > a:nth-of-type(1) { animation-delay: 0.2s; }
+body > a:nth-of-type(2) { animation-delay: 0.32s; }

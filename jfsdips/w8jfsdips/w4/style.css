@@ -1,0 +1,229 @@
+/* ============================================
+   Food Ordering System — Dark Theme
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary:     #0a0c10;
+  --bg-secondary:   #121519;
+  --bg-card:        #181c25;
+  --bg-input:       #0e1016;
+  --border:         #252b3b;
+  --border-focus:   #f97316;
+  --accent:         #f97316;
+  --accent-hover:   #ea6a0a;
+  --accent-muted:   #3b1f0a;
+  --text-primary:   #f0f0ee;
+  --text-secondary: #8a8f9e;
+  --text-muted:     #4a5060;
+  --success:        #22c55e;
+  --success-bg:     #0d2b1a;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: var(--bg-primary);
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(8, 9, 12, 0.72) 0%,
+      rgba(8, 9, 12, 0.60) 40%,
+      rgba(8, 9, 12, 0.78) 100%
+    ),
+    url('bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ── Page Wrapper ── */
+#page-wrapper {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ── Card ── */
+.card {
+  background: rgba(18, 21, 25, 0.72);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: 14px;
+  padding: 2.5rem 2rem;
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.7),
+    0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+/* ── Headings ── */
+#page-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+#page-title span {
+  color: var(--accent);
+}
+
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.03em;
+}
+
+/* ── Navigation Links (index) ── */
+#nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.15s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--accent-muted);
+  border-color: var(--accent);
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* ── Form ── */
+#order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(10, 12, 16, 0.65);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: 'DM Sans', inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.form-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+textarea.form-input {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ── Submit Button ── */
+#submit-btn {
+  margin-top: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.18s ease, transform 0.1s ease, box-shadow 0.18s ease;
+}
+
+#submit-btn:hover {
+  background-color: var(--accent-hover);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.35);
+}
+
+#submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* ── Success Page ── */
+#success-message {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--success);
+  text-align: center;
+  margin-bottom: 1.6rem;
+  padding: 1rem;
+  background-color: var(--success-bg);
+  border: 1px solid var(--success);
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+
+#back-home-link {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 1.2rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+#back-home-link:hover {
+  background-color: var(--accent-muted);
+  border-color: var(--accent);
+  color: #ffffff;
+}

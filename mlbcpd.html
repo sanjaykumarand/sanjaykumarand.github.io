@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay Kumaran Portfolio</title>
+  <link rel="icon" href="SKengine/pt.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+</head>
+
+<style>
+.content{
+  background-color: rgba(0,0,0,0);
+}
+.footer{
+  border-radius: 12px;
+}
+  
+header{
+margin-left: 0px;
+}
+
+
+.introgui1{
+  margin-top:50px;
+}
+.card-frontend:hover{
+  transform: scale(1.00);
+  max-height:150px;
+  
+}
+@media only screen and (max-width: 1024px) {
+
+.introgui1{
+  margin-top:0;
+}
+header{
+margin-left: 0px;
+}
+  .footer{
+  border-radius: 0px;
+}
+  
+}
+</style>
+
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/webgl-fluid@0.4"></script>
+<script src="script.js"></script>
+
+
+
+ <div id="hero">
+  <canvas id="fluid"></canvas>
+
+
+
+
+ <div class="content">
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+  if (nav.style.display === 'none') {
+    nav.style.display = 'flex';
+    nav.style.flexDirection = 'column'; 
+  } else {
+    nav.style.display = 'none';
+  }
+});
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    window.addEventListener('load', updateLayout);
+    
+
+</script>
+
+
+
+  <div class="glass-container">
+    <section class="navblog-posts">
+    <header>
+  <h2><b><a href="/" class="headgui">Sanjay Kumaran</a></b></h2>      
+  <nav>
+    <span class="menu-toggle" id="menuToggle">☰</span>
+    <div class="nav-links" id="navLinks">
+       <a href="/" class="navbuttongui">Home</a>
+      <a href="/#aboutme" class="navbuttongui">About</a>
+      <a href="/#projects" class="navbuttongui">Projects️</a>
+      <a href="certificates" class="navbuttongui">Skills</a>
+      <a href="highlights" class="navbuttongui">Highlights</a>
+      <a href="apps" class="navbuttongui">MyApps</a>
+      <a href="SKengine/SanjayKumaran-CV.pdf" class="navbuttongui">Resume</a>
+      
+    </div>
+  </nav>
+</header>
+    </section>   
+    
+
+
+<article class="introgui1"> 
+    <br>
+ <section class="blog-posts" id="education">
+      <article class="post">
+      <center> <div class="hui" ><h2 style="color:#fff;">Machine Learning BootCamp Projects</h2>
+                    <h2 class="headingfont" >This BootCamp Project Associated with a Sarvagna Innovation Private Limited Company</h2></div><br>
+      </center>
+              <div class="daipcard-grid">
+               <div class="daipcard-frontend" style="height:350px;" >
+              <section class="blog-posts">
+                <article class="rpost" >
+          <center>      
+<span style="color:#fff;">
+    <br><h2 style="color:#fff;">Hands on Projects during BootCamp:</h2><br></center>
+    <h3 style="color:gold;"><br>•Disease Prediction System using K-Nearest Neighbors (KNN).<br>
+                •Classification Models using Random Forest Algorithm.<br>
+                •Student Result Prediction using Linear Regression.<br>
+                •Flower (Petal) Classification.
+            </h3></span>
+
+            </center>
+      </article>
+    </section></div>
+    </div>
+  <div class="daipcard-grid" style="margin-top:20px;">
+               <div class="daipcard-frontend" >
+              <section class="blog-posts">
+                <article class="rpost">
+             <center>   
+<h3 style="color:#fff;">Project: Classification Models and KNN(Disease Prediction)</h3><br>
+<a href="https://github.com/sanjaykumarand/Machine-Learning-BootCamp-Project/blob/0dea9490d6547c5705633e1e939d9d2c097ffeb7/Day5_%26_6MLBC.ipynb"><button class="buttongui">️GitHub 🕵️</button></a>
+         
+     </center> </article>
+    </section>
+    </div><br></div>
+  <div class="daipcard-grid">
+               <div class="daipcard-frontend">
+              <section class="blog-posts">
+                <article class="rpost">
+             <center>   
+<h3 style="color:#fff;">Project: Linear Regression and Flower(Petal) Classification</h3><br>
+<a href="https://github.com/sanjaykumarand/Machine-Learning-BootCamp-Project/blob/0dea9490d6547c5705633e1e939d9d2c097ffeb7/Day1_to_4_ML_BootCamp.ipynb"><button class="buttongui">️GitHub 🕵️</button></a>
+         
+     </center> </article>
+    </section>
+    </div><br></div>
+
+          <div class="daipcard-grid">
+               <div class="daipcard-frontend" style="height:400px;">
+              <section class="blog-posts">
+                <article class="rpost">
+             <center>   
+<h3 style="color:#fff;">Completion Certificate</h3><br>
+<a href="SKengine/mlbc.pdf"><img src="SKengine/defcer.png" class="cimggui"></a><br><br>
+<center><a href="SKengine/mlbc.pdf"><button class="buttongui">View Completion Certificate ↗️</button></a></center>
+         
+     </center> </article>
+    </section>
+    </div><br></div>
+                  
+      </center></article>
+    </section><br><br>
+      
+    
+
+
+</article>
+</section><br>
+    
+ 
+
+
+
+
+<center>
+  <a href="/#lcgit"><button class="buttongui">Let's Connect ◥</button></a>  
+</center>
+
+
+
+
+   <div class="footer" style="margin-top:100px;">
+       <div class="fname">© 2024 Sanjay Kumaran D. All Rights Reserved</div>
+     <center><div class="sml">
+    <a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="SKengine/mail.png" class="cugui"></a>
+    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/linkedin.png" class="cugui"></a>
+    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/github.png" class="cugui"></a>
+    <a href="https://leetcode.com/u/sanjaykumarand/" class="linkgui" style="text-decoration:none !important"><img src="SKengine/lcp.png" class="cugui"></a>
+    <a href="https://unstop.com/u/sanjakum98898" class="linkgui" style="text-decoration:none !important"><img src="SKengine/uns.png" class="cugui"></a>
+     </div></center></div>
+    
+
+    
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    function updateLayout() {
+      if (!nav || !toggle) return;
+
+      if (window.innerWidth <= 1024) {
+        toggle.style.display = 'inline';
+        nav.style.display = 'none';
+        nav.style.flexDirection = 'column';
+      } else {
+        toggle.style.display = 'none';
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'row';
+      }
+    }
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        if (nav.style.display === 'none') {
+          nav.style.display = 'flex';
+          nav.style.flexDirection = 'column';
+        } else {
+          nav.style.display = 'none';
+        }
+      });
+
+
+
+
+
+
+    window.addEventListener('resize', updateLayout);
+    updateLayout();
+    }
+  });
+
+
+    
+  </script>
+         
+         
+
+    
+    
+   <script>
+ window.difyChatbotConfig = {
+  token: 'EEHX7AizWNHTwXXN',
+  inputs: {
+    // You can define the inputs from the Start node here
+    // key is the variable name
+    // e.g.
+    // name: "NAME"
+  },
+  systemVariables: {
+    // user_id: 'YOU CAN DEFINE USER ID HERE',
+    // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+  },
+  userVariables: {
+    avatar_url: 'aiuser.png',
+    name: 'SKAI',
+  },
+ }
+</script>
+<script
+ src="https://udify.app/embed.min.js"
+ id="EEHX7AizWNHTwXXN"
+ defer>
+</script>
+<style>
+  #dify-chatbot-bubble-button {
+    background:linear-gradient(135deg,#fdf5b9,#f3b0f2,#fdf5b9) !important;
+    box-shadow: 0 8px 32px rgba(255,255,0,0.5);
+  }
+  #dify-chatbot-bubble-button:hover {
+    box-shadow: 0 8px 32px rgba(255,255,0,0.75);
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+    position:fixed !important;
+    z-index: 999999;
+    
+  }
+</style>    
+    
+    
+    
+
+
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+       
+ </div>
+    
+ </div>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</body>
+</html>

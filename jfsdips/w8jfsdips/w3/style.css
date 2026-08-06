@@ -1,0 +1,198 @@
+/* ============================================
+   Library Management System — Dark Theme
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary:     #0d0f14;
+  --bg-secondary:   #151820;
+  --bg-card:        #1c2030;
+  --bg-input:       #111318;
+  --border:         #2a2f42;
+  --border-focus:   #4a6cf7;
+  --accent:         #4a6cf7;
+  --accent-hover:   #3a5ce6;
+  --accent-muted:   #1e2d6b;
+  --text-primary:   #e8eaf0;
+  --text-secondary: #8b91a8;
+  --text-muted:     #555c75;
+  --success:        #22c55e;
+  --success-bg:     #0d2b1a;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* ── Page Wrapper ── */
+#page-wrapper {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ── Card ── */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Headings ── */
+#page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Navigation Links (index) ── */
+#nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.75rem 1.2rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--accent-muted);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+/* ── Form ── */
+#add-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.form-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15);
+}
+
+/* ── Submit Button ── */
+#submit-btn {
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color 0.18s ease, transform 0.1s ease;
+}
+
+#submit-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+#submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* ── Success Page ── */
+#success-message {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--success);
+  text-align: center;
+  margin-bottom: 1.6rem;
+  padding: 1rem;
+  background-color: var(--success-bg);
+  border: 1px solid var(--success);
+  border-radius: 8px;
+  letter-spacing: 0.01em;
+}
+
+#back-home-link {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 1.2rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+#back-home-link:hover {
+  background-color: var(--accent-muted);
+  border-color: var(--accent);
+  color: #ffffff;
+}

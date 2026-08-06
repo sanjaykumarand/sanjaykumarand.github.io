@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Employee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Add Employee</h2>
+
+  <form action="AddEmployeeServlet" method="POST" id="form-add-employee">
+
+    <input
+      type="text"
+      id="employee-name"
+      name="employee_name"
+      placeholder="Employee Name"
+      required>
+
+    <input
+      type="text"
+      id="department"
+      name="department"
+      placeholder="Department"
+      required>
+
+    <input
+      type="text"
+      id="salary"
+      name="salary"
+      placeholder="Salary"
+      required>
+
+    <button type="submit" id="btn-submit">Add Employee</button>
+
+  </form>
+</body>
+</html>
