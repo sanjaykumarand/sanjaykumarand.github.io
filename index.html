@@ -16,7 +16,7 @@
 <div id="welcomePopup" style="display:flex; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:99999; font-family:'Inter', sans-serif;">
   <div style="background-color:rgba(255,255,255,0.1); backdrop-filter:blur(19px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:35px; max-width:400px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#fff;">
     <h1 style="font-family:'Space Grotesk', sans-serif; margin-bottom:10px;">👋🏻 Welcome to <span style="background:linear-gradient(to right, gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Sanjay Kumaran's</span> Portfolio</h1>
-    <p style="color:#fff; font-weight:500;">🌐 Today's Updates: I have created 2 Android App Projects.</p>
+    <p style="color:#fff; font-weight:500;">🌐 Today's Updates: I have created AI Attendance Check-IN with Report Projects.</p>
     <button class="buttongui" style="margin-top:20px;" onclick="document.getElementById('welcomePopup').style.display='none';">Got it</button>
   </div>
 </div>
@@ -42,11 +42,21 @@
 <div id="androidPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:99999; font-family:'Inter', sans-serif;">
   <div style="background-color:rgba(255,255,255,0.1); backdrop-filter:blur(19px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:35px; max-width:400px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#fff;">
     <h1 style="font-family:'Space Grotesk', sans-serif; margin-bottom:10px;">🌐 <span id="AndroidPopupTitle" style="background:linear-gradient(to right, gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent;"></span></h1>
-    <p style="color:#fff; font-weight:500;">*Website Backend Server : <span class="blink" style="color: #00ff00; font-weight:bold; ">ACTIVE</span></p>
+    <p style="color:#fff; font-weight:500;">*Google Firebase Server : <span class="blink" style="color: #00ff00; font-weight:bold; ">ACTIVE</span></p>
     <a id="AndroidPopupLink" href="#" target="_blank"><button class="buttongui" style="margin-top:20px;">🌐 View Source</button></a><br>
     <a href="apps#skaib2"><button class="buttongui">🤖 SKAI App</button></a>
     <a href="apps#skchat"><button class="buttongui">💬 SK Chat App</button></a>
     <br><button class="buttongui" style="margin-top:10px; background:rgba(255,255,255,0.2);" onclick="document.getElementById('androidPopup').style.display='none';">Close</button>
+  </div>
+</div>
+
+
+<div id="aiPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:99999; font-family:'Inter', sans-serif;">
+  <div style="background-color:rgba(255,255,255,0.1); backdrop-filter:blur(19px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:35px; max-width:400px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#fff;">
+    <h1 style="font-family:'Space Grotesk', sans-serif; margin-bottom:10px;">🌐 <span id="AIPopupTitle" style="background:linear-gradient(to right, gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent;"></span></h1>
+    <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7494448774141005826"><button class="buttongui">🤖 NPU Based AI</button></a>
+    <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7499789531198636033"><button class="buttongui">🏫 AI Attendance</button></a>
+    <br><button class="buttongui" style="margin-top:10px; background:rgba(255,255,255,0.2);" onclick="document.getElementById('aiPopup').style.display='none';">Close</button>
   </div>
 </div>
 
@@ -63,6 +73,11 @@ function showAndroidPopup(title, url) {
   document.getElementById('AndroidPopupTitle').innerText = title;
   document.getElementById('AndroidPopupLink').href = url;
   document.getElementById('androidPopup').style.display = 'flex';
+}
+
+function showAIPopup(title) {
+  document.getElementById('AIPopupTitle').innerText = title;
+  document.getElementById('aiPopup').style.display = 'flex';
 }
 </script>
 
@@ -86,13 +101,13 @@ function showAndroidPopup(title, url) {
   <nav>
     <span class="menu-toggle" id="menuToggle">☰</span>
     <div class="nav-links" id="navLinks">
-      <a href="/" class="navbuttongui">Home</a>
-      <a href="#aboutme" class="navbuttongui">About</a>
-      <a href="#projects" class="navbuttongui">Projects️</a>
-      <a href="certificates" class="navbuttongui">Skills</a>
-      <a href="highlights" class="navbuttongui">Highlights</a>
-      <a href="apps" class="navbuttongui">MyApps</a>
-      <a href="SKengine/SanjayKumaran-CV.pdf" class="navbuttongui">Resume</a>
+      <a href="/" class="navbuttongui">🏡<span>Home</span></a>
+      <a href="https://sanjaykumarand.github.io/#aboutme" class="navbuttongui">👨🏻<span>About Me</span></a>
+      <a href="https://sanjaykumarand.github.io/#projects" class="navbuttongui">📂<span>Projects</span></a>
+      <a href="certificates" class="navbuttongui">📜<span>Certificates</span></a>
+      <a href="highlights" class="navbuttongui">✨<span>Highlights</span></a>
+      <a href="apps" class="navbuttongui">📲<span>My App Store</span></a>
+      <a href="SKengine/SanjayKumaran-CV.pdf" class="navbuttongui">📃<span>Resume</span></a>
       
     </div>
   </nav>
@@ -274,7 +289,7 @@ Outside Tech, I love Chess, Carrom, and diving into AI breakthroughs and Futuris
      
      
      <div class="scard-grid" id="expnav">
-  <div class="scard-frontend">
+  <div class="scard-frontend" style="background-color: rgba(0,0,0,0);">
       <section class="blog-posts">
           <article class="rpost" >
             <center>
@@ -390,7 +405,7 @@ Outside Tech, I love Chess, Carrom, and diving into AI breakthroughs and Futuris
 
 
          <div class="scard-grid" >
-  <div class="scard-frontend" style="min-height: 400px; max-height: 400px; ">
+  <div class="scard-frontend" style="min-height: 400px; max-height: 400px; background-color: rgba(0,0,0,0);">
       <section class="blog-posts">
           <article class="rpost">
             <center>
@@ -431,8 +446,7 @@ Outside Tech, I love Chess, Carrom, and diving into AI breakthroughs and Futuris
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;">Projects</span></h2></div><br><br>
       
-              <div class="card-grid"   style="background-color: rgba(255,255,255,0.1); border-radius: 12px;   backdrop-filter: blur(19px);
-  -webkit-backdrop-filter: blur(20px);" id="pgm">
+              <div class="card-grid"   id="pgm">
 
 
 
@@ -449,6 +463,7 @@ Outside Tech, I love Chess, Carrom, and diving into AI breakthroughs and Futuris
             <button class="psb" style="width:110px;">JSP / HTML</button>
             <button class="psb" style="width:75px;">MySQL</button>
             <button class="psb" style="width:90px;">Servlets</button><br><br>
+            <a href="jfsdipscfsipl"><button class="buttongui">View Projects ↗️</button></a>
                  <button class="buttongui" onclick="showDemoPopup('Java Full Stack Developer Intern Projects','https://w8-jfsdips.onrender.com/')">Play Demo 🌐</button>
                  <h6>*Wait 50 Seconds and then Refresh Website to play Demo!</h6>
       </article>
@@ -459,14 +474,30 @@ Outside Tech, I love Chess, Carrom, and diving into AI breakthroughs and Futuris
     <div class="pcard-frontend" >
               <section class="blog-posts">
                 <article class="rpost" >
-                  <a href="asaps"><img src="SKengine/skailgo.png" class="primggui"></a>
-<a href="asaps" class="projectgui"><h4 >Android Studio App Projects(7)</h4><br></a>
+                  <a href="asaps"><img src="SKengine/skchatlgo.png" class="primggui"></a>
+<a href="asaps" class="projectgui"><h4 >Android Studio App Projects(2)</h4><br></a>
                     
             <button class="psb" style="width:70px;">JAVA</button>
             <button class="psb" style="width:110px;">ANDROID</button>
             <button class="psb" >XML</button>
             <button class="psb" style="width:90px;">FIREBASE</button><br><br>
                  <button class="buttongui" onclick="showAndroidPopup('Android Studio App Projects(2)','asaps')">View Projects ↗️</button>
+                 
+      </article>
+    </section>
+    </div><br>
+
+    <div class="pcard-frontend" >
+              <section class="blog-posts">
+                <article class="rpost" >
+                  <img src="SKengine/skailgo.png" class="primggui">
+<h4 >AI Integrated Projects(2)</h4><br>
+                    
+            <button class="psb" style="width:90px;">JAVAFX</button>
+            <button class="psb" style="width:110px;">PYTHON</button>
+            <button class="psb" >API</button>
+            <button class="psb" style="width:200px;">GOOGLE APP PASSWORDS</button><br><br>
+                 <button class="buttongui" onclick="showAIPopup('AI Integrated Projects(2)')">View Projects ↗️</button>
                  
       </article>
     </section>

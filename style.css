@@ -446,16 +446,19 @@ height:475px;
 .pcard-frontend{
     flex: 1 1 250px;
    border-radius:12px;
-   max-width: 320px;
-    min-width: 320px; 
+   max-width: 300px;
+    min-width: 300px; 
     width:100%;
     color:#fff;
-      background-color: rgba(0,0,0,1);
-    min-height:460px;
-    max-height: 460px;
+      background-color: rgba(0,0,0,0.3);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(4px);
+    min-height:500px;
+    max-height: 500px;
     height: 100%;
     margin-bottom: 20px;
     overflow: hidden;
+    box-shadow: 0px 4px 8px #fff;
 }
 
 .pcard-frontend:hover {
@@ -495,7 +498,7 @@ height:475px;
 }
 
     nav {
-        margin-right:-50%;
+        margin-right:-95%;
         transform: translateX(-50%);
       align-items:center;
       padding: 5px;
@@ -519,12 +522,17 @@ height:475px;
 
     .nav-links {
       display: flex;
-      gap: 7.5px;
+      display: inline-block;
+      gap: 15px;
     }
 
     .nav-links a {
-      font-size: 17.5px;
+      font-size: 23px;
       color:#fff;
+      width: 50px;
+    }
+    .nav-links:hover a navbuttongui{
+      width:150px;
     }
 
 
@@ -534,7 +542,7 @@ height:475px;
   border-radius: 30px;
   padding: 1rem;
   display: flex;
-  gap: 10px;
+  gap: 15px;
 
 }
 .navpost h3 {
@@ -546,15 +554,15 @@ height:475px;
 }
 
 .navpost a {
-      color: #1BDBDA;
+      color: #fff;
       text-decoration: none;
+      width: auto;
       
     }
 
 nav a:hover {
-  color: #1BDBDA;
-  border-bottom: 2.5px solid #1BDBDA;
-  transform: translateY(-5px);
+  color: #fff;
+  
 
 }
 
@@ -738,20 +746,41 @@ nav a:hover {
   z-index: 1000;
   display: inline-block;
   margin-left:5px;
-  margin-bottom:8px;
+  margin-bottom:10px;
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 5px 5px;
   color: #1BDBDA;
   cursor: pointer;
+  background-color: rgba(255,255,255,0.25);
+  border-radius: 12px;
   
 }
 
 .navbuttongui:hover {
-    background: linear-gradient(#1BDBDA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background-color: rgba(255,255,255,0.25);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0px 4px 8px #1bdbda;
 }
 
+.navbuttongui span{
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width:auto;
+}
+
+.navbuttongui:hover span{
+  display: inline-block;
+  opacity: 1;
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0px 2px 4px #e0f7fa;
+  color:#fff;
+  border-radius: 12px;
+  padding: 5px;
+}
 
 
 
@@ -1319,7 +1348,7 @@ header {
     font-size:12px;
   }
   .navbuttongui {
-    margin-left: -50%;
+    margin-left: -190%;
   }
   .bimggui{
     width:100px;
@@ -1355,7 +1384,7 @@ header {
     
   }
   .menu-toggle {
-    margin-right:100px;
+    margin-left:-250px;
   }
   .primggui{
     height: 200px;
@@ -1458,6 +1487,19 @@ header {
   #pgm{
   justify-content: center;
   gap: 0px;
+}
+
+.navbuttongui span{
+  display: inline-block;
+  opacity: 1;
+  
+
+}
+
+.nav-links a{
+  width:215px;
+  margin-top: 10px;
+
 }
 }
 
