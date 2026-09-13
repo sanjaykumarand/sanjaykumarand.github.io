@@ -142,30 +142,32 @@ header.navbar {
 
 /* Offset anchor-link targets so the fixed navbar never overlaps them */
 .section, [id] { scroll-margin-top: var(--navbar-height, 72px); }
-.brand { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; }
-.nav-links { display: flex; align-items: center; gap: 6px; }
+.brand { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 2px; flex-wrap: nowrap; }
 .nav-link {
-  padding: 8px 14px; border-radius: 10px; font-weight: 500; font-size: 0.92rem;
+  padding: 8px 10px; border-radius: 10px; font-weight: 500; font-size: 0.85rem;
   color: var(--text-secondary); transition: var(--transition-fast);
-  display: flex; align-items: center; gap: 6px;
+  display: flex; align-items: center; gap: 5px; white-space: nowrap;
 }
 .nav-link:hover, .nav-link.active { color: var(--text-primary); background: var(--glass-bg-hover); }
-.nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-resume-btn { margin-left: 4px; flex-shrink: 0; }
+@media (max-width: 1180px) { .nav-resume-btn { width: 100%; justify-content: center; margin-left: 0; margin-top: 6px; } }
+.nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 .icon-btn {
-  width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
+  width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
   background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-primary);
-  transition: var(--transition-fast); font-size: 1.05rem;
+  transition: var(--transition-fast); font-size: 1rem; flex-shrink: 0;
 }
 .icon-btn:hover { background: var(--glass-bg-hover); transform: translateY(-2px); }
 .menu-toggle { display: none; font-size: 1.4rem; background: none; color: var(--text-primary); }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .nav-links { position: fixed; top: 68px; right: -100%; width: min(78vw, 320px); height: calc(100vh - 68px);
     flex-direction: column; align-items: flex-start; padding: 24px;
     background: var(--glass-modal-bg); backdrop-filter: var(--glass-blur);
     border-left: 1px solid var(--glass-border); transition: right var(--transition-smooth); gap: 4px; }
   .nav-links.open { right: 0; }
-  .nav-link { width: 100%; }
+  .nav-link { width: 100%; font-size: 0.92rem; padding: 10px 14px; }
   .menu-toggle { display: inline-block; }
 }
 
