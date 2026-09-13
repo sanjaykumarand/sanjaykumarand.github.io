@@ -1,817 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanjay Kumaran Portfolio</title>
-  <link rel="icon" href="SKengine/skailgo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <meta name="google-site-verification" content="bIuP1C2_zeoI9RXnqy46-R4dqH2NqM96JJ5CBqlQZlw" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sanjay Kumaran D — Portfolio</title>
+<meta name="description" content="Sanjay Kumaran D — Aspiring Java Developer. B.Tech IT student, full-stack, data science & cloud projects." />
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
-
-
 <body>
 
-<div id="welcomePopup" style="display:flex; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:99999; font-family:'Inter', sans-serif;">
-  <div style="background-color:rgba(255,255,255,0.1); backdrop-filter:blur(19px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:35px; max-width:400px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#fff;">
-    <h1 style="font-family:'Space Grotesk', sans-serif; margin-bottom:10px;">👋🏻 Welcome to <span style="background:linear-gradient(to right, gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Sanjay Kumaran's</span> Portfolio</h1>
-    <p style="color:#fff; font-weight:500;">🌐 Today's Updates: I have created AI Attendance Check-IN with Report Projects.</p>
-    <button class="buttongui" style="margin-top:20px;" onclick="document.getElementById('welcomePopup').style.display='none';">Got it</button>
+<div class="ambient-bg">
+  <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+</div>
+
+<div class="page-wrap">
+  <header class="navbar">
+    <a href="index.html" class="brand gold-text">Sanjay Kumaran</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link">👨🏻 About</a>
+      <a href="#experience" class="nav-link">💼 Experience</a>
+      <a href="#skills" class="nav-link">💎 Skills</a>
+      <a href="#projects" class="nav-link">📂 Projects</a>
+      <a href="certificates.html" class="nav-link">📜 Certificates</a>
+      <a href="highlights.html" class="nav-link">✨ Highlights</a>
+      <a href="apps.html" class="nav-link">📲 App Store</a>
+      <a href="#contact" class="nav-link">✉️ Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme">☀️</button>
+      <button class="btn btn-glass btn-sm" id="navSignIn">Sign in</button>
+      <div class="user-chip hidden" id="userChip">
+        <img id="userChipImg" src="" alt="">
+        <span id="userChipName"></span>
+      </div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div>
+      <img class="hero-avatar" src="SKengine/profilepicture.png" alt="Sanjay Kumaran D" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=Sanjay%20Kumaran&backgroundColor=f59e0b'">
+      <h1>Hello, I'm <span class="gold-text">Sanjay Kumaran</span></h1>
+      <p class="role">Aspiring Java Developer</p>
+      <p class="subline">Pursuing B.Tech in Information Technology at Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College (Autonomous)</p>
+      <div class="hero-actions">
+        <a href="https://www.linkedin.com/in/sanjaykumarand" target="_blank" class="btn btn-glass">in LinkedIn ↗</a>
+        <a href="highlights.html" class="btn btn-glass">✨ Highlights</a>
+        <a href="#projects" class="btn btn-glass">📂 Projects</a>
+        <a href="#experience" class="btn btn-glass">💼 Experience</a>
+        <a href="certificates.html" class="btn btn-glass">🏅 Certificates</a>
+        <a href="SKengine/SanjayKumaran-CV.pdf" class="btn btn-primary">📑 Resume</a>
+      </div>
+      <a href="#about" class="scroll-cue">↓</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-head">
+      <span class="badge-pill">About</span>
+      <h2>About <span class="gold-text">Me</span></h2>
+    </div>
+    <div class="glass-panel card" style="max-width:820px;margin:0 auto;">
+      <p style="font-size:1.02rem;">
+        I'm <b>Sanjay Kumaran</b>, pursuing B.Tech in IT at Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala
+        Engineering College (Autonomous). I'm a passionate technophile who loves exploring new innovations and
+        how they work. My ambition is to become a <span class="gold-text" style="font-weight:600;">Java Developer</span>,
+        solving real-world problems through data-driven insights. I enjoy mentoring peers, sharing knowledge, and
+        building a smarter tech community. Outside tech, I love Chess, Carrom, and diving into AI breakthroughs
+        and futuristic gadgets.
+      </p>
+    </div>
+
+    <div class="section-head" style="margin-top:60px;">
+      <h2>Education <span class="gold-text">Journey</span></h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="glass-panel exp-card">
+        <h3>B.Tech Information Technology</h3>
+        <div class="row">Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College (Autonomous)</div>
+        <div class="date">Batch: 2024 – 2028</div>
+        <span class="tag">🟢 Current CGPA: 8.37</span>
+      </div>
+      <div class="glass-panel exp-card">
+        <h3>Higher Secondary School</h3>
+        <div class="row">Sethu Bhaskara Matriculation Higher Secondary School</div>
+        <div class="date">Batch: 2023 – 2024</div>
+        <span class="tag">Grade: 75.83%</span>
+      </div>
+      <div class="glass-panel exp-card">
+        <h3>Secondary School</h3>
+        <div class="row">Sri Venkateswara Matriculation Higher Secondary School</div>
+        <div class="date">Batch: 2021 – 2022</div>
+        <span class="tag">Grade: 78.20%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-head">
+      <span class="badge-pill">Skills</span>
+      <h2>Skills & <span class="gold-text">Toolkit</span></h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="glass-panel skill-card">
+        <div class="skill-icon" style="font-size:2rem;">🌐</div>
+        <h5>HTML / CSS</h5><p class="role">Frontend</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:65%;"></div></div>
+      </div>
+      <div class="glass-panel skill-card">
+        <div class="skill-icon" style="font-size:2rem;">🐍</div>
+        <h5>Python</h5><p class="role">Backend / Data</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:45%;"></div></div>
+      </div>
+      <div class="glass-panel skill-card">
+        <div class="skill-icon" style="font-size:2rem;">☕</div>
+        <h5>Java</h5><p class="role">Backend</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:45%;"></div></div>
+      </div>
+      <div class="glass-panel skill-card">
+        <div class="skill-icon" style="font-size:2rem;">🗄️</div>
+        <h5>MySQL</h5><p class="role">Database</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:40%;"></div></div>
+      </div>
+    </div>
+    <div class="center mt">
+      <a href="https://leetcode.com/u/sanjaykumarand/" target="_blank" class="btn btn-glass">View LeetCode Profile ↗</a>
+      <a href="certificates.html" class="btn btn-glass">View Certificates & Badges ↗</a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section-head">
+      <span class="badge-pill">Experience</span>
+      <h2>Internship <span class="gold-text">Experience</span></h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="glass-panel exp-card">
+        <h3>Cloud Computing</h3>
+        <div class="date">June 2026</div>
+        <div class="row"><b>Company:</b> BICS Global, Ambattur, India</div>
+        <div class="row"><b>Mode:</b> On-Site</div>
+        <a href="ccipfbicsgc.html" class="btn btn-glass btn-sm mt" data-gate-action data-gate-href="ccipfbicsgc.html" data-gate-label="Sign in with Google to view Cloud Computing internship projects.">View Projects ↗</a>
+      </div>
+      <div class="glass-panel exp-card">
+        <h3>Data Science</h3>
+        <div class="date">May 2026 – June 2026</div>
+        <div class="row"><b>Company:</b> Cognifyz Technologies</div>
+        <div class="row"><b>Mode:</b> Remote</div>
+        <a href="SKengine/czcc.pdf" class="btn btn-glass btn-sm mt" data-gate-action data-gate-href="SKengine/czcc.pdf" data-gate-label="Sign in with Google to view this certificate.">View Certificate ↗</a>
+      </div>
+      <div class="glass-panel exp-card">
+        <h3>Java Full Stack Developer</h3>
+        <div class="date">May 2026 – July 2026</div>
+        <div class="row"><b>Company:</b> Sarvagna Innovation Private Limited</div>
+        <div class="row"><b>Mode:</b> Remote</div>
+        <a href="jfsdipscfsipl.html" class="btn btn-glass btn-sm mt" data-gate-action data-gate-href="jfsdipscfsipl.html" data-gate-label="Sign in with Google to view Java Full Stack internship projects.">View Projects ↗</a>
+      </div>
+      <div class="glass-panel exp-card">
+        <h3>Data Science with Gen AI</h3>
+        <div class="date">March 2026</div>
+        <div class="row"><b>Company:</b> Top Engineers</div>
+        <div class="row"><b>Mode:</b> Remote</div>
+        <a href="SKengine/DSWGAIintern.pdf" class="btn btn-glass btn-sm mt" data-gate-action data-gate-href="SKengine/DSWGAIintern.pdf" data-gate-label="Sign in with Google to view this certificate.">View Certificate ↗</a>
+      </div>
+      <div class="glass-panel exp-card">
+        <h3>Data Science Internship</h3>
+        <div class="date">January 2026</div>
+        <div class="row"><b>Company:</b> Virtual Tech Services, Ambattur, India</div>
+        <div class="row"><b>Mode:</b> On-Site</div>
+        <a href="dsip.html" class="btn btn-glass btn-sm mt" data-gate-action data-gate-href="dsip.html" data-gate-label="Sign in with Google to view Data Science internship projects.">View Projects ↗</a>
+      </div>
+      <div class="glass-panel exp-card">
+        <h3>Data Analysis Internship</h3>
+        <div class="date">Dec 2025 – Jan 2026</div>
+        <div class="row"><b>Company:</b> Sarvagna Innovation Private Limited</div>
+        <div class="row"><b>Mode:</b> Remote</div>
+        <a href="daip.html" class="btn btn-glass btn-sm mt" data-gate-action data-gate-href="daip.html" data-gate-label="Sign in with Google to view Data Analysis internship projects.">View Projects ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS PREVIEW -->
+  <section class="section" id="highlights-preview">
+    <div class="section-head">
+      <span class="badge-pill">Highlights</span>
+      <h2>Portfolio <span class="gold-text">Highlights</span></h2>
+    </div>
+    <div class="glass-panel card center" data-gate="true" data-gate-msg="Sign in with Google to view portfolio highlights & photos.">
+      <div class="grid grid-3">
+        <img src="SKengine/hl1.jpg" alt="Highlight" style="border-radius:14px;aspect-ratio:1;object-fit:cover;" onerror="this.style.display='none'">
+        <img src="SKengine/bsnlhl.jpeg" alt="Highlight" style="border-radius:14px;aspect-ratio:1;object-fit:cover;" onerror="this.style.display='none'">
+        <img src="SKengine/akhl.jpeg" alt="Highlight" style="border-radius:14px;aspect-ratio:1;object-fit:cover;" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="center mt"><a href="highlights.html" class="btn btn-glass">Explore All Highlights ↗</a></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-head">
+      <span class="badge-pill">Projects</span>
+      <h2>Technical <span class="gold-text">Projects</span></h2>
+    </div>
+    <div class="grid grid-3">
+
+      <div class="glass-panel project-card">
+        <div class="project-icon">☕</div>
+        <h3>Java Full Stack Developer Projects (7)</h3>
+        <div class="tag-row"><span class="tag">JDBC</span><span class="tag">JSP/HTML</span><span class="tag">MySQL</span><span class="tag">Servlets</span></div>
+        <div class="card-actions">
+          <a href="jfsdipscfsipl.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="jfsdipscfsipl.html" data-gate-label="Sign in with Google to view these projects.">View Projects ↗</a>
+          <a href="https://w8-jfsdips.onrender.com/" target="_blank" class="btn btn-glass btn-sm" data-gate-action data-gate-href="https://w8-jfsdips.onrender.com/" data-gate-label="Sign in with Google to play the live demo.">Play Demo 🌐</a>
+        </div>
+      </div>
+
+      <div class="glass-panel project-card">
+        <div class="project-icon">🤖</div>
+        <h3>Android Studio App Projects (2)</h3>
+        <div class="tag-row"><span class="tag">Java</span><span class="tag">Android</span><span class="tag">XML</span><span class="tag">Firebase</span></div>
+        <div class="card-actions">
+          <a href="asaps.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="asaps.html" data-gate-label="Sign in with Google to view these projects.">View Projects ↗</a>
+        </div>
+      </div>
+
+      <div class="glass-panel project-card">
+        <div class="project-icon">🧠</div>
+        <h3>AI Integrated Projects (2)</h3>
+        <div class="tag-row"><span class="tag">JavaFX</span><span class="tag">Python</span><span class="tag">API</span></div>
+        <div class="card-actions">
+          <a href="apps.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="apps.html" data-gate-label="Sign in with Google to view AI-integrated projects.">View Projects ↗</a>
+        </div>
+      </div>
+
+      <div class="glass-panel project-card">
+        <div class="project-icon">📊</div>
+        <h3>Data Analysis Projects</h3>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag">Power BI</span></div>
+        <div class="card-actions">
+          <a href="daip.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="daip.html" data-gate-label="Sign in with Google to view these projects.">View Projects ↗</a>
+        </div>
+      </div>
+
+      <div class="glass-panel project-card">
+        <div class="project-icon">🔬</div>
+        <h3>Data Science Mini Projects</h3>
+        <div class="tag-row"><span class="tag">Python</span></div>
+        <div class="card-actions">
+          <a href="dsip.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="dsip.html" data-gate-label="Sign in with Google to view these projects.">View Projects ↗</a>
+        </div>
+      </div>
+
+      <div class="glass-panel project-card">
+        <div class="project-icon">🧪</div>
+        <h3>Machine Learning Projects</h3>
+        <div class="tag-row"><span class="tag">Python</span></div>
+        <div class="card-actions">
+          <a href="mlbcpd.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="mlbcpd.html" data-gate-label="Sign in with Google to view these projects.">View Projects ↗</a>
+        </div>
+      </div>
+
+      <div class="glass-panel project-card">
+        <div class="project-icon">🗂️</div>
+        <h3>FileToolBox App</h3>
+        <div class="tag-row"><span class="tag">Java</span><span class="tag">Swing</span></div>
+        <div class="card-actions">
+          <a href="oopsminiproject.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="oopsminiproject.html" data-gate-label="Sign in with Google to view this project.">View Project ↗</a>
+        </div>
+      </div>
+
+      <div class="glass-panel project-card">
+        <div class="project-icon">🐳</div>
+        <h3>Automated Docker App Using Jenkins</h3>
+        <div class="tag-row"><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Jenkins</span><span class="tag">GitHub</span></div>
+        <div class="card-actions">
+          <a href="ccipfbicsgc.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="ccipfbicsgc.html" data-gate-label="Sign in with Google to view this project.">View Project ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section class="section">
+    <div class="glass-panel resume-box">
+      <h2>Resume</h2>
+      <div class="hero-actions" style="justify-content:center;margin-top:18px;">
+        <a href="SKengine/SanjayKumaran-CV.pdf" target="_blank" class="btn btn-glass">View Resume ↗</a>
+        <a href="SKengine/SanjayKumaran-CV.pdf" download class="btn btn-primary">⬇️ Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-head">
+      <span class="badge-pill">Contact</span>
+      <h2>Let's <span class="gold-text">Connect</span></h2>
+      <p>Get in touch</p>
+    </div>
+    <div class="contact-grid">
+      <div class="glass-panel contact-item">
+        <h4>📩 Email</h4><p>sanjaykumaran6907@gmail.com</p>
+        <a href="mailto:sanjaykumaran6907@gmail.com" class="btn btn-glass btn-sm">Email</a>
+      </div>
+      <div class="glass-panel contact-item">
+        <h4>in LinkedIn</h4><p>/sanjaykumarand</p>
+        <a href="https://linkedin.com/in/sanjaykumarand" target="_blank" class="btn btn-glass btn-sm">Connect</a>
+      </div>
+      <div class="glass-panel contact-item">
+        <h4>📲 Instagram</h4><p>@_buildwithsanjay</p>
+        <a href="https://www.instagram.com/_buildwithsanjay" target="_blank" class="btn btn-glass btn-sm">Follow</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="mailto:sanjaykumaran6907@gmail.com" title="Email">📧</a>
+      <a href="https://www.linkedin.com/in/sanjaykumarand" target="_blank" title="LinkedIn">in</a>
+      <a href="https://github.com/sanjaykumarand" target="_blank" title="GitHub">gh</a>
+      <a href="https://leetcode.com/u/sanjaykumarand/" target="_blank" title="LeetCode">lc</a>
+      <a href="https://unstop.com/u/sanjakum98898" target="_blank" title="Unstop">un</a>
+    </div>
+    © 2026 Sanjay Kumaran D. All Rights Reserved.
+  </footer>
+</div>
+
+<!-- Auth Modal -->
+<div class="modal-backdrop" id="authModal">
+  <div class="glass-panel modal-box" style="position:relative;">
+    <button class="modal-close" id="authModalClose">✕</button>
+    <h3>🔒 Sign in required</h3>
+    <p id="authModalMsg">Sign in with Google to unlock this content.</p>
+    <button class="btn google-btn" id="googleSignInBtn"><span>🔵</span> Continue with Google</button>
   </div>
 </div>
 
-<div id="demoPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:99999; font-family:'Inter', sans-serif;">
-  <div style="background-color:rgba(255,255,255,0.1); backdrop-filter:blur(19px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:35px; max-width:400px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#fff;">
-    <h1 style="font-family:'Space Grotesk', sans-serif; margin-bottom:10px;">🌐 <span id="demoPopupTitle" style="background:linear-gradient(to right, gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent;"></span></h1>
-    <p style="color:#fff; font-weight:500;">*Website System Server : <span class="blink" style="color: #00ff00; font-weight:bold; "><br>ACTIVE(60s Delay to START)</span></p>
-    <p style="color:#fff; font-weight:500;">*Website DataBase Server : <span class="blink" style="color: #ff0000; font-weight:bold; ">DEACTIVATED</span></p>
-    <a id="demoPopupLink" href="#" target="_blank"><button class="buttongui" style="margin-top:20px;">🛒 E-Commerce Management System</button></a>
-    <h6 style="color:#00ff00">*The above Website Link allows demo to add Products into my sample database others below not given permission to add, only you can view data.</h6>
-    <a href="https://w8-jfsdips.onrender.com/w7/"><button class="buttongui">🎫 Movie Ticket Booking System</button></a>
-    <a href="https://w8-jfsdips.onrender.com/w6/"><button class="buttongui">📜 Online Quiz Examination System</button></a>
-    <a href="https://w8-jfsdips.onrender.com/w5/"><button class="buttongui">🎓 College Management System</button></a>
-    <a href="https://w8-jfsdips.onrender.com/w4/"><button class="buttongui">😋 Online Food Ordering System</button></a>
-    <a href="https://w8-jfsdips.onrender.com/w3/"><button class="buttongui">📚 Library Management System</button></a>
-    <a href="https://w8-jfsdips.onrender.com/w2/"><button class="buttongui">💼 Employee Management System</button></a>
-    <br><button class="buttongui" style="margin-top:10px; background:rgba(255,255,255,0.2);" onclick="document.getElementById('demoPopup').style.display='none';">Close</button>
-  </div>
-</div>
-
-
-<div id="androidPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:99999; font-family:'Inter', sans-serif;">
-  <div style="background-color:rgba(255,255,255,0.1); backdrop-filter:blur(19px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:35px; max-width:400px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#fff;">
-    <h1 style="font-family:'Space Grotesk', sans-serif; margin-bottom:10px;">🌐 <span id="AndroidPopupTitle" style="background:linear-gradient(to right, gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent;"></span></h1>
-    <p style="color:#fff; font-weight:500;">*Google Firebase Server : <span class="blink" style="color: #00ff00; font-weight:bold; ">ACTIVE</span></p>
-    <a id="AndroidPopupLink" href="#" target="_blank"><button class="buttongui" style="margin-top:20px;">🌐 View Source</button></a><br>
-    <a href="apps#skaib2"><button class="buttongui">🤖 SKAI App</button></a>
-    <a href="apps#skchat"><button class="buttongui">💬 SK Chat App</button></a>
-    <br><button class="buttongui" style="margin-top:10px; background:rgba(255,255,255,0.2);" onclick="document.getElementById('androidPopup').style.display='none';">Close</button>
-  </div>
-</div>
-
-
-<div id="aiPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:99999; font-family:'Inter', sans-serif;">
-  <div style="background-color:rgba(255,255,255,0.1); backdrop-filter:blur(19px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:35px; max-width:400px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#fff;">
-    <h1 style="font-family:'Space Grotesk', sans-serif; margin-bottom:10px;">🌐 <span id="AIPopupTitle" style="background:linear-gradient(to right, gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent;"></span></h1>
-    <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7494448774141005826"><button class="buttongui">🤖 NPU Based AI</button></a>
-    <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7499789531198636033"><button class="buttongui">🏫 AI Attendance</button></a>
-    <br><button class="buttongui" style="margin-top:10px; background:rgba(255,255,255,0.2);" onclick="document.getElementById('aiPopup').style.display='none';">Close</button>
-  </div>
-</div>
-
-
-
-<script>
-function showDemoPopup(title, url) {
-  document.getElementById('demoPopupTitle').innerText = title;
-  document.getElementById('demoPopupLink').href = url;
-  document.getElementById('demoPopup').style.display = 'flex';
-}
-
-function showAndroidPopup(title, url) {
-  document.getElementById('AndroidPopupTitle').innerText = title;
-  document.getElementById('AndroidPopupLink').href = url;
-  document.getElementById('androidPopup').style.display = 'flex';
-}
-
-function showAIPopup(title) {
-  document.getElementById('AIPopupTitle').innerText = title;
-  document.getElementById('aiPopup').style.display = 'flex';
-}
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/webgl-fluid@0.4"></script>
-<script src="script.js"></script>
-
-
-
- <div id="hero">
-  <canvas id="fluid"></canvas>
-
-
-
- <div class="content">
-
-  <div class="glass-container">
-  
-    <section class="navblog-posts">
-    <header>
-  <h2><b><a href="/" class="headgui">Sanjay Kumaran</a></b></h2>      
-  <nav>
-    <span class="menu-toggle" id="menuToggle">☰</span>
-    <div class="nav-links" id="navLinks">
-      <a href="/" class="navbuttongui">🏡<span>Home</span></a>
-      <a href="https://sanjaykumarand.github.io/#aboutme" class="navbuttongui">👨🏻<span>About Me</span></a>
-      <a href="https://sanjaykumarand.github.io/#projects" class="navbuttongui">📂<span>Projects</span></a>
-      <a href="certificates" class="navbuttongui">📜<span>Certificates</span></a>
-      <a href="highlights" class="navbuttongui">✨<span>Highlights</span></a>
-      <a href="apps" class="navbuttongui">📲<span>My App Store</span></a>
-      <a href="SKengine/SanjayKumaran-CV.pdf" class="navbuttongui">📃<span>Resume</span></a>
-      
-    </div>
-  </nav>
-</header>
-    </section>   
-    
-  <div class = "homie">
-<article class="introgui">
-
-    <center>
-          <a href="SKengine/profilepicture.png"><img class="pp" src="SKengine/ppfast.jpg" alt="Loading Sanjay Kumaran Image Please Wait..."></a><br>
-      <div class="typing-text"><h1 style ="color:#fff;">Hello, I'm <span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  ">Sanjay Kumaran</span></h1></div>
-
-      <h3 class="gga" style="
-  background: linear-gradient(to right, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    ">-Aspiring Java Developer</h3><br>
-
-      <h3 class="gg" style ="color:#fff; font-weight:500;">Pursuing B.Tech Information Technology at<br> Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College</h4><br>
-     <div id="down"></div>
-     
-       
-<a href="https://www.linkedin.com/in/sanjaykumarand"><button class="slbuttongui"><h3 style = "color:blue; padding-left: 5px; padding-right: 5px;">in <span style="color:#fff;">Linkedin ↗</span></button></a>
-           <a href="highlights"><button class="slbuttongui"><h3>✨ <span>Highlights ↗</span></h3></button></a>
-  <a href="#projects"><button class="slbuttongui"><h3>📂️️ <span>Projects ↗</span></h3></button></a>
-   <a href="#expnav"><button class="slbuttongui"><h3>💼 <span>Experience ↗</span></h3></button></a><br><br>
-      <a href="certificates"><button class="slbuttongui"><h3>🏅 <span>Certificates ↗</span></h3></button></a>
-      <a href="#skills"><button class="slbuttongui"><h3>💎 <span>Skills ↗</span></h3></button></a>
-      <a href="apps#skai"><button class="slbuttongui"><h3>📥 <span>My Apps ↗</span></h3></button></a>
-      <a href="SKengine/SanjayKumaran-CV.pdf"><button class="slbuttongui"><h3>📑 <span>Resume ↗</span></h3></button></a>
-  
-       
-  
-   
-<br><center>
-    <div class="arrow" style="color:lightgreen; text-shadow: 0 8px 16px lightgreen;"><h5><a href="#aboutme" style="color:lightgreen; text-decoration: none !important">↓</a></h5></div></center>
-         </div>
-
-</article><br>
-    <div id="aboutme">
-    
-    <center>
-    <div class="hui" ><h1 class="headingfont" >About <span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">Me</span</h1></div><br>
-    </center></div>
-           <br><br>
-
-                <div class="card-grid">
-                  <div class="Acard-frontend"> 
-
-                    <a href="SKengine/techysanjay.png"><img src="SKengine/techysanjay.png" class="techypic" alt="Loading Sanjay Kumaran Image Please Wait..."></img></a><br>
-
-                  </div>
-               <div class="Acard-frontend"> 
-                                
-<h2 class="abgui">I’m <span class="spabm"style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight:bold;
-  ">Sanjay Kumaran</span>, pursuing B.Tech in IT at Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College(Autonomous).<br>
-I'm a passionate technophile, I love exploring new innovations and how they work.  
-My ambition is to become a <span class="spabm" style="
-  background: linear-gradient(to right, pink, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight:bold;
-  ">Java Developer</span>, solving real-world problems through insights.  
-I feel happy while mentoring peers, sharing knowledge, and building a smarter tech community.  
-Outside Tech, I love Chess, Carrom, and diving into AI breakthroughs and Futuristic Gadgets.  </h2>
-            
-               </div></div>
-  
-   
-   
-   
-   <div id="education"> <br>
-                  <section class="blog-posts">
-      <article class="post">
-      <center>
-    <div class="hui" >   <h1 style="color: #fff;"><span style= " background: linear-gradient(to right, gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; " >Education</span> Journey</h1><br></center></div>
-      <center>
-              <div class="card-grid">
-               <div class="card-frontend1" style="height:325px;">
-              <section class="blog-posts">
-                <article class="rpost" style="color:#fff;">
-                <img src="SKengine/vtmt.png" class="epp">
-                <h2>B.Tech Information Technology</h2>
-        <h3 > Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College(Autonomous)</h3>
-        <h4 style="color:gold;">Batch: 2024-2028</h4>
-        <button class="dbuttongui" style="padding:10px;"><span class="dbgs blink" >Current</span> CGPA: 8.37</h3>
-      </article>
-    </section></div><br>
-  
-               <div class="card-frontend2" style="height:325px;">
-              <section class="blog-posts">
-                <article class="rpost" style="color:#fff;">
-                <img src="SKengine/sb.png" class="epp">
-                <h2>Higher Secondary School</h2>
-        <h3 >Sethu Bhaskara Matriculation Higher Secondary School</h3>
-        <h4 style="color:gold;">Batch: 2023-2024</h4>
-        <button class="d1buttongui">Grade: 75.83</button>
-        </article>
-    </section>
-    </div><br>
-    
-                  <div class="card-frontend2" style="height:325px;">
-              <section class="blog-posts">
-                <article class="rpost" style="color:#fff;">
-                <img src="SKengine/sv.png" class="epp">
-                <h2>Secondary School</h2>
-        <h3>Sri Venkateswara Matriculation Higher Secondary School</h3>
-        <h4 style="color:gold;">Batch: 2021-2022</h4>
-        <button class="d1buttongui">Grade: 78.20</button>
-      </article>
-    </section>
-    </div><br>
-    
-    
-    
-    </div>
-      </center></article>
-    </section></div><br>
-  
-   
-        <div class="scard-grid">
-  <div class="scard frontend">
-    <section class="blog-posts">
-          <article class="rpost">
-           <center>  <div class = "hui">  <h1 id="skills" style="color:  #fff;"><span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">Skills</span> & <span style="
-  background: linear-gradient(to right,  gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">Certificates</span></h2></div></center><br><br>
-         <div class="scard-grid" style="background-color: rgba(255,255,255,0.1); border-radius: 12px;">
-  <div class="scard-frontends" style="--percent:65%;">
-    <img src="SKengine/html.png" class="spp">
-    <h5>HTML/CSS</h5>
-    <p>Frontend</p>
-    <h6>⚡ 65%</h6>
-  </div>
-  <div class="scard-frontends" style="--percent:45%;">
-    <img src="SKengine/python.png" class="spp">
-    <h5>PYTHON</h5>
-    <p>Backend</p>
-    <h6>⚡ 45%</h6>
-  </div>
-  <div class="scard-frontends" id="exp" style="--percent:45%;">
-    <img src="SKengine/java.png" class="spp">
-    <h5>JAVA</h5>
-    <p>Backend</p>
-    <h6>⚡ 45%</h6>
-  </div>
-  <div class="scard-frontends" style="--percent:40%;">
-    <img src="SKengine/mysqllgo.png" class="spp">
-    <h5>MySQL</h5>
-    <p>Backend</p>
-  <h6>⚡ 40%</h6></div>
-                 </center> 
-                  <center>
-       <br><br><a href="https://leetcode.com/u/sanjaykumarand/"><button class="buttongui">View LeetCode Profile ↗️</button></a>
-     <a href="certificates"><button class="buttongui"><h4>View Certificates & Badges ↗️</h4></button></a></center>
-      </article>
-    </section>
-  </div>
-  </div>
-
-  
-
-     
-     
-     <div class="scard-grid" id="expnav">
-  <div class="scard-frontend" style="background-color: rgba(0,0,0,0);">
-      <section class="blog-posts">
-          <article class="rpost" >
-            <center>
-<h2  style="color: #fff;">Internship <span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">Experience</span></h2></center>
-   <br>
-
- <div class="scard-grid">
-          <a href="ccipfbicsgc" style="text-decoration:none !important; color:white;">  <div class="escard-frontends" style="height:250px;"  id="pbf">
-    <h3>Cloud Computing</h3>
-    <h4 style="color:gold;">June 2026</h4><br>
-    <span style="text-align: left;"><h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right,  gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">COMPANY</span> : BICS Global, Ambattur, India</h4>
-    <h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">MODE</span> : On-Site</h4><br>
-    <a href="ccipfbicsgc"><button class="buttongui">View Projects ↗️️</button></a></span>
-  </div></a>
-  
-  
-          <a href="SKengine/czcc.pdf" style="text-decoration:none !important; color:white;">  <div class="escard-frontends" style="height:250px;"  id="pbf">
-    <h3>Data Science</h3>
-    <h4 style="color:gold;">May 2026 - June 2026</h4><br>
-    <span style="text-align: left;"><h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right,  gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">COMPANY</span> : Cognifyz Technologies</h4>
-    <h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">MODE</span> : Remote</h4><br>
-     <a href="SKengine/czcc.pdf"><button class="buttongui">View Certificate ↗️️</button></a> </span>
-  </div></a>
-  
-  
-          <a href="jfsdipscfsipl" style="text-decoration:none !important; color:white;">  <div class="escard-frontends" style="height:250px;"  id="pbf">
-    <h3>Java Full Stack Developer</h3>
-    <h4 style="color:gold;">May 2026 - July 2026</h4><br>
-    <span style="text-align: left;"><h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right,  gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">COMPANY</span> : Sarvagna Innovation Private Limited</h4>
-    <h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">MODE</span> : Remote</h4><br>
-    <a href="jfsdipscfsipl"><button class="buttongui">View Projects ↗️️</button></a></span>
-  </div></a>
-  
-  </div>
-
-            
-            <div class="scard-grid">
-          <a href="SKengine/DSWGAIintern.pdf" style="text-decoration:none !important; color:white;">  <div class="escard-frontends" style="height:250px;"  id="pbf">
-    <h3>Data Science with Gen AI Internship</h3>
-    <h4 style="color:gold;">Mar 2026</h4><br>
-    <span style="text-align: left;"><h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right,  gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">COMPANY</span> : Top Engineers</h4>
-    <h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">MODE</span> : Remote</h4><br>
-    <a href="SKengine/DSWGAIintern.pdf"><button class="buttongui">View Certificate ↗️️</button></a></span>
-  </div></a>
-  
-  
-      <a href="dsip" style="text-decoration:none !important; color:white; "><div class="escard-frontends" style="height:250px;"  id="pbf">
-    <h3>Data Science Internship</h3>
-    <h4 style="color:gold;">Jan 2026</h4><br>
-    <span style="text-align: left;"> <h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right,  gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">COMPANY</span> : Virtual Tech Services, Ambattur, India<br><span style="
-  background: linear-gradient(to right,  gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">MODE</span> : On-Site</h4>
-    <br><a href="dsip"><button class="buttongui">View Projects ↗️️</button></a></span>
-  </div></a><br>
-  
-  
-          <a href="daip" style="text-decoration:none !important; color:white;">  <div class="escard-frontends" style="height:250px;"  id="pbf">
-    <h3>Data Analysis Internship</h3>
-    <h4 style="color:gold;">Dec 2025 - Jan 2026</h4><br>
-   <span style="text-align: left;">  <h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right,  gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">COMPANY</span> : Sarvagna Innovation Private Limited</h4>
-    <h4 style="color:#fff;"><span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">MODE</span> : Remote</h4>
-    
-    <br><a href="daip"><button class="buttongui">View Projects ↗️️</button></a></span>
-  </div></a>
-  
-  </div>
-
-            
-            
-    </article>
-    </section>
-  </div>
-  </div>
-
-
-
-
-         <div class="scard-grid" >
-  <div class="scard-frontend" style="min-height: 400px; max-height: 400px; background-color: rgba(0,0,0,0);">
-      <section class="blog-posts">
-          <article class="rpost">
-            <center>
-<h2  style="color: #fff;">Portfolio <span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">Highlights</span></h2></center>
-   <br>
- <div class="scard-grid">
-           <div class="escard-frontends"   id="pbfh">
-             <center>
-    <h3>Recent Highlights</h3>
-    <a href="highlights"><img src="SKengine/hl1.jpg" style="width:30%; height:30%;"></a>
-    <a href="highlights"><img src="SKengine/bsnlhl.jpeg" style="width:30%; height:30%;"></a>
-    <a href="highlights"><img src="SKengine/akhl.jpeg" style="width:30%; height:30%;"></a>
-               <br>
-    <br><a href="highlights"><button class="buttongui">Explore ↗️️</button></a>
-             </center>
-  </div></a>
-  
-  </div>
-
- 
-            
-    </article>
-    </section>
-  </div>
-  </div>
-
-
-
-    
- <section class="blog-posts" id="projects">
-      <article class="post">
-      <center><br><br>
-     <div class="hui" >  <h2 style="color:  #fff;">Technical <span style="
-  background: linear-gradient(to right, gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;">Projects</span></h2></div><br><br>
-      
-              <div class="card-grid"   id="pgm">
-
-
-
-
-
-
-<div class="pcard-frontend" >
-              <section class="blog-posts">
-                <article class="rpost" >
-                  <a href="jfsdipscfsipl"><img src="SKengine/w8jl.png" class="primggui"></a>
-<a href="jfsdipscfsipl" class="projectgui"><h4 >Java Full Stack Developer Projects(7)</h4><br></a>
-                    
-            <button class="psb" style="width:70px;">JDBC</button>
-            <button class="psb" style="width:110px;">JSP / HTML</button>
-            <button class="psb" style="width:75px;">MySQL</button>
-            <button class="psb" style="width:90px;">Servlets</button><br><br>
-            <a href="jfsdipscfsipl"><button class="buttongui">View Projects ↗️</button></a>
-                 <button class="buttongui" onclick="showDemoPopup('Java Full Stack Developer Intern Projects','https://w8-jfsdips.onrender.com/')">Play Demo 🌐</button>
-                 <h6>*Wait 50 Seconds and then Refresh Website to play Demo!</h6>
-      </article>
-    </section>
-    </div><br>
-
-
-    <div class="pcard-frontend" >
-              <section class="blog-posts">
-                <article class="rpost" >
-                  <a href="asaps"><img src="SKengine/skchatlgo.png" class="primggui"></a>
-<a href="asaps" class="projectgui"><h4 >Android Studio App Projects(2)</h4><br></a>
-                    
-            <button class="psb" style="width:70px;">JAVA</button>
-            <button class="psb" style="width:110px;">ANDROID</button>
-            <button class="psb" >XML</button>
-            <button class="psb" style="width:90px;">FIREBASE</button><br><br>
-                 <button class="buttongui" onclick="showAndroidPopup('Android Studio App Projects(2)','asaps')">View Projects ↗️</button>
-                 
-      </article>
-    </section>
-    </div><br>
-
-    <div class="pcard-frontend" >
-              <section class="blog-posts">
-                <article class="rpost" >
-                  <img src="SKengine/skailgo.png" class="primggui">
-<h4 >AI Integrated Projects(2)</h4><br>
-                    
-            <button class="psb" style="width:90px;">JAVAFX</button>
-            <button class="psb" style="width:110px;">PYTHON</button>
-            <button class="psb" >API</button>
-            <button class="psb" style="width:200px;">GOOGLE APP PASSWORDS</button><br><br>
-                 <button class="buttongui" onclick="showAIPopup('AI Integrated Projects(2)')">View Projects ↗️</button>
-                 
-      </article>
-    </section>
-    </div><br>
-
-
-                
-          
-
-
-                
-          <div class="pcard-frontend" >
-              <section class="blog-posts">
-                <article class="rpost">
-                <a href="daip"><img src="SKengine/dapl.png" class="primggui"></a><br>
-            <a href="daip" class="projectgui"><h3 >Data Analysis Projects</h3></a><br>
-                                 
-            <button class="psb" style="width:75px;">Python</button>
-                  <button class="psb" style="width:160px;">Microsoft Power BI</button> <br>   <br>
-            <a href="daip" class="projectgui"><button class="buttongui" >View Projects ↗️</button></a>
-      </article>
-    </section>
-    </div><br>
-    
-               <div class="pcard-frontend" >
-              <section class="blog-posts">
-                <article class="rpost">
-                <a href="dsip"><img src="SKengine/dspl.png" class="primggui"></a><br>
-            <a href="dsip" class="projectgui"><h3 >Data Science Mini Projects</h3></a><br>
-
-                        
-            <button class="psb" style="width:75px;"><center>Python</center></button><br><br>
-            <a href="dsip" class="projectgui"><button class="buttongui" >View Projects ↗️</button></a>
-      </article>
-    </section>
-    </div><br>   
-
-
-
-<div class="pcard-frontend" >
-              <section class="blog-posts">
-                <article class="rpost">
-                <a href="mlbcpd"><img src="SKengine/mlbcl.png" class="primggui"></a><br>
-            <a href="mlbcpd" class="projectgui"><h3>ML Projects</h3></a><br>
-
-            
-            <button class="psb" style="width:75px;"><center>Python</center></button><br><br>
-            <a href="mlbcpd" class="projectgui"><button class="buttongui" >View Projects ↗️</button></a>
-      </article>
-    </section></div><br>
-  
-
-                
-          
-               <div class="pcard-frontend">
-              <section class="blog-posts">
-                <article class="rpost">
-                <a href="oopsminiproject"><img src="SKengine/oopsminiproject.jpg" class="primggui"></a><br>
-            <a href="oopsminiproject" class="projectgui"><h3>FileToolBox App</h3></a><br>
-             
-            <button class="psb"><center>JAVA</center></button>
-                  <button class="psb" style="width:85px;"><center>SWING</center></button><br><br>
-            <a href="oopsminiproject" class="projectgui"><button class="buttongui" >View Projects ↗️</button></a>
-      </article>
-    </section></div><br>
-  
-               <div class="pcard-frontend" >
-              <section class="blog-posts">
-                <article class="rpost">
-                <a href="ccipfbicsgc"><img src="SKengine/bicsglgo.png" class="primggui"></a><br>
-            <a href="ccipfbicsgc" class="projectgui"><h3 >Automated Docker App Using Jenkins</h3></a><br>
-
-                    
-            <button class="psb">AWS</button>
-            <button class="psb" style="width:75px;">Docker</button>
-            <button class="psb" style="width:75px;">Jenkin</button>
-            <button class="psb" style="width:75px;">GitHub</button><br><br>            
-            <a href="ccipfbicsgc" class="projectgui"><button class="buttongui" >View Projects ↗️</button></a>
-      </article>
-    </section>
-    </div><br>
-
-
-
-                
-    
-          
-
-    </div>
-      </center></article>
-    </section><br>
-    
-    
-  
-      <center>
-      <div id="resumenav">
-      <h2 style="text-align: center; color: gold;"> Resume </h2><br>
-       <a href="SKengine/SanjayKumaran-CV.pdf"><button class="buttongui"><h4>View Resume ↗️</h4></button></a>
-      <a href="https://drive.google.com/uc?export=download&id=1orjvOj2X51wAeME9s-Bef7vxJkNGM8Ii"><button class="buttongui"><h4>⬇️ Download Resume</h4></button></a></div></center>
-      <br><br>
-    
-      
-
-    
-    
-    <center>
-   <div class="hui" style="text-align: center;" >  <h2 id="lcgit" style="color:#fff;">Let's <span style="color: gold;">Connect</span></h2>
-    <h3 style="color:  gold;">Get in Touch</h3></div><br>
-  <div class="tconnect">
-    <div class="gitcb">
-      <h4>📩 Email</h4>
-      <h4>sanjaykumaran6907@gmail.com</h4><br> <a href="mailto:sanjaykumaran6907@gmail.com"<button class="buttongui"><h2>📧</h2></button></a>
-    </div>
-    <div class="gitcb">
-      <h4><span style="color:blue;">in</span> Linkedin</h4>
-      <h4>/sanjaykumarand</h4><br> <a href="https://linkedin.com/in/sanjaykumarand"<button class="buttongui" style="color:blue;"><h2>in</h2></button></a>
-    </div>
-    <div class="gitcb">
-      <h4>📲 Instagram</h4>
-      <h4>@_buildwithsanjay</h4></h4><br> <a href="https://www.instagram.com/_buildwithsanjay?igsh=MTB4cWQzaDc0NDFjeQ=="<button class="buttongui"><h2>📲</h2></button></a>
-    </div>
-  </div></center>
-
-
-
-
-   <div class="footer" style="margin-top:150px;">
-       <div class="fname">© 2024 Sanjay Kumaran D. All Rights Reserved</div>
-     <center><div class="sml">
-    <a href="mailto:sanjaykumaran6907@gmail.com" class="linkgui" style="text-decoration:none !important"><img src="SKengine/mail.png" class="cugui"></a>
-    <a href="https://www.linkedin.com/in/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/linkedin.png" class="cugui"></a>
-    <a href="https://github.com/sanjaykumarand" class="linkgui" style="text-decoration:none !important"><img src="SKengine/github.png" class="cugui"></a>
-    <a href="https://leetcode.com/u/sanjaykumarand/" class="linkgui" style="text-decoration:none !important"><img src="SKengine/lcp.png" class="cugui"></a>
-    <a href="https://unstop.com/u/sanjakum98898" class="linkgui" style="text-decoration:none !important"><img src="SKengine/uns.png" class="cugui"></a>
-     </div></center></div>
-
-    
-<script>
-    const toggle = document.getElementById('menuToggle');
-    const nav = document.getElementById('navLinks');
-
-    function updateLayout() {
-      if (window.innerWidth <= 1024) {
-        toggle.style.display = 'inline';
-        nav.style.display = 'none';
-      } else {
-        toggle.style.display = 'none';
-        nav.style.display = 'flex';
-      }
-    }
-
-    toggle.addEventListener('click', () => {
-  if (nav.style.display === 'none') {
-    nav.style.display = 'flex';
-    nav.style.flexDirection = 'column'; 
-  } else {
-    nav.style.display = 'none';
-  }
-});
-
-
-
-
-    window.addEventListener('resize', updateLayout);
-    window.addEventListener('load', updateLayout);
-    
-
-</script>
-         
-         
-
-    <script>
- window.difyChatbotConfig = {
-  token: 'EEHX7AizWNHTwXXN',
-  inputs: {
-  },
-  systemVariables: {
-  },
-  userVariables: {
-    avatar_url: 'aiuser.png',
-    name: 'SKAI',
-  },
- }
-</script>
-<script
- src="https://udify.app/embed.min.js"
- id="EEHX7AizWNHTwXXN"
- defer>
-</script>
-<style>
-  #dify-chatbot-bubble-button {
-    background:linear-gradient(135deg,#fdf5b9,#f3b0f2,#fdf5b9) !important;
-    box-shadow: 0 8px 32px rgba(255,255,0,0.5);
-  }
-  #dify-chatbot-bubble-button:hover {
-    box-shadow: 0 8px 32px rgba(255,255,0,0.75);
-  }
-  #dify-chatbot-bubble-window {
-    width: 24rem !important;
-    height: 40rem !important;
-    position:fixed !important;
-    z-index: 999999;
-    
-  }
-</style>
-    
-    
-    
-    
-    
-
-
-    
-    
-    
-  
-    
-    </div>
-    
-    
-    
-    
-    
-    
-    
- </div>
- </div>
-  
-    
-    
-    
-    
-    
-    
-    
-  
+<script type="module" src="js/main.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
