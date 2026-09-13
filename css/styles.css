@@ -127,7 +127,18 @@ header.navbar {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--glass-border);
+  /* Forces the fixed+blurred navbar onto its own compositor layer so
+     mobile browsers (Android Chrome/WebView especially) repaint the
+     content beneath it correctly instead of leaving it blank. */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  isolation: isolate;
 }
+
+/* Give gated/lazy content its own compositor layer too, so it repaints
+   reliably under a fixed navbar on mobile instead of staying blank. */
+.gate-wrap, .glass-panel { transform: translateZ(0); }
 
 /* Offset anchor-link targets so the fixed navbar never overlaps them */
 .section, [id] { scroll-margin-top: var(--navbar-height, 72px); }
@@ -340,3 +351,35 @@ footer {
   .modal-backdrop { padding-top: 70px; }
   .modal-box { max-height: calc(100vh - 100px); padding: 24px 18px; }
 }
+
+
+.typing-text {
+  display: inline-block;
+  line-height: inherit; 
+  vertical-align: bottom;
+   white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+    
+      animation: typing 2s steps(12, end) forwards;
+   background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+     
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 12ch; }
+    }    
+
+.blink {
+    animation: blinker 3s linear infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
