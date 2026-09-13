@@ -215,7 +215,7 @@
         <div class="tag-row"><span class="tag">JDBC</span><span class="tag">JSP/HTML</span><span class="tag">MySQL</span><span class="tag">Servlets</span></div>
         <div class="card-actions">
           <a href="jfsdipscfsipl.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="jfsdipscfsipl.html" data-gate-label="Sign in with Google to view these projects.">View Projects ↗</a>
-          <a href="https://w8-jfsdips.onrender.com/" target="_blank" class="btn btn-glass btn-sm" data-gate-action data-gate-href="https://w8-jfsdips.onrender.com/" data-gate-label="Sign in with Google to play the live demo.">Play Demo 🌐</a>
+          <a href="#" class="btn btn-glass btn-sm" data-gate-action data-gate-popup="demoPopup" data-gate-label="Sign in with Google to play the live demo.">Play Demo 🌐</a>
         </div>
       </div>
 
@@ -224,7 +224,7 @@
         <h3>Android Studio App Projects (2)</h3>
         <div class="tag-row"><span class="tag">Java</span><span class="tag">Android</span><span class="tag">XML</span><span class="tag">Firebase</span></div>
         <div class="card-actions">
-          <a href="asaps.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="asaps.html" data-gate-label="Sign in with Google to view these projects.">View Projects ↗</a>
+          <a href="#" class="btn btn-glass btn-sm" data-gate-action data-gate-popup="androidPopup" data-gate-label="Sign in with Google to view these projects.">View Projects ↗</a>
         </div>
       </div>
 
@@ -233,7 +233,7 @@
         <h3>AI Integrated Projects (2)</h3>
         <div class="tag-row"><span class="tag">JavaFX</span><span class="tag">Python</span><span class="tag">API</span></div>
         <div class="card-actions">
-          <a href="apps.html" class="btn btn-glass btn-sm" data-gate-action data-gate-href="apps.html" data-gate-label="Sign in with Google to view AI-integrated projects.">View Projects ↗</a>
+          <a href="#" class="btn btn-glass btn-sm" data-gate-action data-gate-popup="aiPopup" data-gate-label="Sign in with Google to view AI-integrated projects.">View Projects ↗</a>
         </div>
       </div>
 
@@ -306,7 +306,7 @@
     <div class="contact-grid">
       <div class="glass-panel contact-item">
         <h4>📩 Email</h4><p>sanjaykumaran6907@gmail.com</p>
-        <a href="mailto:sanjaykumaran6907@gmail.com" class="btn btn-glass btn-sm">Email</a>
+        <a href="mailto:sanjaykumaran6907@gmail.com" class="btn btn-glass btn-sm">Send Email</a>
       </div>
       <div class="glass-panel contact-item">
         <h4>in LinkedIn</h4><p>/sanjaykumarand</p>
@@ -321,14 +321,82 @@
 
   <footer>
     <div class="footer-icons">
-      <a href="mailto:sanjaykumaran6907@gmail.com" title="Email">📧</a>
-      <a href="https://www.linkedin.com/in/sanjaykumarand" target="_blank" title="LinkedIn">in</a>
-      <a href="https://github.com/sanjaykumarand" target="_blank" title="GitHub">gh</a>
-      <a href="https://leetcode.com/u/sanjaykumarand/" target="_blank" title="LeetCode">lc</a>
-      <a href="https://unstop.com/u/sanjakum98898" target="_blank" title="Unstop">un</a>
+      <a href="mailto:sanjaykumaran6907@gmail.com" title="Email"><img src="SKengine/mail.png" alt="Email" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'📧'}))"></a>
+      <a href="https://www.linkedin.com/in/sanjaykumarand" target="_blank" title="LinkedIn"><img src="SKengine/linkedin.png" alt="LinkedIn" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'in'}))"></a>
+      <a href="https://github.com/sanjaykumarand" target="_blank" title="GitHub"><img src="SKengine/github.png" alt="GitHub" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'gh'}))"></a>
+      <a href="https://leetcode.com/u/sanjaykumarand/" target="_blank" title="LeetCode"><img src="SKengine/lcp.png" alt="LeetCode" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'lc'}))"></a>
+      <a href="https://unstop.com/u/sanjakum98898" target="_blank" title="Unstop"><img src="SKengine/uns.png" alt="Unstop" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'un'}))"></a>
     </div>
     © 2026 Sanjay Kumaran D. All Rights Reserved.
   </footer>
+</div>
+
+<!-- Welcome Popup -->
+<div class="modal-backdrop" id="welcomePopup" style="align-items:center;padding-top:20px;">
+  <div class="glass-panel modal-box" style="max-width:420px;">
+    <h3>👋🏻 Welcome to <span class="gold-text">Sanjay Kumaran's</span> Portfolio</h3>
+    <p>🌐 Today's Updates: I have created AI Attendance Check-IN with Report Projects.</p>
+    <button class="btn btn-primary" id="welcomePopupClose">Got it</button>
+  </div>
+</div>
+
+<!-- Java Full Stack Demo Popup -->
+<div class="modal-backdrop" id="demoPopup">
+  <div class="glass-panel modal-box" style="position:relative;max-width:420px;">
+    <button class="modal-close" data-popup-close="demoPopup">✕</button>
+    <h3>🌐 <span class="gold-text">Java Full Stack Developer Intern Projects</span></h3>
+    <p style="margin-bottom:4px;">*Website System Server: <strong style="color:#22c55e;">ACTIVE (60s delay to start)</strong></p>
+    <p style="margin-bottom:16px;">*Website DataBase Server: <strong style="color:#ef4444;">DEACTIVATED</strong></p>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="https://w8-jfsdips.onrender.com/" target="_blank" class="btn btn-glass">🛒 E-Commerce Management System</a>
+      <p style="font-size:0.75rem;color:#22c55e;margin:-4px 0 0;">*The above link allows demo product add; others below are view-only.</p>
+      <a href="https://w8-jfsdips.onrender.com/w7/" target="_blank" class="btn btn-glass">🎫 Movie Ticket Booking System</a>
+      <a href="https://w8-jfsdips.onrender.com/w6/" target="_blank" class="btn btn-glass">📜 Online Quiz Examination System</a>
+      <a href="https://w8-jfsdips.onrender.com/w5/" target="_blank" class="btn btn-glass">🎓 College Management System</a>
+      <a href="https://w8-jfsdips.onrender.com/w4/" target="_blank" class="btn btn-glass">😋 Online Food Ordering System</a>
+      <a href="https://w8-jfsdips.onrender.com/w3/" target="_blank" class="btn btn-glass">📚 Library Management System</a>
+      <a href="https://w8-jfsdips.onrender.com/w2/" target="_blank" class="btn btn-glass">💼 Employee Management System</a>
+    </div>
+    <button class="btn btn-glass" style="margin-top:14px;" data-popup-close="demoPopup">Close</button>
+  </div>
+</div>
+
+<!-- Android Studio Popup -->
+<div class="modal-backdrop" id="androidPopup">
+  <div class="glass-panel modal-box" style="position:relative;max-width:420px;">
+    <button class="modal-close" data-popup-close="androidPopup">✕</button>
+    <h3>🌐 <span class="gold-text">Android Studio App Projects (2)</span></h3>
+    <p style="margin-bottom:16px;">*Google Firebase Server: <strong style="color:#22c55e;">ACTIVE</strong></p>
+    <a href="asaps.html" class="btn btn-glass" style="margin-bottom:10px;">🌐 View Source</a>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="apps.html#skaib2" class="btn btn-glass">🤖 SKAI App</a>
+      <a href="apps.html#skchat" class="btn btn-glass">💬 SK Chat App</a>
+    </div>
+    <button class="btn btn-glass" style="margin-top:14px;" data-popup-close="androidPopup">Close</button>
+  </div>
+</div>
+
+<!-- AI Integrated Popup -->
+<div class="modal-backdrop" id="aiPopup">
+  <div class="glass-panel modal-box" style="position:relative;max-width:420px;">
+    <button class="modal-close" data-popup-close="aiPopup">✕</button>
+    <h3>🌐 <span class="gold-text">AI Integrated Projects (2)</span></h3>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7494448774141005826" target="_blank" class="btn btn-glass">🤖 NPU Based AI</a>
+      <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7499789531198636033" target="_blank" class="btn btn-glass">🏫 AI Attendance</a>
+    </div>
+    <button class="btn btn-glass" style="margin-top:14px;" data-popup-close="aiPopup">Close</button>
+  </div>
+</div>
+
+<!-- Sign-Out Modal -->
+<div class="modal-backdrop" id="signOutModal">
+  <div class="glass-panel modal-box" style="position:relative;">
+    <button class="modal-close" id="signOutModalClose">✕</button>
+    <h3>👋 Sign out?</h3>
+    <p>You'll need to sign in with Google again to view gated content.</p>
+    <button class="btn google-btn" id="signOutConfirmBtn"><span>🚪</span> Sign out</button>
+  </div>
 </div>
 
 <!-- Auth Modal -->

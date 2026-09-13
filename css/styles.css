@@ -104,13 +104,18 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 /* --- Ambient Orbs --- */
 .ambient-bg { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
-.orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.5; will-change: transform; }
-.orb-1 { width: 500px; height: 500px; top: -100px; left: -100px; background: var(--orb-1); animation: floatOrb1 22s ease-in-out infinite alternate; }
-.orb-2 { width: 450px; height: 450px; bottom: -120px; right: -80px; background: var(--orb-2); animation: floatOrb2 26s ease-in-out infinite alternate; }
-.orb-3 { width: 350px; height: 350px; top: 40%; left: 60%; background: var(--orb-3); animation: floatOrb3 18s ease-in-out infinite alternate; }
-@keyframes floatOrb1 { to { transform: translate(80px, 60px); } }
-@keyframes floatOrb2 { to { transform: translate(-60px, -50px); } }
-@keyframes floatOrb3 { to { transform: translate(-40px, 70px); } }
+.orb { position: absolute; border-radius: 50%; filter: blur(90px) hue-rotate(0deg); opacity: 0.55; will-change: transform, filter; }
+.orb-1 { width: 520px; height: 520px; top: -100px; left: -100px; background: var(--orb-1); animation: floatOrb1 7s ease-in-out infinite alternate, hueDrift 6s ease-in-out infinite alternate; }
+.orb-2 { width: 470px; height: 470px; bottom: -120px; right: -80px; background: var(--orb-2); animation: floatOrb2 8.5s ease-in-out infinite alternate, hueDrift 7s ease-in-out infinite alternate; }
+.orb-3 { width: 380px; height: 380px; top: 40%; left: 60%; background: var(--orb-3); animation: floatOrb3 6s ease-in-out infinite alternate, hueDrift 5s ease-in-out infinite alternate; }
+@keyframes floatOrb1 { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(120px, 90px) scale(1.15); } 100% { transform: translate(60px, 160px) scale(0.95); } }
+@keyframes floatOrb2 { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-100px, -80px) scale(1.1); } 100% { transform: translate(-160px, 40px) scale(0.9); } }
+@keyframes floatOrb3 { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-90px, 100px) scale(1.2); } 100% { transform: translate(70px, -70px) scale(0.95); } }
+@keyframes hueDrift { 0% { filter: blur(90px) hue-rotate(0deg); } 50% { filter: blur(100px) hue-rotate(25deg); } 100% { filter: blur(90px) hue-rotate(-15deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .orb { animation: none !important; }
+}
 
 .page-wrap { position: relative; z-index: 1; }
 
@@ -240,8 +245,8 @@ header.navbar {
 
 /* --- Auth Modal --- */
 .modal-backdrop {
-  position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center;
-  z-index: 2000; padding: 20px;
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: flex-start; justify-content: center;
+  z-index: 2000; padding: 20px; padding-top: 90px;
 }
 .modal-backdrop.open { display: flex; }
 .modal-box { width: 100%; max-width: 380px; padding: 34px 28px; text-align: center; }
@@ -270,8 +275,9 @@ footer {
   text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; position: relative; z-index: 1;
 }
 .footer-icons { display: flex; justify-content: center; gap: 16px; margin-bottom: 14px; }
-.footer-icons a { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--glass-bg); border: 1px solid var(--glass-border); transition: var(--transition-fast); }
+.footer-icons a { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--glass-bg); border: 1px solid var(--glass-border); transition: var(--transition-fast); overflow: hidden; }
 .footer-icons a:hover { background: var(--glass-bg-hover); transform: translateY(-3px); color: var(--accent-primary); }
+.footer-icons a img { width: 20px; height: 20px; object-fit: contain; }
 
 /* Page header for sub-pages */
 .page-header { text-align: center; padding: 120px 6% 20px; }
@@ -284,3 +290,36 @@ footer {
 .hidden { display: none !important; }
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-thumb { background: var(--glass-border-hover); border-radius: 8px; }
+
+/* --- Highlights Slider --- */
+.slider-container { position: relative; max-width: 640px; margin: 0 auto; }
+.slider-wrapper { overflow: hidden; border-radius: 20px; }
+.slider-track { display: flex; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1); }
+.slide { min-width: 100%; box-sizing: border-box; }
+.slide img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.slide-caption { padding: 18px 20px 22px; text-align: left; }
+.slide-caption h3 { font-size: 1.15rem; margin-bottom: 4px; }
+.slide-caption .loc { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 14px; }
+.slide-caption .btn-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.slide-btn {
+  position: absolute; top: 40%; transform: translateY(-50%); z-index: 5;
+  width: 42px; height: 42px; border-radius: 50%; background: var(--glass-bg); border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur); color: var(--text-primary); font-size: 1.4rem; display: grid; place-items: center;
+  transition: var(--transition-fast);
+}
+.slide-btn:hover { background: var(--accent-gradient); color: #1a1206; }
+.prev-btn { left: -6px; }
+.next-btn { right: -6px; }
+.slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+.slider-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--glass-border); cursor: pointer; transition: var(--transition-fast); border: none; }
+.slider-dot.active { background: var(--accent-primary); width: 22px; border-radius: 5px; }
+@media (max-width: 640px) {
+  .prev-btn { left: 4px; } .next-btn { right: 4px; }
+}
+
+/* --- Project Detail Embeds --- */
+.embed-frame { width: 100%; aspect-ratio: 4/5; max-height: 480px; border: none; border-radius: 12px; margin-top: 12px; background: rgba(0,0,0,0.15); }
+.embed-video { width: 100%; border-radius: 12px; margin-top: 12px; max-height: 420px; object-fit: cover; background: #000; }
+.week-card { text-align: center; }
+.week-card h3 { font-size: 1rem; margin-bottom: 10px; }
+.week-card .btn-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
