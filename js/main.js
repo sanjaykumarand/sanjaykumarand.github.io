@@ -1,4 +1,4 @@
-import { authController } from './auth.js';
+import { authController } from './auth.js?v=2';
 
 /* ---------- Theme Toggle ---------- */
 const themeBtn = document.getElementById('themeToggle');

@@ -1,6 +1,6 @@
 // Authentication Controller — Google Sign-In with Demo Fallback
-import { firebaseReady } from './firebase-config.js';
-import * as fb from './firebase-config.js';
+import { firebaseReady } from './firebase-config.js?v=2';
+import * as fb from './firebase-config.js?v=2';
 
 class AuthController {
   constructor() {
