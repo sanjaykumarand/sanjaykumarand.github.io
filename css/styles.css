@@ -117,17 +117,20 @@ button { font-family: inherit; cursor: pointer; border: none; }
   .orb { animation: none !important; }
 }
 
-.page-wrap { position: relative; z-index: 1; }
+.page-wrap { position: relative; z-index: 1; padding-top: var(--navbar-height, 72px); }
 
 /* --- Navbar --- */
 header.navbar {
-  position: sticky; top: 0; z-index: 500;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 5%;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--glass-border);
 }
+
+/* Offset anchor-link targets so the fixed navbar never overlaps them */
+.section, [id] { scroll-margin-top: var(--navbar-height, 72px); }
 .brand { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; }
 .nav-links { display: flex; align-items: center; gap: 6px; }
 .nav-link {
@@ -323,3 +326,17 @@ footer {
 .week-card { text-align: center; }
 .week-card h3 { font-size: 1rem; margin-bottom: 10px; }
 .week-card .btn-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+
+/* --- Badges Grid --- */
+.badge-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 16px; justify-items: center; }
+.badge-grid a { display: block; width: 90px; height: 90px; transition: var(--transition-fast); }
+.badge-grid a:hover { transform: translateY(-4px) scale(1.05); }
+.badge-grid img { width: 100%; height: 100%; object-fit: contain; border-radius: 10px; }
+
+/* --- Modal mobile fix --- */
+.modal-backdrop { overflow-y: auto; }
+.modal-box { max-height: calc(100vh - 130px); overflow-y: auto; }
+@media (max-width: 480px) {
+  .modal-backdrop { padding-top: 70px; }
+  .modal-box { max-height: calc(100vh - 100px); padding: 24px 18px; }
+}
