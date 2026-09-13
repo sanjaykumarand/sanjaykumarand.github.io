@@ -35,6 +35,18 @@
     <span class="badge-pill">Personal Projects</span>
     <h1>Android Studio <span class="gold-text">App Projects</span></h1>
     <p>Java · Android · XML · Firebase</p>
+<!-- Sign-In button — hides itself automatically after sign-in -->
+<button class="btn btn-glass btn-sm" id="navSignIn">Sign-in with Google to see Projects.</button>
+
+<!-- Required: the popup this button opens -->
+<div class="modal-backdrop" id="authModal">
+  <div class="glass-panel modal-box" style="position:relative;">
+    <button class="modal-close" id="authModalClose">✕</button>
+    <h3>🔒 Sign in required</h3>
+    <p id="authModalMsg">Sign in with Google to unlock this content.</p>
+    <button class="btn google-btn" id="googleSignInBtn"><span>🔵</span> Continue with Google</button>
+  </div>
+</div>
   </div>
 
   <section class="section">

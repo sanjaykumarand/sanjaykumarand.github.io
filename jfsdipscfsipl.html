@@ -35,6 +35,18 @@
     <span class="badge-pill">Internship · Sarvagna Innovation Pvt. Ltd.</span>
     <h1>Java Full Stack <span class="gold-text">Developer Projects</span></h1>
     <p>8 week-by-week projects built during the internship — sign in with Google to view.</p>
+    <!-- Sign-In button — hides itself automatically after sign-in -->
+<button class="btn btn-glass btn-sm" id="navSignIn">Sign-in with Google to see Projects.</button>
+
+<!-- Required: the popup this button opens -->
+<div class="modal-backdrop" id="authModal">
+  <div class="glass-panel modal-box" style="position:relative;">
+    <button class="modal-close" id="authModalClose">✕</button>
+    <h3>🔒 Sign in required</h3>
+    <p id="authModalMsg">Sign in with Google to unlock this content.</p>
+    <button class="btn google-btn" id="googleSignInBtn"><span>🔵</span> Continue with Google</button>
+  </div>
+</div>
   </div>
 
   <section class="section">
