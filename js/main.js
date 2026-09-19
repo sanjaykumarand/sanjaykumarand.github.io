@@ -119,46 +119,53 @@ function applyGating() {
   const signedIn = !!authController.currentUser;
 
   document.querySelectorAll('[data-gate="true"]').forEach(el => {
-    if (el.dataset.gateInit) { /* already wrapped */ }
-    else wrapGate(el);
-    const overlay = el.parentElement.querySelector('.gate-overlay');
-    if (signedIn) {
-      el.classList.remove('gate-blur');
-      overlay?.classList.add('hidden');
-    } else {
-      el.classList.add('gate-blur');
-      overlay?.classList.remove('hidden');
+    try {
+      if (!el.dataset.gateInit) wrapGate(el);
+      const overlay = el.parentElement.querySelector('.gate-overlay');
+      if (signedIn) {
+        el.classList.remove('gate-blur');
+        overlay?.classList.add('hidden');
+      } else {
+        el.classList.add('gate-blur');
+        overlay?.classList.remove('hidden');
+      }
+    } catch (err) {
+      console.error('[Gating] Failed to process data-gate element:', err, el);
     }
   });
 
   document.querySelectorAll('[data-gate-action]').forEach(el => {
-    if (!el.dataset.gateBound) {
-      el.dataset.gateBound = 'true';
-      el.dataset.gateOrigLabel = el.textContent.trim();
-      const href = el.getAttribute('data-gate-href');
-      const popupId = el.getAttribute('data-gate-popup');
-      const label = el.dataset.gateLabel || 'Sign in with Google to view this content.';
-      el.addEventListener('click', (e) => {
-        e.preventDefault();
-        const reveal = () => {
-          if (popupId) document.getElementById(popupId)?.classList.add('open');
-          else if (href) window.location.href = href;
-        };
-        if (!authController.currentUser) {
-          openAuthModal(label, reveal);
-        } else {
-          reveal();
-        }
-      });
-    }
-    // visual lock/unlock state
-    const baseLabel = el.dataset.gateOrigLabel;
-    if (signedIn) {
-      el.classList.remove('btn-locked');
-      el.textContent = baseLabel;
-    } else {
-      el.classList.add('btn-locked');
-      el.textContent = '🔒 ' + baseLabel;
+    try {
+      if (!el.dataset.gateBound) {
+        el.dataset.gateBound = 'true';
+        el.dataset.gateOrigLabel = el.textContent.trim();
+        const href = el.getAttribute('data-gate-href');
+        const popupId = el.getAttribute('data-gate-popup');
+        const label = el.dataset.gateLabel || 'Sign in with Google to view this content.';
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          const reveal = () => {
+            if (popupId) document.getElementById(popupId)?.classList.add('open');
+            else if (href) window.location.href = href;
+          };
+          if (!authController.currentUser) {
+            openAuthModal(label, reveal);
+          } else {
+            reveal();
+          }
+        });
+      }
+      // visual lock/unlock state
+      const baseLabel = el.dataset.gateOrigLabel;
+      if (signedIn) {
+        el.classList.remove('btn-locked');
+        el.textContent = baseLabel;
+      } else {
+        el.classList.add('btn-locked');
+        el.textContent = '🔒 ' + baseLabel;
+      }
+    } catch (err) {
+      console.error('[Gating] Failed to process data-gate-action element:', err, el);
     }
   });
 }
@@ -222,11 +229,19 @@ applyGating();
   });
 })();
 
-/* ---------- Fade-in on scroll ---------- */
+/* ---------- Fade-in on scroll ----------
+   threshold lowered from 0.12 to 0 (fires as soon as any pixel is visible) —
+   0.12 required 12% of an element's total height to be on-screen at once,
+   which is impossible on mobile for tall elements (e.g. a gated panel with
+   40 stacked cards can be 9000px+ tall vs a ~700px phone viewport), leaving
+   them stuck at opacity:0 forever. Gated ([data-gate]) panels and anything
+   inside them are skipped entirely — sign-in gating already controls their
+   visibility via blur/overlay, so this animation only risked hiding them. */
 const io = new IntersectionObserver((entries) => {
   entries.forEach(en => { if (en.isIntersecting) { en.target.style.opacity = 1; en.target.style.transform = 'translateY(0)'; } });
-}, { threshold: 0.12 });
+}, { threshold: 0 });
 document.querySelectorAll('.glass-panel, .section-head').forEach(el => {
+  if (el.closest('[data-gate="true"]') || el.hasAttribute('data-gate')) return;
   el.style.opacity = 0; el.style.transform = 'translateY(18px)';
   el.style.transition = 'opacity .6s ease, transform .6s ease';
   io.observe(el);
