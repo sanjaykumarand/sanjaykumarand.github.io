@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>App Store — Sanjay Kumaran D</title>
+<link rel="stylesheet" href="css/styles.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="ambient-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+
+<div class="page-wrap">
+  <header class="navbar">
+    <a href="asm.html" class="brand gold-text">💾 SK APP STORE</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="asm.html" class="nav-link active">🏡HomePage</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme">☀️</button>
+      <button class="btn btn-glass btn-sm" id="navSignIn">Sign in</button>
+      <div class="user-chip hidden" id="userChip"><img id="userChipImg" src="" alt=""><span id="userChipName"></span></div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <span class="badge-pill">App Store</span>
+    <h1>Sanjay Kumaran <span class="gold-text">App Projects</span></h1>
+    <p>Windows & Android apps built by Sanjay — sign in with Google to view download links.</p>
+   
+  </div>
+
+  <section class="section">
+    <div class="glass-panel card" data-gate="true" data-gate-msg="Sign in with Google to view the app store.">
+      <div class="grid grid-2">
+        <div class="card" id="skai">
+          <div class="project-icon">🤖</div>
+          <h3>Sanjay Kumaran AI</h3>
+          <p>Supports Windows 11 / 10 / 8.1 / 7 (64-bit) & Android 9 – 16</p>
+          <div class="tag-row"><span class="tag">JavaFX</span><span class="tag">Python</span></div>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">Temporarily disabled download link for Windows users</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px;">
+            <a href="https://icedrive.net/s/B5w9vgAZ952YkF5vv5F5tyaNfk6y" target="_blank" class="btn btn-glass btn-sm">⬇️ Download for Android</a>
+            <a href="skai/skaiav" class="btn btn-glass btn-sm">🌐 Chat on Web Now</a>
+          </div>
+        </div>
+        <div class="card" id="skc">
+          <div class="project-icon">🏫</div>
+          <h3>SK Classroom</h3>
+          <p>Supports Windows 11 / 10 / 8.1 / 7 (64-bit)</p>
+          <div class="tag-row"><span class="tag">Java</span></div>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">Try again later, if you're interested to check my app.</p>
+        </div>
+        <div class="card" id="skaib2">
+          <div class="project-icon">✨</div>
+          <h3>SK AI Beta 2</h3>
+          <p>Supports Android 12 – 17</p>
+          <div class="tag-row"><span class="tag">Android</span><span class="tag">Gemini API</span></div>
+          <button class="btn btn-glass btn-sm mt" disabled>Coming Soon ❕</button>
+        </div>
+        <div class="card" id="skchat">
+          <div class="project-icon">💬</div>
+          <h3>SK Chat</h3>
+          <p>Supports Android 12 – 17 · Public open chat app</p>
+          <div class="tag-row"><span class="tag">Android</span><span class="tag">Firebase</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px;">
+            <a href="mailto:sanjaykumaran6907@gmail.com?subject=Request%20for%20Decryption%20Key%20-%20SK%20Chat%20App&body=I%20requesting%20to%20give%20the%20Decryption%20Key%20to%20Check%20your%20SK%20Chat%20App" class="btn btn-glass btn-sm">🔐 Request Key</a>
+            <a href="https://mega.nz/file/rhpWGDaK" target="_blank" class="btn btn-glass btn-sm">🔑 Download for Android (.apk)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2024 Sanjay Kumaran D. All Rights Reserved.
+  </footer>
+</div>
+
+<!-- Sign-Out Modal -->
+<div class="modal-backdrop" id="signOutModal">
+  <div class="glass-panel modal-box" style="position:relative;">
+    <button class="modal-close" id="signOutModalClose">✕</button>
+    <h3>👋 Sign out?</h3>
+    <p>You'll need to sign in with Google again to view gated content.</p>
+    <button class="btn google-btn" id="signOutConfirmBtn"><span>🚪</span> Sign out</button>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="authModal">
+  <div class="glass-panel modal-box" style="position:relative;">
+    <button class="modal-close" id="authModalClose">✕</button>
+    <h3>🔒 Sign in required</h3>
+    <p id="authModalMsg">Sign in with Google to unlock this content.</p>
+    <button class="btn google-btn" id="googleSignInBtn"><span>🔵</span> Continue with Google</button>
+  </div>
+</div>
+
+<script type="module" src="js/main.js?v=2"></script>
+</body>
+</html>
