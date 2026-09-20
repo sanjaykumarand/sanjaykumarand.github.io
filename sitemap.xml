@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://sanjaykumarand.github.io/</loc>
+    <image:image>
+      <image:loc>https://sanjaykumarand.github.io/SKengine/ppfast.jpg</image:loc>
+      <image:title>Sanjay Kumaran</image:title>
+      <image:caption>Aspire to become a Java Developer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sanjaykumarand.github.io/SKengine/techysanjay.png</image:loc>
+      <image:title>Sanjay Kumaran</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sanjaykumarand.github.io/SKengine/pp.jpg</image:loc>
+      <image:title>Sanjay Kumaran</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sanjaykumarand.github.io/SKengine/pphr.png</image:loc>
+      <image:title>Sanjay Kumaran</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjaykumarand.github.io/apps.html</loc>
+    <lastmod>2026-05-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://sanjaykumarand.github.io/certificates.html</loc>
+    <lastmod>2026-04-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://sanjaykumarand.github.io/highlights.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <image:image>
+      <image:loc>https://sanjaykumarand.github.io/SKengine/hl1.jpg</image:loc>
+      <image:title>Sanjay Kumaran</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sanjaykumarand.github.io/SKengine/bsnlhl.jpeg</image:loc>
+      <image:title>Sanjay Kumaran</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sanjaykumarand.github.io/SKengine/csps3.png</image:loc>
+      <image:title>Sanjay Kumaran</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sanjaykumarand.github.io/SKengine/hl1-1.jpg</image:loc>
+      <image:title>Sanjay Kumaran</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sanjaykumarand.github.io/SKengine/bicsgi.png</image:loc>
+      <image:title>Sanjay Kumaran</image:title>
+    </image:image>
+  </url>
+
+</urlset>
